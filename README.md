@@ -1,4 +1,8 @@
-# jquery-ui-icons
-Icon-Font for jQuery-UI
+#Icons for jQuery-UI
 
-Demo: http://mkkeck.github.io/jquery-ui-icons/
+* Complete new redesigned icons for jQuery UI as font.
+* Support mobile devices
+* Clear and resizable icons
+* Changeable color of icons without the need to export new graphix
+
+Take a look at the demo under http://mkkeck.github.io/jquery-ui-icons/
