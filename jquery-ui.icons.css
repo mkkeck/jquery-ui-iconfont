@@ -100,6 +100,7 @@
   top: 50%;
 }
 
+/* positioning on accordion(s) */
 .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
   left: 0.5em;
   margin-top: -0.5em;
@@ -107,6 +108,7 @@
   top: 50%;
 }
 
+/* positioning on spinner inputs(s) */
 .ui-spinner-input {
   margin: 0.2em 1.4em 0.2em 0.4em;
 }
@@ -127,6 +129,7 @@
   left: 0;
 }
 
+/* positioning on dialogs(s) */
 .ui-dialog .ui-dialog-titlebar-close {
   box-sizing: border-box;
   height: 1.4em;
@@ -139,8 +142,76 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+.ui-dialog .ui-resizable-se {
+  bottom: -0.5em;
+  height: 1.8em;
+  right: -0.5em;
+  width: 1.8em;
+}
+.ui-dialog .ui-resizable-se:before {
+  top: 0;
+  left: 0;
+}
 
-/* icons */
+/* this makes resizable handlers responsive */
+.ui-resizable-handle {
+  font-size: 1em;
+  position: absolute;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+.ui-resizable-n,
+.ui-resizable-s {
+  height: 1em;
+  left: 0;
+  width: 100%;
+}
+.ui-resizable-n {
+  top: -0.5em;
+}
+.ui-resizable-s {
+  bottom: -0.5em;
+}
+.ui-resizable-e,
+.ui-resizable-w {
+  height: 100%;
+  top: 0;
+  width: 1em;
+}
+.ui-resizable-e {
+  right: -0.5em;
+}
+.ui-resizable-w {
+  left: -0.5em;
+}
+.ui-resizable-se {
+  bottom: 1px;
+  height: 1em;
+  right: 1px;
+  width: 1em;
+}
+.ui-resizable-nw,
+.ui-resizable-sw {
+  height: 1em;
+  left: -0.5em;
+  width: 1em;
+}
+.ui-resizable-sw {
+  bottom: -0.5em;
+}
+.ui-resizable-nw {
+  top: -0.5em;
+}
+.ui-resizable-ne {
+  width: 1em;
+  height: 1em;
+  right: -0.5em;
+  top: -0.5em;
+}
+
+/* apply font to icons */
 .ui-icon:before {
   font: 14px/16px 'jquery-ui', sans-serif normal !important;
   height: 1em;
