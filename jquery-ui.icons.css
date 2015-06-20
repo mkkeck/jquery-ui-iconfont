@@ -17,7 +17,7 @@
   font-weight: normal;
 }
 
-/* bicons basics */
+/* icon basics */
 .ui-icon {
   background: transparent none no-repeat scroll 0 0 !important;
   display: block;
@@ -236,7 +236,7 @@
   top: -0.5em;
 }
 
-/* apply font to icons */
+/* apply glyphs to icons */
 .ui-icon-arrow-1-n:before { content: '\e600'; }
 .ui-icon-arrow-u:before { content: '\e600'; }
 .ui-icon-arrow-1-ne:before { content: '\e601'; }
