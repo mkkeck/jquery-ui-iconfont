@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="us">
 <head>
-  <title>jQuery UI Example Page with Icon Font</title>
+  <title>jQuery UI Example Page</title>
   <meta name="Description" content="Icon Font for jQuery UI"/>
   <meta name="Keywords" content="jquery, ui, font, icon, svg"/>
   <meta name="author" content="Michael Keck"/>
@@ -10,6 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="noodp"/>
+
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
   <link href="jquery-ui.icons.css" rel="stylesheet" type="text/css" />
@@ -17,20 +18,33 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="preview.js" type="text/javascript"></script>
 </head>
-
 <body>
 
 <div id="body">
   <h1 class="hl-1">Icon-Font for jQuery-UI</h1>
 
   <div class="ui-widget">
-    <p>This page uses complete new redisgned icons for jQuery UI as font. </p>
+    <p>This page uses complete new redesigned icons for jQuery UI as font. </p>
+    <p class="ui-helper-clearfix">
+      <a href="https://github.com/mkkeck/jquery-ui-icons" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-script"></span>Source on GitHub</a>
+      <a href="https://github.com/mkkeck/jquery-ui-icons/archive/master.zip" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-file-zip"></span>Download as ZIP</a>
+    </p>
   </div>
 
   <h2 class="hl-2">Sample components:</h2>
   <div class="ui-widget">
-    <p>This demonstrates widgets and theme with the new icons.</p>
+    <div class="ui-theme-switch">
+      <p>This demonstrates widgets and themes with the new icons.</p>
+    </div>
+    <p><strong>Please note:</strong><br />
+      Make sure you are using them with a compatible jQuery version.<br />
+      This demo uses the complete jQuery UI 1.11.3 and
+      jQuery Core 1.11.3.<br />
+      Internet Explorer 7 is not supported and Internet Explorer 8 will not render all
+      things correctly.
+    </p>
   </div>
 
   <!-- Accordion -->
@@ -54,6 +68,7 @@
   <h3 class="hl-3">Button</h3>
   <button id="button">A button element</button>
   <div class="space"></div>
+  <h3 class="hl-3">Radio Buttons</h3>
   <form>
     <div id="radioset">
       <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
@@ -72,18 +87,18 @@
     </ul>
     <div id="tabs-1">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
       nisi ut aliquip ex ea commodo consequat.
     </div>
     <div id="tabs-2">
-      Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium 
-      vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce 
+      Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
+      vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
       sed lorem in enim dictum bibendum.
     </div>
     <div id="tabs-3">
-      Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. 
-      Pellentesque nisi urna, interdum eget, sagittis et, consequat 
+      Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
+      Pellentesque nisi urna, interdum eget, sagittis et, consequat
       vestibulum, lacus. Mauris porttitor ullamcorper augue.
     </div>
   </div>
@@ -97,14 +112,14 @@
   <div id="overlay-example">
     <p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis
       purus consectetur consequat. </p>
-    <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, 
-      venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse 
-      scelerisque dui nec velit. Duis augue augue, gravida euismod, 
+    <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet,
+      venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse
+      scelerisque dui nec velit. Duis augue augue, gravida euismod,
       vulputate ac, facilisis id, sem. Morbi in orci. </p>
-    <p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. 
-      Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem 
-      ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, 
-      commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. 
+    <p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam.
+      Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem
+      ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus,
+      commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor.
       Donec id elit quis purus consectetur consequat. </p>
 
     <!-- ui-dialog -->
@@ -114,9 +129,9 @@
     </div>
     <div class="ui-widget ui-widget-content ui-corner-all">
       <div class="ui-dialog-content ui-widget-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
@@ -125,9 +140,9 @@
 
   <!-- ui-dialog -->
   <div id="dialog" title="Dialog Title">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-      enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+      enim ad minim veniam, quis nostrud exercitation ullamco laboris
       nisi ut aliquip ex ea commodo consequat.</p>
   </div>
   <h3 class="hl-3">Framework Icons (content color preview)</h3>
@@ -823,10 +838,10 @@
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-wrench" class="ui-icon ui-icon-wrench"></label><input readonly="readonly" id="item-wrench" value="ui-icon-wrench" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-zoomin" class="ui-icon ui-icon-zoomin"></label><input readonly="readonly" id="item-zoomin" value="ui-icon-zoomin" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-zoomout" class="ui-icon ui-icon-zoomout"></label><input readonly="readonly" id="item-zoomout" value="ui-icon-zoomout" /></li>
-    </ul>
+  </ul>
 </div>
 <script type="text/javascript">
-/*<![CDATA[*/
+  /*<![CDATA[*/
   var availableTags = [
     'ActionScript', 'AppleScript', 'Asp', 'BASIC',
     'C', 'C++', 'Clojure', 'COBOL', 'ColdFusion',
@@ -835,12 +850,8 @@
     'Ruby', 'Scala', 'Scheme'
   ];
   (function($) {
-    var dlg, dlg_link, ico_grid, ico_list, ico_name;
+    var dlg, theme;
     dlg = $('#dialog');
-    dlg_link = $('#dialog-link');
-    ico_grid = $('li', $('#icons-grid'));
-    ico_list = $('#icons-list');
-    ico_name = $('li input', ico_list);
     dlg.dialog({
       autoOpen: false,
       width: 400,
@@ -849,11 +860,15 @@
         { text: 'Cancel', click: function() { $(this).dialog('close'); }}
       ]
     });
-    dlg_link.click(function(event) {
+    $('#dialog-link').on('click',function(event) {
       dlg.dialog('open');
       event.preventDefault();
     });
-
+    theme = $('<p id="theme-switch">Theme: </p>').appendTo('.ui-theme-switch');
+    theme.themeswitch({
+        themeicon: { path : 'images/', 'width':'90', 'height':'90','type':'.png' },
+        themeversion: '1.11.3'
+    });
     $('#datepicker').datepicker({ inline: true });
     $('#accordion').accordion();
     $('#autocomplete').autocomplete({ source: availableTags });
@@ -868,22 +883,19 @@
     $('#selectmenu').selectmenu();
 
     // Hover states on the static widgets
-    dlg_link
-      .on('mouseover', function() { $(this).addClass('ui-state-hover'); })
-      .on('mouseout', function()  { $(this).removeClass('ui-state-hover'); });
-    ico_grid
-      .on('mouseover', function() { $(this).addClass('ui-state-hover'); })
-      .on('mouseout', function()  { $(this).removeClass('ui-state-hover'); })
-      .on('mousedown', function() { $(this).addClass('ui-state-highlight'); })
-      .on('mouseup', function() { $(this).removeClass('ui-state-highlight'); });
+    $('body')
+      .on('mouseover', '.as-button, #icons-grid li', function() { $(this).addClass('ui-state-hover'); })
+      .on('mouseout', '.as-button, #icons-grid li', function()  { $(this).removeClass('ui-state-hover'); })
+      .on('mousedown', '#icons-grid li', function() { $(this).addClass('ui-state-highlight'); })
+      .on('mouseup', '#icons-grid li', function() { $(this).removeClass('ui-state-highlight'); });
 
-    ico_name.on('focus', function() {
+    $('#icons-list').on('focus', 'li input', function() {
       $(this).select();
       $(this).parent().addClass('ui-state-highlight');
-    }).on('blur', function() {
+    }).on('blur', 'li input', function() {
       $(this).parent().removeClass('ui-state-highlight');
     });
-  })(jQuery);
+  })(jQuery, document);
   /*]]>*/
 </script>
 </body>
