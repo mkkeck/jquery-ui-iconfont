@@ -1,0 +1,156 @@
+html, body,
+.ui-widget,
+input[type='text'] {
+  font: 13px/16px 'Ubuntu', Arial, Tahoma, Helvetica, Verdana, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 10px;
+}
+form {
+  padding: 0;
+}
+
+em, i, q, blockquote {
+  font-style: normal;
+}
+strong, b { font-weight: bold; }
+
+.hl-2, .hl-2 label,
+.hl-3, .hl-3 label {
+  font-weight: 400;
+}
+.hl-1, .hl-2, .hl-3 {
+  font-family: 'Ubuntu Condensed', Arial, Tahoma, Helvetica, Verdana, sans-serif;
+}
+.hl-1 { font-size: 2.25em; }
+.hl-2 { font-size: 1.75em; margin-top: 2em; }
+.hl-3 { font-size: 1.5em; margin-top: 2em; }
+.space { height: 1em; }
+
+.as-button {
+  padding: 0.4em 0.4em 0.4em 2em;
+  position: relative;
+  text-decoration: none;
+}
+.as-button .ui-icon {
+  left: 0.4em;
+  margin-left: 0;
+  position: absolute;
+  margin-top: -0.5em;
+  top: 50%;
+}
+
+.ui-sample {
+  font-size: 1em;
+  padding: 1em;
+}
+.ui-sample > .ui-icon {
+  float: left;
+  margin-right: 10px;
+}
+.ui-sample-large-icon .ui-icon {
+  font-size: 2.3em;
+  color: #693;
+}
+form.ui-sample { padding: 0; }
+form.ui-sample select { width: 20em; }
+
+/* Bug in some jQuery UI Themes? */
+.ui-spinner {
+  height: auto !important;
+}
+
+#body {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+#icons-grid,
+#icons-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#icons-grid li,
+#icons-list li {
+  float: left;
+  margin: 0.5%;
+  padding: 5px;
+}
+#icons-grid li {
+  cursor: pointer;
+}
+#icons-list {
+  margin: 0 auto;
+}
+#icons-list li {
+  box-sizing: border-box;
+  vertical-align: middle;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#icons-list li label,
+#icons-list li input {
+  float: left;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+#icons-list li input {
+  background: transparent none 0 0;
+  border: 0 none;
+  margin-left: 5px;
+  width: 15em;
+}
+
+
+#menu {
+  width: 100px;
+}
+#menu .ui-menu-item {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+#overlay-example {
+  height: 200px;
+  overflow:hidden;
+  padding:1% 2%;
+  position: relative;
+  width: 96%;
+}
+#overlay-example .ui-widget-overlay {
+  position: absolute;
+}
+#overlay-example .ui-widget-shadow {
+  height: 152px;
+  left: 50px;
+  position: absolute;
+  width: 302px;
+  top: 30px;
+}
+#overlay-example .ui-widget {
+  height: 130px;
+  left: 50px;
+  padding: 10px;
+  position: absolute;
+  width: 280px;
+  top: 30px;
+}
+#overlay-example .ui-dialog-content {
+  background: none;
+  border: 0 none;
+}
+
+@media screen and (max-width: 519px) {
+  #body {
+    min-width: 300px;
+  }
+  #icons-list li {
+    float: none;
+    width: 100%;
+  }
+}
