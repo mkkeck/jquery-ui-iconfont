@@ -12,26 +12,38 @@
   url('fonts/jquery-ui.woff?jquf') format('woff'),
   url('fonts/jquery-ui.ttf?jquf') format('truetype'),
   url('fonts/jquery-ui.svg?jquf#jquery-ui') format('svg');
-  font-style: normal !important;
-  font-variant: normal !important;
-  font-weight: normal !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
 }
 
-/* width and height of icons */
+/* bicons basics */
 .ui-icon {
   background: transparent none no-repeat scroll 0 0 !important;
-  box-sizing: border-box;
-  font: 16px/16px sans-serif;
+  display: block;
+  font: 14px/16px 'jquery-ui', sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
   height: 1em;
-  overflow: hidden;
-  padding: 0.1em;
+  overflow: visible;
   position: relative;
-  text-align: left;
+  vertical-align: middle;
   text-indent: -999999px;
   text-transform: none;
   width: 1em;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+.ui-icon:before {
+  display: block;
+  float: left;
+  text-align: center;
+  text-indent: 0;
+  vertical-align: middle;
+  width: 100%;
 }
 
 /* positioning on button element(s) */
@@ -40,6 +52,7 @@
 .ui-button-text-icon-secondary .ui-icon,
 .ui-button-text-icons .ui-icon,
 .ui-button-icons-only .ui-icon {
+  display: block;
   margin-top: -0.5em;
   position: absolute;
   top: 50%;
@@ -60,39 +73,47 @@
 }
 
 /* positioning on datepicker element(s) */
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev {
+  font-size: 1em;
   cursor: pointer;
-  height: 1.8em;
-  margin: 0.2em;
-  position: absolute;
-  top: 0;
-  width: 1.8em;
+  height: 2em;
+  margin: 1px;
+  top: 1px;
+  width: 2em;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 0;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 0;
 }
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
-  margin: 0.1em;
+  margin: 0;
 }
-.ui-datepicker .ui-datepicker-prev { left: 0; }
-.ui-datepicker .ui-datepicker-next { right: 0; }
-
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
+.ui-datepicker .ui-datepicker-prev .ui-icon,
+.ui-datepicker .ui-datepicker-next .ui-icon {
   display: block;
   left: 50%;
-  margin-left: -0.5em;
-  margin-top: -0.5em;
+  margin: -0.5em;
   position: absolute;
   top: 50%;
 }
-
 .ui-datepicker-rtl .ui-datepicker-prev,
-.ui-datepicker-rtl .ui-datepicker-prev:hover { left: auto; right: 0; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  left: auto;
+  right: 0;
+}
 .ui-datepicker-rtl .ui-datepicker-next,
-.ui-datepicker-rtl .ui-datepicker-next:hover { left: 0; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 0;
+  right: auto;
+}
 
 /* positioning on selectmenu element(s) */
-.ui-selectmenu-button span.ui-icon {
+.ui-selectmenu-button .ui-icon {
+  display: block;
   left: auto;
   margin-top: -0.5em;
   position: absolute;
@@ -102,6 +123,7 @@
 
 /* positioning on accordion(s) */
 .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  display: block;
   left: 0.5em;
   margin-top: -0.5em;
   position: absolute;
@@ -123,34 +145,37 @@
 }
 /* vertically center icon */
 .ui-spinner .ui-icon {
-  position: absolute;
-  margin-top: -0.5em;
-  top: 50%;
+  display: block;
   left: 0;
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
 }
 
 /* positioning on dialogs(s) */
 .ui-dialog .ui-dialog-titlebar-close {
-  box-sizing: border-box;
-  height: 1.4em;
-  margin: -0.7em 0 0 0;
-  padding: 0.2em;
+  display: block;
+  height: 1.8em;
+  margin: -0.9em 0 0 0;
+  padding: 0;
   position: absolute;
   right: 0.3em;
   top: 50%;
-  width: 1.4em;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.ui-dialog .ui-resizable-se {
-  bottom: -0.5em;
-  height: 1.8em;
-  right: -0.5em;
   width: 1.8em;
 }
+.ui-dialog .ui-resizable-se {
+  bottom: 0;
+  display: block;
+  height: 1em;
+  padding: 0 .5em .5em 0;
+  position: absolute;
+  right: 0;
+  width: 1em;
+}
 .ui-dialog .ui-resizable-se:before {
-  top: 0;
   left: 0;
+  margin: 0 0 0 0;
+  top: 0
 }
 
 /* this makes resizable handlers responsive */
@@ -212,20 +237,6 @@
 }
 
 /* apply font to icons */
-.ui-icon:before {
-  font: 14px/16px 'jquery-ui', sans-serif normal !important;
-  height: 1em;
-  line-height: 1em !important;
-  left: 0.1em;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  text-indent: 0;
-  top: 0.1em;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
 .ui-icon-arrow-1-n:before { content: '\e600'; }
 .ui-icon-arrow-u:before { content: '\e600'; }
 .ui-icon-arrow-1-ne:before { content: '\e601'; }
