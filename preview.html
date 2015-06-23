@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="us">
 <head>
-  <title>jQuery UI Example Page</title>
-  <meta name="Description" content="Icon Font for jQuery UI"/>
-  <meta name="Keywords" content="jquery, ui, font, icon, svg"/>
+  <title>Icon-Font for jQuery-UI</title>
+  <meta name="Description" content="Icon-Font for jQuery-UI. Complete redesigned icons as web font for jQuery UI."/>
+  <meta name="Keywords" content="jquery, ui, font, icon, svg, iconfont, awesome, sheet"/>
   <meta name="author" content="Michael Keck"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta http-equiv="content-language" content="en"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="noodp"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-language" content="en" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noodp" />
 
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
@@ -24,16 +24,62 @@
 
 <div id="body">
   <h1 class="hl-1">Icon-Font for jQuery-UI</h1>
-
   <div class="ui-widget">
-    <p>This page uses complete new redesigned icons for jQuery UI as font. </p>
+    <ul class="ul-1">
+      <li><span class="ui-icon ui-icon-pencil"></span>Complete new redesigned icons for jQuery UI as font</li>
+      <li><span class="ui-icon ui-icon-mobile"></span>Support mobile devices</li>
+      <li><span class="ui-icon ui-icon-arrow-4-diag"></span>Clear and resizable icons</li>
+      <li><span class="ui-icon ui-icon-circle-b-check"></span>Changeable color of icons without the need to export new graphic files</li>
+      <li><span class="ui-icon ui-icon-circle-b-check"></span>Supported by many browsers<br />(tested on Firefox 36, Chrome 42, Internet-Explorer 8-10)</li>
+      <li><span class="ui-icon ui-icon-circle-b-check"></span>Works with all jQuery UI Themes (see &#34;Sample Components&#34;)</li>
+      <li><span class="ui-icon ui-icon-file-txt"></span>Icon License <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="Creative Commons Attribution-ShareAlike">CC BY-SA 3.0</a></li>
+      <li><span class="ui-icon ui-icon-comments"></span>Please report bugs or feature requests on the <a href="https://github.com/mkkeck/jquery-ui-icons/issues">issue-tracker</a>.</li>
+    </ul>
+  </div>
+
+  <h2 class="hl-2">Icon Picker</h2>
+  <div class="ui-widget">
+    <p>Here you can search an icon and change its color and/or size</p>
+    <div class="ui-widget-content ui-corner-all" id="icon-picker">
+      <div id="icon-params">
+        <p>
+          <label for="icon-name">Icon:</label>
+          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-name" type="text" value="alert" /></span>
+        </p>
+        <p>
+          <label for="icon-size">Icon size:</label>
+          <select id="icon-size">
+            <option value="1em" selected="selected">Default</option>
+            <option value="2em">2 em</option>
+            <option value="4em">4 em</option>
+            <option value="6em">6 em</option>
+            <option value="8em">8 em</option>
+          </select>
+        </p>
+        <p>
+          <label for="icon-color">Icon color:</label>
+          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-color" type="text" value="#953734" /></span>
+        </p>
+        <p>
+          <label for="back-color">Backcolor:</label>
+          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="back-color" type="text" value="#ffffff" /></span>
+        </p>
+      </div>
+      <div id="icon-preview" class="ui-widget-content ui-corner-all">
+        <div class="ui-icon ui-icon-alert"></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="hl-2">Download and sources</h2>
+  <div class="ui-widget">
     <p class="ui-helper-clearfix">
       <a href="https://github.com/mkkeck/jquery-ui-icons" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-script"></span>Source on GitHub</a>
       <a href="https://github.com/mkkeck/jquery-ui-icons/archive/master.zip" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-file-zip"></span>Download as ZIP</a>
     </p>
   </div>
 
-  <h2 class="hl-2">Sample components:</h2>
+  <h2 class="hl-2">Sample components</h2>
   <div class="ui-widget">
     <div class="ui-theme-switch">
       <p>This demonstrates widgets and themes with the new icons.</p>
@@ -472,7 +518,7 @@
   <!-- Tooltip -->
   <h3 class="hl-3">Tooltip</h3>
   <p id="tooltip">
-    <a href="#" title="That&apos;s what this widget is">Tooltips</a>
+    <a href="#tooltip" title="That&apos;s what this widget is">Tooltips</a>
     can be attached to any element. When you hover the element with your
     mouse, the title attribute is displayed in a little box next to the
     element, just like a native tooltip.
@@ -499,6 +545,9 @@
   </div>
 
   <h3 class="hl-3">Icons as list</h3>
+  <div class="ui-widget">
+    <p>Clicking on the icon you can copy its class name to the clipboard.</p>
+  </div>
   <ul id="icons-list" class="ui-widget ui-helper-clearfix">
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-action" class="ui-icon ui-icon-action"></label><input readonly="readonly" id="item-action" value="ui-icon-action" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-addon" class="ui-icon ui-icon-addon"></label><input readonly="readonly" id="item-addon" value="ui-icon-addon" /></li>
@@ -842,6 +891,11 @@
 </div>
 <script type="text/javascript">
   /*<![CDATA[*/
+
+  /**
+   * jQuery UI Demos
+   * ----------------------------------------------------------------
+   */
   var availableTags = [
     'ActionScript', 'AppleScript', 'Asp', 'BASIC',
     'C', 'C++', 'Clojure', 'COBOL', 'ColdFusion',
@@ -849,52 +903,112 @@
     'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'Python',
     'Ruby', 'Scala', 'Scheme'
   ];
+
   (function($) {
-    var dlg, theme;
-    dlg = $('#dialog');
+
+    /* Buttons */
+    $('#button').button();
+    $('#radioset').buttonset();
+
+    /* Content */
+    $('#accordion').accordion();
+    $('#menu').menu();
+    $('#progressbar').progressbar({ value: 20 });
+    $('#tabs').tabs();
+    $('#tooltip').tooltip();
+
+    /* Dialog */
+    var dlg = $('#dialog');
     dlg.dialog({
       autoOpen: false,
-      width: 400,
+      width: 280,
       buttons: [
         { text: 'Ok', click: function() { $(this).dialog('close'); } },
         { text: 'Cancel', click: function() { $(this).dialog('close'); }}
       ]
     });
-    $('#dialog-link').on('click',function(event) {
-      dlg.dialog('open');
-      event.preventDefault();
-    });
-    theme = $('<p id="theme-switch">Theme: </p>').appendTo('.ui-theme-switch');
-    theme.themeswitch({
-        themeicon: { path : 'images/', 'width':'90', 'height':'90','type':'.png' },
-        themeversion: '1.11.3'
-    });
-    $('#datepicker').datepicker({ inline: true });
-    $('#accordion').accordion();
-    $('#autocomplete').autocomplete({ source: availableTags });
-    $('#button').button();
-    $('#radioset').buttonset();
-    $('#tabs').tabs();
-    $('#slider').slider({ range: true,  values: [ 17, 67 ] });
-    $('#progressbar').progressbar({ value: 20 });
-    $('#spinner').spinner();
-    $('#menu').menu();
-    $('#tooltip').tooltip();
-    $('#selectmenu').selectmenu();
+    $('#dialog-link').on('click',function(event) { dlg.dialog('open'); event.preventDefault(); });
 
-    // Hover states on the static widgets
+    /* Datepicker */
+    $('#datepicker').datepicker({ inline: true });
+
+    /* Inputs */
+    $('#autocomplete').autocomplete({ source: availableTags });
+    $('#selectmenu').selectmenu();
+    $('#slider').slider({ range: true,  values: [ 17, 67 ] });
+    $('#spinner').spinner();
+  })(jQuery, document);
+
+  /**
+   * Extra functions
+   */
+  (function($) {
+
+    /* Hover states on the static widgets */
     $('body')
       .on('mouseover', '.as-button, #icons-grid li', function() { $(this).addClass('ui-state-hover'); })
       .on('mouseout', '.as-button, #icons-grid li', function()  { $(this).removeClass('ui-state-hover'); })
       .on('mousedown', '#icons-grid li', function() { $(this).addClass('ui-state-highlight'); })
       .on('mouseup', '#icons-grid li', function() { $(this).removeClass('ui-state-highlight'); });
 
-    $('#icons-list').on('focus', 'li input', function() {
+    var alist = $('#icons-list'), bcolor = $('#back-color'), icolor = $('#icon-color'), iname = $('#icon-name'), isize = $('#icon-size'), iview = $('#icon-preview'), ilist = [];
+    alist.on('focus', 'li input', function() {
       $(this).select();
       $(this).parent().addClass('ui-state-highlight');
     }).on('blur', 'li input', function() {
       $(this).parent().removeClass('ui-state-highlight');
     });
+
+    /* Theme Switcher */
+    var theme = $('<p id="theme-switch"><span class="hl-3">Theme:&#160;&#160;</span> </p>').appendTo('.ui-theme-switch');
+    theme.themeswitch({
+      themeicon: { path : 'images/', 'width':'90', 'height':'90','type':'.png' },
+      themeversion: '1.11.3'
+    });
+
+    /* Get all icons from #icons-list */
+    $('input[value^="ui-icon-"]', alist).each(function() {
+      var v = $(this).val();
+      v = v.substring(8, v.length);
+      ilist.push(v);
+    });
+
+    /* Icon color selector */
+    icolor.attr('readonly','readonly').css({'cursor':'pointer'})
+      .colorpicker({ 'color':icolor.val(), 'displayIndicator': false, 'hideButton': false, 'history':false })
+      .on('change.color', function(e, c) { $('.ui-icon',iview).css({'color': c }); })
+      .on('mouseover.color', function(e, c) { if (c) { icolor.val(c).next('.evo-pointer').css({'background-color':c}); $('.ui-icon',iview).css({'color': c }); } });
+
+    /* Backcolor selector */
+    bcolor.attr('readonly','readonly').css({'cursor':'pointer'})
+      .colorpicker({ 'color':bcolor.val(), 'displayIndicator': false, 'hideButton': false, 'history':false })
+      .on('change.color', function(e, c) { $(iview).css({'background-color': c }); })
+      .on('mouseover.color', function(e, c) { if (c) { bcolor.val(c).next('.evo-pointer').css({'background-color':c}); $(iview).css({'background-color': c }); } });
+
+    /* Icon name */
+    iname.attr('autocomplete','off').on('focus',this, function() {
+      $(this).select();
+    }).autocomplete({
+      'source': ilist,
+      'appendTo': $('#icon-params'),
+      focus: function(event, ui) {
+        event.preventDefault();
+        $(this).val(ui.item.value);
+      },
+      select: function(event, ui) {
+        event.preventDefault();
+        $(this).val(ui.item.value);
+        $('.ui-icon',iview).attr({'class':'ui-icon ui-icon-'+ui.item.value });
+      }
+    });
+
+    /* Icon size */
+    isize.selectmenu({ 'change': function(e, d) { $('.ui-icon',iview).css({ 'font-size': d.item.value }); } });
+
+    /* Initial icon settings */
+    $(iview).css({'background-color': bcolor.val() });
+    $('.ui-icon', iview).css({'color': icolor.val(), 'font-size': isize.val() });
+
   })(jQuery, document);
   /*]]>*/
 </script>
