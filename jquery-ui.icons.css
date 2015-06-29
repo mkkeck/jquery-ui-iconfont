@@ -21,29 +21,32 @@
 .ui-icon {
   background: transparent none no-repeat scroll 0 0 !important;
   display: block;
-  font: 14px/16px 'jquery-ui', sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0;
-  height: 1em;
-  overflow: visible;
-  position: relative;
-  vertical-align: middle;
-  text-indent: -999999px;
+  font: normal normal normal 14px/16px 'jquery-ui', sans-serif;
   text-transform: none;
-  width: 1em;
+  text-rendering: auto;
+  text-indent: 0;
+  overflow: visible;
+  height: auto;
+  width: auto;
+  transform: translate(0,0);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 .ui-icon:before {
   display: block;
   float: left;
+  height: 100%;
+  line-height: 100%;
   text-align: center;
   text-indent: 0;
   vertical-align: middle;
   width: 100%;
+}
+.ui-icon:after {
+  display: table;
+  content: '';
+  clear: both;
+
 }
 
 /* positioning on button element(s) */
@@ -97,6 +100,7 @@
   display: block;
   left: 50%;
   margin: -0.5em;
+  overflow: hidden;
   position: absolute;
   top: 50%;
 }
@@ -180,6 +184,7 @@
 
 /* this makes resizable handlers responsive */
 .ui-resizable-handle {
+  display: block;
   font-size: 1em;
   position: absolute;
 }
@@ -234,6 +239,34 @@
   height: 1em;
   right: -0.5em;
   top: -0.5em;
+}
+
+/* Animation */
+.ui-animate-rotate .ui-icon {
+  animation: rotate 1s linear infinite;
+  transform-origin: 50% 50%;
+  -moz-animation: rotate 1s linear infinite;
+  -moz-transform-origin: 50% 50%;
+  -ms-animation: rotate 1s linear infinite;
+  -ms-transform-origin: 50% 50%;
+  -webkit-animation: rotate 1s linear infinite;
+  -webkit-transform-origin: 50% 50%;
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* apply glyphs to icons */
@@ -575,3 +608,9 @@
 .ui-icon-battery-3:before { content: '\e70f'; }
 .ui-icon-signal:before { content: '\e710'; }
 .ui-icon-signal-diag:before { content: '\e711'; }
+
+.ui-throbber-balls:before  { content: '\e712'; }
+.ui-throbber-circle:before { content: '\e713'; }
+.ui-throbber-comet:before  { content: '\e714'; }
+.ui-throbber-lines:before  { content: '\e715'; }
+.ui-throbber-planet:before { content: '\e716'; }
