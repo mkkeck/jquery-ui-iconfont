@@ -55,12 +55,12 @@ a:focus, a:hover { text-decoration: none; }
 .space { height: 1em; }
 
 .as-button {
-  padding: 0.4em 0.4em 0.4em 2em;
+  padding: 0.4em 0.6em 0.4em 2em;
   position: relative;
   text-decoration: none;
 }
 .as-button .ui-icon {
-  left: 0.4em;
+  left: 0.6em;
   margin-left: 0;
   position: absolute;
   margin-top: -0.5em;
@@ -96,35 +96,38 @@ form.ui-sample select { width: 20em; }
   max-width: 500px;
   width: 100%;
 }
-
+.icons-busy,
 #icons-grid,
 #icons-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+.icons-busy li,
 #icons-grid li,
 #icons-list li {
+  display: block;
   float: left;
   margin: 0.5%;
   padding: 5px;
 }
+.icons-busy li,
 #icons-grid li {
   cursor: pointer;
-}
-#icons-list {
-  margin: 0 auto;
-}
-#icons-list li {
-  box-sizing: border-box;
   vertical-align: middle;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+}
+#icons-grid li .ui-icon {
+  float: left;
+}
+
+#icons-list {
+  line-height: 1.5;
+  margin: 0 auto;
 }
 #icons-list li label,
 #icons-list li input {
   float: left;
-  line-height: 1.5;
+  line-height: 1;
   vertical-align: middle;
 }
 #icons-list li input {
