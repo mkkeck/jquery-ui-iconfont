@@ -19,11 +19,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
   <script src="preview.js" type="text/javascript"></script>
-  <script type="text/javascript">
-  /*<!CDATA[*/
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-64592666-1', 'auto');ga('send', 'pageview');
-  /*]]>*/
-</script>
 </head>
 <body>
 
@@ -40,6 +35,16 @@
       <li><span class="ui-icon ui-icon-file-txt"></span>Icon License <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="Creative Commons Attribution-ShareAlike">CC BY-SA 3.0</a></li>
       <li><span class="ui-icon ui-icon-comments"></span>Please report bugs or feature requests on the <a href="https://github.com/mkkeck/jquery-ui-icons/issues">issue-tracker</a>.</li>
     </ul>
+    <p class="hl-3">Changelog:</p>
+    <ul>
+      <li>2015-07-12
+        <ul>
+          <li>Font upddated: Font has baseline 0em. This should remove problems descripted in Issue <a href="https://github.com/mkkeck/jquery-ui-icons/issues/2">#2</a> &amp; <a href="https://github.com/mkkeck/jquery-ui-icons/issues/3">#3</a>.</li>
+          <li>New CSS-Animated loaders</li>
+          <li>Improved icon picker</li>
+        </ul>
+      </li>
+    </ul>
   </div>
 
   <h2 class="hl-2">Icon Picker</h2>
@@ -54,16 +59,16 @@
         <p>
           <label for="icon-size">Icon size:</label>
           <select id="icon-size">
-            <option value="1em" selected="selected">Default</option>
+            <option value="1em">Default</option>
             <option value="2em">2 em</option>
             <option value="4em">4 em</option>
             <option value="6em">6 em</option>
-            <option value="8em">8 em</option>
+            <option value="8em" selected="selected">8 em</option>
           </select>
         </p>
         <p>
           <label for="icon-color">Icon color:</label>
-          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-color" type="text" value="#953734" /></span>
+          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-color" type="text" value="#c00000" /></span>
         </p>
         <p>
           <label for="back-color">Backcolor:</label>
@@ -75,6 +80,28 @@
       </div>
     </div>
   </div>
+
+
+  <h2 class="hl-2">Busy Icons (Loaders/Spinners)</h2>
+  <p class="hl-3">Font-Icons</p>
+  <p class="ui-widget">Usage Example:<br />&lt;span class=&quot;ui-icon ui-loading-icon ui-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
+  <ul class="icons-busy ui-widget ui-helper-clearfix">
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-balls"><span class="ui-icon ui-loading-icon ui-icon-balls"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle"><span class="ui-icon ui-loading-icon ui-icon-circle"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-comet"><span class="ui-icon ui-loading-icon ui-icon-comet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-lines"><span class="ui-icon ui-loading-icon ui-icon-lines"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-planet"><span class="ui-icon ui-loading-icon ui-icon-planet"></span></li>
+  </ul>
+  <p class="hl-3">CSS-Icons</p>
+  <p class="ui-widget">Usage Example:<br />&lt;span class=&quot;ui-busy-icon ui-busy-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
+  <ul class="icons-busy ui-widget ui-helper-clearfix">
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-circle"><span class="ui-busy-icon ui-busy-icon-circle"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-clock"><span class="ui-busy-icon ui-busy-icon-clock"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-comet"><span class="ui-busy-icon ui-busy-icon-comet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-planet"><span class="ui-busy-icon ui-busy-icon-planet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-progress"><span class="ui-busy-icon ui-busy-icon-progress"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-radar"><span class="ui-busy-icon ui-busy-icon-radar"></span></li>
+  </ul>
 
   <h2 class="hl-2">Download and sources</h2>
   <div class="ui-widget">
@@ -198,11 +225,6 @@
   </div>
   <h3 class="hl-3">Framework Icons (content color preview)</h3>
   <ul id="icons-grid" class="ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-animate-rotate ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-throbber-balls"></span></li>
-    <li class="ui-state-default ui-animate-rotate ui-corner-all" title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-throbber-circle"></span></li>
-    <li class="ui-state-default ui-animate-rotate ui-corner-all" title=".ui-icon-arrow-1-e"><span class="ui-icon ui-throbber-comet"></span></li>
-    <li class="ui-state-default ui-animate-rotate ui-corner-all" title=".ui-icon-arrow-1-se"><span class="ui-icon ui-throbber-lines"></span></li>
-    <li class="ui-state-default ui-animate-rotate ui-corner-all" title=".ui-icon-arrow-1-s"><span class="ui-icon ui-throbber-planet"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-e"><span class="ui-icon ui-icon-arrow-1-e"></span></li>
@@ -956,10 +978,10 @@
 
     /* Hover states on the static widgets */
     $('body')
-      .on('mouseover', '.as-button, #icons-grid li', function() { $(this).addClass('ui-state-hover'); })
-      .on('mouseout', '.as-button, #icons-grid li', function()  { $(this).removeClass('ui-state-hover'); })
-      .on('mousedown', '#icons-grid li', function() { $(this).addClass('ui-state-highlight'); })
-      .on('mouseup', '#icons-grid li', function() { $(this).removeClass('ui-state-highlight'); });
+      .on('mouseover', '.as-button, #icons-grid li, .icons-busy li', function() { $(this).addClass('ui-state-hover'); })
+      .on('mouseout', '.as-button, #icons-grid li, .icons-busy li', function()  { $(this).removeClass('ui-state-hover'); })
+      .on('mousedown', '#icons-grid li, .icons-busy li', function() { $(this).addClass('ui-state-highlight'); })
+      .on('mouseup', '#icons-grid li, .icons-busy li', function() { $(this).removeClass('ui-state-highlight'); });
 
     var alist = $('#icons-list'), bcolor = $('#back-color'), icolor = $('#icon-color'), iname = $('#icon-name'), isize = $('#icon-size'), iview = $('#icon-preview'), ilist = [];
     alist.on('focus', 'li input', function() {
@@ -1017,7 +1039,7 @@
 
     /* Initial icon settings */
     $(iview).css({'background-color': bcolor.val() });
-    $('.ui-icon', iview).css({'color': icolor.val(), 'font-size': isize.val() });
+    $('.ui-icon', iview).css({'color': icolor.val(), 'font-size': isize.val() }).attr({'class':'ui-icon ui-icon-'+iname.val() });
 
   })(jQuery, document);
   /*]]>*/

@@ -7,46 +7,42 @@
  */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('fonts/jquery-ui.eot?jquf');
-  src: url('fonts/jquery-ui.eot?#iefixjquf') format('embedded-opentype'),
-  url('fonts/jquery-ui.woff?jquf') format('woff'),
-  url('fonts/jquery-ui.ttf?jquf') format('truetype'),
-  url('fonts/jquery-ui.svg?jquf#jquery-ui') format('svg');
+  src: url('fonts/jquery-ui.eot?jquf1.3');
+  src: url('fonts/jquery-ui.eot?#iefixjquf1.3') format('embedded-opentype'),
+       url('fonts/jquery-ui.woff?jquf1.3') format('woff'),
+       url('fonts/jquery-ui.ttf?jquf1.3') format('truetype'),
+       url('fonts/jquery-ui.svg?jquf1.3#jquery-ui') format('svg');
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
 }
 
-/* icon basics */
 .ui-icon {
   background: transparent none no-repeat scroll 0 0 !important;
   display: block;
   font: normal normal normal 14px/16px 'jquery-ui', sans-serif;
+  overflow: hidden;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  position: relative;
   text-transform: none;
-  text-rendering: auto;
-  text-indent: 0;
-  overflow: visible;
-  height: auto;
-  width: auto;
+  text-indent: -9999px;
   transform: translate(0,0);
+  width: 1em;
   -moz-osx-font-smoothing: grayscale;
+  -moz-transform: translate(0,0);
   -webkit-font-smoothing: antialiased;
+  -webkit-transform: translate(0,0);
 }
 .ui-icon:before {
   display: block;
-  float: left;
-  height: 100%;
-  line-height: 100%;
-  text-align: center;
+  left: 50%;
+  line-height: 1;
+  top: 50%;
+  margin: -0.5em;
+  position: absolute;
   text-indent: 0;
-  vertical-align: middle;
-  width: 100%;
-}
-.ui-icon:after {
-  display: table;
-  content: '';
-  clear: both;
-
 }
 
 /* positioning on button element(s) */
@@ -55,7 +51,6 @@
 .ui-button-text-icon-secondary .ui-icon,
 .ui-button-text-icons .ui-icon,
 .ui-button-icons-only .ui-icon {
-  display: block;
   margin-top: -0.5em;
   position: absolute;
   top: 50%;
@@ -78,8 +73,8 @@
 /* positioning on datepicker element(s) */
 .ui-datepicker .ui-datepicker-next,
 .ui-datepicker .ui-datepicker-prev {
-  font-size: 1em;
   cursor: pointer;
+  font-size: 1em;
   height: 2em;
   margin: 1px;
   top: 1px;
@@ -97,10 +92,8 @@
 }
 .ui-datepicker .ui-datepicker-prev .ui-icon,
 .ui-datepicker .ui-datepicker-next .ui-icon {
-  display: block;
   left: 50%;
   margin: -0.5em;
-  overflow: hidden;
   position: absolute;
   top: 50%;
 }
@@ -117,7 +110,6 @@
 
 /* positioning on selectmenu element(s) */
 .ui-selectmenu-button .ui-icon {
-  display: block;
   left: auto;
   margin-top: -0.5em;
   position: absolute;
@@ -149,7 +141,6 @@
 }
 /* vertically center icon */
 .ui-spinner .ui-icon {
-  display: block;
   left: 0;
   margin-top: -0.5em;
   position: absolute;
@@ -239,34 +230,6 @@
   height: 1em;
   right: -0.5em;
   top: -0.5em;
-}
-
-/* Animation */
-.ui-animate-rotate .ui-icon {
-  animation: rotate 1s linear infinite;
-  transform-origin: 50% 50%;
-  -moz-animation: rotate 1s linear infinite;
-  -moz-transform-origin: 50% 50%;
-  -ms-animation: rotate 1s linear infinite;
-  -ms-transform-origin: 50% 50%;
-  -webkit-animation: rotate 1s linear infinite;
-  -webkit-transform-origin: 50% 50%;
-}
-@-moz-keyframes rotate {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@-ms-keyframes rotate {
-  from { -ms-transform: rotate(0deg); }
-  to { -ms-transform: rotate(360deg); }
-}
-@-webkit-keyframes rotate {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 /* apply glyphs to icons */
@@ -609,8 +572,239 @@
 .ui-icon-signal:before { content: '\e710'; }
 .ui-icon-signal-diag:before { content: '\e711'; }
 
-.ui-throbber-balls:before  { content: '\e712'; }
-.ui-throbber-circle:before { content: '\e713'; }
-.ui-throbber-comet:before  { content: '\e714'; }
-.ui-throbber-lines:before  { content: '\e715'; }
-.ui-throbber-planet:before { content: '\e716'; }
+
+/*
+ * Animations
+ */
+@keyframes         _busy_rot  { from { transform: rotate(0deg); }         to { transform: rotate(359deg); }         }
+@-moz-keyframes    _busy_rot  { from { -moz-transform: rotate(0deg); }    to { -moz-transform: rotate(359deg); }    }
+@-ms-keyframes     _busy_rot  { from { -ms-transform: rotate(0deg); }     to { -ms-transform: rotate(359deg); }     }
+@-webkit-keyframes _busy_rot  { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } }
+
+@keyframes         _busy_bar  { from { left: -50%; } to { left: 200%; } }
+@-moz-keyframes    _busy_bar  { from { left: -50%; } to { left: 200%; } }
+@-ms-keyframes     _busy_bar  { from { left: -50%; } to { left: 200%; } }
+@-webkit-keyframes _busy_bar  { from { left: -50%; } to { left: 200%; } }
+
+.ui-loading-icon.ui-icon-balls:before  { content: '\e712'; }
+.ui-loading-icon.ui-icon-circle:before { content: '\e713'; }
+.ui-loading-icon.ui-icon-comet:before  { content: '\e714'; }
+.ui-loading-icon.ui-icon-lines:before  { content: '\e715'; }
+.ui-loading-icon.ui-icon-planet:before { content: '\e716'; }
+.ui-loading-icon.ui-icon-balls,
+.ui-loading-icon.ui-icon-circle,
+.ui-loading-icon.ui-icon-comet,
+.ui-loading-icon.ui-icon-lines,
+.ui-loading-icon.ui-icon-planet {
+  animation: _busy_rot 1s infinite linear;
+  -moz-animation: _busy_rot 1s infinite linear;
+  -ms-animation: _busy_rot 1s infinite linear;
+  -webkit-animation: _busy_rot 1s infinite linear;
+}
+
+.ui-busy-icon {
+  background: transparent none no-repeat scroll 0 0 !important;
+  display: block;
+  font: normal normal normal 14px/16px sans-serif;
+  overflow: hidden;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-indent: -99999px;
+  transform: translate(0,0);
+  width: 1em;
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -webkit-transform: translate(0,0);
+}
+.ui-busy-icon:after,
+.ui-busy-icon:before {
+  content: '';
+  left: 50%;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+}
+
+/* Loader-Animation: Circle */
+.ui-busy-icon-circle:after,
+.ui-busy-icon-circle:before {
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 1em;
+  width: 1em;
+  -moz-border-radius: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-border-radius: 100%;
+  -webkit-box-sizing: border-box;
+}
+.ui-busy-icon-circle:after,
+.ui-busy-icon-circle:before {
+  border: 0.2em solid;
+}
+.ui-busy-icon-circle:before {
+  opacity: 0.25;
+}
+.ui-busy-icon-circle:after {
+  border-bottom-color: transparent;
+  animation: _busy_rot 1s infinite linear;
+  -moz-animation: _busy_rot 1s infinite linear;
+  -ms-animation: _busy_rot 1s infinite linear;
+  -webkit-animation: _busy_rot 1s infinite linear;
+}
+
+/* Loader-Animation: Clock */
+.ui-busy-icon-clock,
+.ui-busy-icon-clock:after,
+.ui-busy-icon-clock:before {
+  border: 0.1em solid;
+}
+.ui-busy-icon-clock {
+  border-radius: 100%;
+  box-sizing: border-box;
+  -moz-border-radius: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-border-radius: 100%;
+  -webkit-box-sizing: border-box;
+}
+.ui-busy-icon-clock:after,
+.ui-busy-icon-clock:before {
+  border-radius: 1em;
+  position: absolute;
+  margin-left: -0.1em;
+  margin-top: -0.1em;
+  width: 0;
+  transform-origin: 0.1em 0.1em;
+  -moz-transform-origin: 0.1em 0.1em;
+  -ms-transform-origin: 0.1em 0.1em;
+  -webkit-transform-origin: 0.1em 0.1em;
+}
+.ui-busy-icon-clock:after {
+  height: 0.3em;
+  animation: _busy_rot 2s linear infinite;
+  -moz-animation: _busy_rot 2s linear infinite;
+  -ms-animation: _busy_rot 2s linear infinite;
+  -webkit-animation: _busy_rot 2s linear infinite;
+}
+.ui-busy-icon-clock:before {
+  animation: _busy_rotate 12s linear infinite;
+  height: 0.2em;
+  -moz-animation: _busy_rot 12s linear infinite;
+  -ms-animation: _busy_rot 12s linear infinite;
+  -webkit-animation: _busy_rot 12s linear infinite;
+}
+
+/* Loader-Animation: Planet und Comet */
+.ui-busy-icon-comet,
+.ui-busy-icon-comet:after,
+.ui-busy-icon-comet:before,
+.ui-busy-icon-planet:after,
+.ui-busy-icon-planet:before {
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.ui-busy-icon-comet {
+  border-bottom-right-radius: 0.4em;
+  -moz-border-bottom-right-radius: 0.4em;
+  -webkit-border-bottom-right-radius: 0.4em;
+  box-shadow: -0.1em 0.1em 0.1em 0 inset;
+  -moz-box-shadow: -0.1em 0.1em 0.1em 0 inset;
+  -webkit-box-shadow: -0.1em 0.1em 0.1em 0 inset;
+  animation: _busy_rot 1s ease-in-out infinite;
+  -moz-animation: _busy_rot 1s ease-in-out infinite;
+  -ms-animation: _busy_rot 1s ease-in-out infinite;
+  -webkit-animation: _busy_rot 1s ease-in-out infinite;
+}
+.ui-busy-icon-comet:after,
+.ui-busy-icon-comet:before,
+.ui-busy-icon-planet:after {
+  margin-left: 0;
+  margin-top: 0;
+}
+.ui-busy-icon-comet:after {
+  height: 1em;
+  left: 0;
+  width: 1em;
+  top: 0;
+  box-shadow: -0.2em -0.1em 0.1em -0.2em;
+  -moz-box-shadow: 0.1em 0 0.1em -0.1em;
+  -webkit-box-shadow: 0.1em 0.1em 0.1em -0.1em;
+}
+.ui-busy-icon-comet:before,
+.ui-busy-icon-planet:after {
+  height: 0.4em;
+  left: 0.6em;
+  top: 0.6em;
+  width: 0.4em;
+  box-shadow: 0 0 4em 4em inset;
+  -moz-box-shadow: 0 0 4em 4em inset;
+  -webkit-box-shadow: 0 0 4em 4em inset;
+}
+.ui-busy-icon-planet {
+  animation: _busy_rot 1s linear infinite;
+  -moz-animation: _busy_rot 1s linear infinite;
+  -ms-animation: _busy_rot 1s linear infinite;
+  -webkit-animation: _busy_rot 1s linear infinite;
+}
+.ui-busy-icon-planet:before {
+  height: 1em;
+  width: 1em;
+  box-shadow: 0 0 0.1em 0 inset;
+  -moz-box-shadow: 0 0 0.1em 0 inset;
+  -webkit-box-shadow: 0 0 0.1em 0 inset;
+}
+
+/* Loader-Animation: Progress-Bar */
+.ui-busy-icon-progress {
+  border: 0.1em solid;
+  border-radius: 0.1em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.ui-busy-icon-progress:before {
+  border-left: 0.4em solid;
+  border-right: 0.4em solid;
+  height: 1em;
+  width: 0.4em;
+  animation: _busy_bar 2s linear infinite;
+  transform-origin: 0 0;
+  -moz-animation: _busy_bar 2s linear infinite;
+  -moz-transform-origin: 0 0;
+  -ms-animation: _busy_bar 2s linear infinite;
+  -ms-transform-origin: 0 0;
+  -webkit-animation: _busy_bar 2s linear infinite;
+  -webkit-transform-origin: 0 0;
+}
+
+.ui-busy-icon-radar,
+.ui-busy-icon-radar:after,
+.ui-busy-icon-radar:before {
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.ui-busy-icon-radar:before {
+  border: 0.2em solid;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  animation: _busy_rot 1s ease infinite;
+  -moz-animation: _busy_rot 1s ease infinite;
+  -ms-animation: _busy_rot 1s ease infinite;
+  -webkit-animation: _busy_rot 1s ease infinite;
+}
+.ui-busy-icon-radar:after {
+  height: 0.4em;
+  margin-left: -0.2em;
+  margin-top: -0.2em;
+  width: 0.4em;
+  box-shadow: 0 0 4em 4em inset;
+  -moz-box-shadow: 0 0 4em 4em inset;
+  -webkit-box-shadow: 0 0 4em 4em inset;
+}
