@@ -1,8 +1,4 @@
 #Icons for jQuery-UI
-* Complete new redesigned icons for jQuery UI as font. 
-* Support mobile devices 
-* Clear and resizable icons 
-* Changeable color of icons without the need to export new graphix 
 * Complete new redesigned icons for jQuery UI as font
 * Support mobile devices
 * Clear and resizable icons
@@ -48,4 +44,3 @@ Take a look at the demo under http://mkkeck.github.io/jquery-ui-icons/
     This should remove problems descripted in Issue [#2](https://github.com/mkkeck/jquery-ui-icons/issues/2) & [#3](https://github.com/mkkeck/jquery-ui-icons/issues/3). 
   * New CSS-Animated loaders 
   * Improved icon picker 
-
