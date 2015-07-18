@@ -1,51 +1,19 @@
-html, body,
-.ui-widget,
-input[type='text'] {
-  font: 13px/16px 'Ubuntu', Arial, Tahoma, Helvetica, Verdana, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-body {
-  margin: 0;
-  padding: 10px;
-}
-form {
-  padding: 0;
-}
-
-em, i, q, blockquote {
-  font-style: normal;
-}
+html, body, .ui-widget, input[type='text'] { font: normal normal normal 13px/16px 'Ubuntu', Arial, Tahoma, Helvetica, Verdana, sans-serif; font-weight: 300; }
+body { margin: 0; padding: 10px; }
+form { padding: 0; }
+em, i, q, blockquote { font-style: normal; }
 strong, b { font-weight: bold; }
-a {
-  color: #bc3f3c;
-  font-weight: bold;
-  text-decoration: underline;
-}
+a { color: #bc3f3c; font-weight: bold; text-decoration: underline; }
 a:focus, a:hover { text-decoration: none; }
 
-.hl-2, .hl-2 label,
-.hl-3, .hl-3 label {
-  font-weight: 400;
-}
-.hl-1, .hl-2, .hl-3 {
-  font-family: 'Ubuntu Condensed', Arial, Tahoma, Helvetica, Verdana, sans-serif;
-}
+.hl-2, .hl-2 label, .hl-3, .hl-3 label { font-weight: 400; }
+.hl-1, .hl-2, .hl-3 { font-family: 'Ubuntu Condensed', Arial, Tahoma, Helvetica, Verdana, sans-serif; }
 .hl-1 { font-size: 2.25em; }
 .hl-2 { font-size: 1.75em; margin-top: 2em; }
 .hl-3 { font-size: 1.5em; margin-top: 2em; }
-.ul-1 {
-  list-style: none outside none;
-  margin: 0;
-  padding: 0;
-}
-.ul-1 li {
-  padding: 0 0 0.5em 2em;
-}
-.ul-1 li .ui-icon {
-  float: left;
-  margin-left: -1.5em;
-}
+.ul-1 { list-style: none outside none; margin: 0; padding: 0; }
+.ul-1 li { padding: 0 0 0.5em 2em; }
+.ul-1 li .ui-icon { float: left; margin-left: -1.5em; }
 .ul-1 li .ui-icon-pencil { color: #1c94c4; }
 .ul-1 li .ui-icon-mobile { color: #c77405; }
 .ul-1 li .ui-icon-arrow-4-diag { color: #8470ff; }
@@ -54,408 +22,98 @@ a:focus, a:hover { text-decoration: none; }
 
 .space { height: 1em; }
 
-.as-button {
-  padding: 0.4em 0.6em 0.4em 2em;
-  position: relative;
-  text-decoration: none;
-}
-.as-button .ui-icon {
-  left: 0.6em;
-  margin-left: 0;
-  position: absolute;
-  margin-top: -0.5em;
-  top: 50%;
-}
+.as-button { padding: 0.4em 0.6em 0.4em 2em; position: relative; text-decoration: none; }
+.as-button .ui-icon { left: 0.6em; margin-left: 0; position: absolute; margin-top: -0.5em; top: 50%; }
 
-.ui-sample {
-  font-size: 1em;
-  padding: 1em;
-}
-.ui-sample > .ui-icon {
-  float: left;
-  margin-right: 10px;
-}
-.ui-sample-large-icon .ui-icon {
-  font-size: 2.3em;
-}
+.ui-sample { font-size: 1em; padding: 1em; }
+.ui-sample > .ui-icon { float: left; margin-right: 10px; }
+.ui-sample-large-icon .ui-icon { font-size: 2.3em; }
 form.ui-sample { padding: 0; }
 form.ui-sample select { width: 20em; }
 
-/* Bug in some jQuery UI Themes? */
-.ui-spinner {
-  height: auto !important;
-}
-.ui-autocomplete {
-  max-height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+/* UI-Sopinner and UI-Autocomplete */
+.ui-spinner { height: auto !important; /* Bug in some jQuery UI Themes? */ }
+.ui-autocomplete { max-height: 200px; overflow-y: auto; overflow-x: hidden; }
 
-#body {
-  margin: 0 auto;
-  max-width: 500px;
-  width: 100%;
-}
-.icons-busy,
-#icons-grid,
-#icons-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.icons-busy li,
-#icons-grid li,
-#icons-list li {
-  display: block;
-  float: left;
-  margin: 0.5%;
-  padding: 5px;
-}
-.icons-busy li,
-#icons-grid li {
-  cursor: pointer;
-  vertical-align: middle;
-}
-#icons-grid li .ui-icon {
-  float: left;
-}
+#body { margin: 0 auto; max-width: 500px; width: 100%; }
+.icons-busy, #icons-grid, #icons-list { list-style: none; margin: 0; padding: 0; }
+.icons-busy li, #icons-grid li, #icons-list li { display: block; float: left; margin: 0.5%; padding: 5px; }
+.icons-busy li, #icons-grid li { cursor: pointer; vertical-align: middle; }
+#icons-grid li .ui-icon { float: left; }
 
-#icons-list {
-  line-height: 1.5;
-  margin: 0 auto;
-}
-#icons-list li label,
-#icons-list li input {
-  float: left;
-  line-height: 1;
-  vertical-align: middle;
-}
-#icons-list li input {
-  background: transparent none 0 0;
-  color: inherit;
-  border: 0 none;
-  margin-left: 5px;
-  width: 15em;
-}
+#icons-list { margin: 0 auto; vertical-align: middle; }
+#icons-list li { padding-left: 2em; position: relative}
+#icons-list li label { left: 0.4em; margin-top: -0.5em; position: absolute; top: 50%; }
+#icons-list li input { background: transparent none 0 0; border: 0 none; color: inherit; width: 15em; }
 
-#icon-picker {
-  display: block;
-  min-height: 0;
-  padding: 20px;
-}
-#icon-picker:after {
-  content: '';
-  display: table;
-}
-#icon-picker:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-#icon-params,
-#icon-preview {
-  display: block;
-  float: left;
-}
+/* Icon Picker */
+#icon-picker { display: block; min-height: 0; padding: 20px; }
+#icon-picker:before { content: ''; display: table; }
+#icon-picker:after { clear: both; content: ''; display: table; }
+#icon-params, #icon-preview { display: block; float: left; }
+#icon-params { max-width: 250px; min-width: 120px; }
+#icon-params p { margin: 0.5em 0 0 0; padding: 0; }
+#icon-params p:first-child { margin-top: 0; }
+#icon-params input, #icon-params select, #icon-params .ui-input-wrap, #icon-params .ui-selectmenu-button, #icon-params .evo-color-picker { box-sizing: border-box; padding: 0; width: 100% !important; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+#icon-params input { background-color: transparent; border: 0 none; color: inherit; padding: 0.4em 1em; }
+#icon-params label, #icon-params .ui-input-wrap { display: block; }
+#icon-params .ui-selectmenu-button { line-height: normal; vertical-align: middle; }
+#icon-params .evo-color-picker { position: relative; }
+#icon-params .evo-color-picker input { padding-left: 3em; }
+#icon-params .evo-color-picker .evo-pointer { height: 18px; left: 1em; margin-top: -9px; position: absolute; top: 50%; width: 18px; }
+#icon-preview { background: #fff none 0 0 no-repeat; border-color: #000; float: right; height: 180px; position: relative; text-align: center; width: 180px; }
+#icon-preview .ui-icon { left: 50%; margin-left: -0.5em; margin-top: -0.5em; position: absolute; top: 50%; }
 
-#icon-params {
-  max-width: 250px;
-  min-width: 120px;
-}
-#icon-params p {
-  margin: 0.5em 0 0 0;
-  padding: 0;
-}
-#icon-params p:first-child {
-  margin-top: 0;
-}
-#icon-params input,
-#icon-params select,
-#icon-params .ui-input-wrap,
-#icon-params .ui-selectmenu-button,
-#icon-params .evo-color-picker {
-  box-sizing: border-box;
-  padding: 0;
-  width: 100% !important;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-#icon-params input {
-  background-color: transparent;
-  border: 0 none;
-  color: inherit;
-  padding: 0.4em 1em;
-}
-#icon-params label,
-#icon-params .ui-input-wrap {
-  display: block;
-}
-#icon-params .ui-selectmenu-button {
-  line-height: normal;
-  vertical-align: middle;
-}
-#icon-params .evo-color-picker {
-  position: relative;
-}
-#icon-params .evo-color-picker input {
-  padding-left: 3em;
-}
-#icon-params .evo-color-picker .evo-pointer {
-  height: 18px;
-  left: 1em;
-  margin-top: -9px;
-  position: absolute;
-  top: 50%;
-  width: 18px;
-}
-#icon-preview {
-  background: #fff none 0 0 no-repeat;
-  border-color: #000;
-  float: right;
-  height: 180px;
-  position: relative;
-  text-align: center;
-  width: 180px;
-}
-#icon-preview .ui-icon {
-  left: 50%;
-  margin-left: -0.5em;
-  margin-top: -0.5em;
-  position: absolute;
-  top: 50%;
-}
+#menu { width: 100px; }
+#menu .ui-menu-item { font-weight: normal; white-space: nowrap; }
 
+#overlay-example { height: 200px; overflow:hidden; padding:1% 2%; position: relative; width: 96%; }
+#overlay-example .ui-widget-overlay { position: absolute; }
+#overlay-example .ui-widget-shadow { height: 152px; left: 50px; position: absolute; top: 30px; width: 302px; }
+#overlay-example .ui-widget { height: 130px; left: 50px; padding: 10px; position: absolute; top: 30px; width: 280px; }
+#overlay-example .ui-dialog-content { background: none; border: 0 none; }
 
-#menu {
-  width: 100px;
-}
-#menu .ui-menu-item {
-  font-weight: normal;
-  white-space: nowrap;
-}
-
-#overlay-example {
-  height: 200px;
-  overflow:hidden;
-  padding:1% 2%;
-  position: relative;
-  width: 96%;
-}
-#overlay-example .ui-widget-overlay {
-  position: absolute;
-}
-#overlay-example .ui-widget-shadow {
-  height: 152px;
-  left: 50px;
-  position: absolute;
-  width: 302px;
-  top: 30px;
-}
-#overlay-example .ui-widget {
-  height: 130px;
-  left: 50px;
-  padding: 10px;
-  position: absolute;
-  width: 280px;
-  top: 30px;
-}
-#overlay-example .ui-dialog-content {
-  background: none;
-  border: 0 none;
-}
-
-#theme-switch span {
-  line-height: normal;
-  vertical-align: middle;
-}
+#theme-switch span { line-height: normal; vertical-align: middle; }
 
 /*  evol.colorpicker = ColorPicker widget for jQuery UI  */
 /*  (c) 2014 Olivier Giulieri  */
 /*  https://github.com/evoluteur/colorpicker */
-.evo-pop {
-  z-index: 10000;
-  width: 204px;
-  padding: 3px 3px 0;
-}
-.evo-pop-ie {
-  z-index: 10000;
-  width: 212px;
-  padding: 3px;
-}
-.evo-palette td {
-  font-size: 1px;
-  border: solid 1px #c0c0c0;
-  padding: 7px;
-  cursor: pointer;
-}
-.evo-palette tr.top > td {
-  border-bottom: 0;
-}
-.evo-palette tr.in > td {
-  border-top: 0;
-  border-bottom: 0;
-}
-.evo-palette tr.bottom > td {
-  border-top: 0;
-}
-.evo-palette div.sep {
-  height: 3px;
-}
-.evo-palette,
-.evo-palette-ie {
-  border-collapse: separate;
-  border-spacing: 4px 0;
-}
-.evo-palette th,
-.evo-palette-ie th {
-  border: 0;
-  padding: 5px 3px;
-  text-align: left;
-  font-weight: normal;
-  background: transparent !important;
-}
-.evo-palette-ie td {
-  font-size: 1px;
-  border: solid 1px #c0c0c0;
-  padding: 7px;
-  cursor: pointer;
-}
-.evo-palette2,
-.evo-palette2-ie {
-  margin: auto;
-  border-collapse: collapse;
-}
-.evo-palette2 td,
-.evo-palette2-ie td {
-  font-size: 1px;
-  cursor: pointer;
-}
-.evo-palette2 td {
-  padding: 6px 7px;
-}
-.evo-palette2-ie td {
-  padding: 5px;
-}
-.evo-palcenter {
-  padding: 5px;
-  text-align: center;
-}
-.evo-colorind,
-.evo-colorind-ie,
-.evo-colorind-ff {
-  border: solid 1px #c3c3c3;
-  width: 18px;
-  height: 18px;
-  float: right;
-}
-.evo-colorind-ie {
-  position: relative;
-  top: -23px;
-}
-.evo-colorbox-ie {
-  font-size: 8px;
-  padding: 3px 9px !important;
-}
-.evo-pop:after,
-.evo-pop-ie:after,
-.evo-colorind:after,
-.evo-colorind-ie:after,
-.evo-colorind-ff:after,
-.evo-color span:after,
-.evo-cHist:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-  font-size: 0;
-}
-.evo-color {
-  width: 94px;
-  padding: 1px 3px 0 4px;
-}
-.evo-color div {
-  border: 1px solid #808080;
-  border-right-color: #c0c0c0;
-  border-bottom-color: #c0c0c0;
-  padding: 3px;
-  margin-bottom: 5px;
-  width: 10px;
-  height: 10px;
-  float: left;
-}
-.evo-color span {
-  font-size: 15px;
-  margin: 1px 0 4px 3px;
-  float: left;
-}
-.evo-sep {
-  height: 10px;
-  font-size: 0;
-}
-.evo-more {
-  padding: 4px 5px 4px;
-  font-size: smaller;
-}
-.evo-cHist {
-  padding: 3px;
-}
-.evo-cHist div {
-  cursor: pointer;
-  border: solid 1px #c0c0c0;
-  padding: 3px;
-  margin: 5px;
-  width: 10px;
-  height: 10px;
-  float: left;
-}
-.evo-transparent {
-  background-image: repeating-linear-gradient(135deg, #000000, #000000 1px, #ffffff 1px, #ffffff 3px);
-}
-.evo-tr-box {
-  cursor: pointer;
-  border: solid 1px #c0c0c0;
-  padding: 3px;
-  width: 7px;
-  height: 7px;
-  float: right;
-  position: relative;
-  right: -3px;
-  top: 2px;
-}
-a.evo-hist {
-  margin-left: 6px;
-}
-.evo-pointer {
-  cursor: pointer;
-}
-.evo-hidden-button {
-  display: none;
-}
+.evo-pop { padding: 3px 3px 0; width: 204px; z-index: 999; }
+.evo-pop-ie { padding: 3px; width: 212px; z-index: 999; }
+.evo-palette td { border: solid 1px #c0c0c0; cursor: pointer; font-size: 1px; padding: 7px; }
+.evo-palette tr.top > td { border-bottom: 0 none; }
+.evo-palette tr.in > td { border-bottom: 0 none; border-top: 0 none; }
+.evo-palette tr.bottom > td { border-top: 0; }
+.evo-palette div.sep { height: 3px; }
+.evo-palette, .evo-palette-ie { border-collapse: separate; border-spacing: 4px 0; }
+.evo-palette th, .evo-palette-ie th { background: transparent !important; border: 0; font-weight: normal; padding: 5px 3px; text-align: left; }
+.evo-palette-ie td { border: solid 1px #c0c0c0; cursor: pointer; font-size: 1px; padding: 7px; }
+.evo-palette2, .evo-palette2-ie { border-collapse: collapse;  margin: auto; }
+.evo-palette2 td, .evo-palette2-ie td { cursor: pointer; font-size: 1px; }
+.evo-palette2 td { padding: 6px 7px; }
+.evo-palette2-ie td { padding: 5px; }
+.evo-palcenter { padding: 5px; text-align: center; }
+.evo-colorind, .evo-colorind-ie, .evo-colorind-ff { border: solid 1px #c3c3c3; float: right; height: 18px; width: 18px; }
+.evo-colorind-ie { position: relative; top: -23px; }
+.evo-colorbox-ie { font-size: 8px; padding: 3px 9px !important; }
+.evo-pop:after, .evo-pop-ie:after, .evo-colorind:after, .evo-colorind-ie:after, .evo-colorind-ff:after, .evo-color span:after, .evo-cHist:after { clear: both; content: '.'; font-size: 0; display: block; height: 0; visibility: hidden; }
+.evo-color { padding: 1px 3px 0 4px; width: 94px; }
+.evo-color div { border: 1px solid #808080; border-right-color: #c0c0c0; border-bottom-color: #c0c0c0; float: left; height: 10px; margin-bottom: 5px; padding: 3px; width: 10px; }
+.evo-color span { float: left; font-size: 15px; margin: 1px 0 4px 3px; }
+.evo-sep {font-size: 0; height: 10px; }
+.evo-more { font-size: smaller; padding: 4px 5px 4px; }
+.evo-cHist { padding: 3px; }
+.evo-cHist div { border: solid 1px #c0c0c0; cursor: pointer; float: left; height: 10px; margin: 5px; padding: 3px; width: 10px; }
+.evo-transparent { background-image: repeating-linear-gradient(135deg, #000000, #000000 1px, #ffffff 1px, #ffffff 3px); }
+.evo-tr-box { border: solid 1px #c0c0c0; cursor: pointer; float: right; height: 7px; padding: 3px; position: relative; right: -3px; top: 2px; width: 7px; }
+a.evo-hist { margin-left: 6px; }
+.evo-pointer { cursor: pointer; }
+.evo-hidden-button { display: none; }
 
 
 @media screen and (max-width: 519px) {
-  #body {
-    min-width: 300px;
-  }
-  #icons-list li {
-    float: none;
-    width: 100%;
-  }
-  #icon-params,
-  #icon-preview {
-    clear: both;
-    float: none;
-    max-width: none;
-    min-width: 200px;
-    width: 100%;
-  }
-  #icon-preview {
-    border: 0 none;
-    border-radius: 0;
-    border-top: 1px dashed #000;
-    margin-top: 20px;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-  }
+  #body { min-width: 300px; }
+  #icons-list li { float: none; margin-left: 0; margin-right: 0; width: 100%; }
+  #icon-params, #icon-preview { clear: both; float: none; max-width: none; min-width: 200px; width: 100%; }
+  #icon-preview { border: 0 none; border-radius: 0; border-top: 1px dashed #000; margin-top: 20px; -moz-border-radius: 0; -webkit-border-radius: 0; }
 }
