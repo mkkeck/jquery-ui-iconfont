@@ -4,26 +4,33 @@
  * Generated: with IcoMoon-App (Chromium)
  * License:   CC BY-SA 3.0
  *            https://creativecommons.org/licenses/by-sa/3.0/
+ * Update:    2015-07-18
+ * Version:   Font 1.4
+ *            Styles 1.4
  */
+
+/* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('fonts/jquery-ui.eot?jquf1.3');
-  src: url('fonts/jquery-ui.eot?#iefixjquf1.3') format('embedded-opentype'),
-       url('fonts/jquery-ui.woff?jquf1.3') format('woff'),
-       url('fonts/jquery-ui.ttf?jquf1.3') format('truetype'),
-       url('fonts/jquery-ui.svg?jquf1.3#jquery-ui') format('svg');
+  src: url('fonts/jquery-ui.eot?jquf1.4');
+  src: url('fonts/jquery-ui.eot?#iefixjquf1.4') format('embedded-opentype'),
+       url('fonts/jquery-ui.woff?jquf1.4') format('woff'),
+       url('fonts/jquery-ui.ttf?jquf1.4') format('truetype'),
+       url('fonts/jquery-ui.svg?jquf1.4#jquery-ui') format('svg');
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
 }
 
-.ui-icon {
+/* basic settings */
+.ui-icon,
+.ui-busy-icon {
   background: transparent none no-repeat scroll 0 0 !important;
   display: block;
   font: normal normal normal 14px/16px 'jquery-ui', sans-serif;
-  overflow: hidden;
   height: 1em;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   position: relative;
   text-transform: none;
@@ -37,12 +44,15 @@
 }
 .ui-icon:before {
   display: block;
+  height: 1em;
   left: 50%;
   line-height: 1;
-  top: 50%;
-  margin: -0.5em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
   position: absolute;
   text-indent: 0;
+  top: 50%;
+  width: 1em;
 }
 
 /* positioning on button element(s) */
@@ -93,7 +103,9 @@
 .ui-datepicker .ui-datepicker-prev .ui-icon,
 .ui-datepicker .ui-datepicker-next .ui-icon {
   left: 50%;
-  margin: -0.5em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  overflow: hidden;
   position: absolute;
   top: 50%;
 }
@@ -109,7 +121,7 @@
 }
 
 /* positioning on selectmenu element(s) */
-.ui-selectmenu-button .ui-icon {
+.ui-selectmenu-button span.ui-icon {
   left: auto;
   margin-top: -0.5em;
   position: absolute;
@@ -571,97 +583,139 @@
 .ui-icon-battery-3:before { content: '\e70f'; }
 .ui-icon-signal:before { content: '\e710'; }
 .ui-icon-signal-diag:before { content: '\e711'; }
+.ui-icon-window-minimize:before { content: '\e717'; }
 
-
-/*
- * Animations
- */
-@keyframes         _busy_rot  { from { transform: rotate(0deg); }         to { transform: rotate(359deg); }         }
-@-moz-keyframes    _busy_rot  { from { -moz-transform: rotate(0deg); }    to { -moz-transform: rotate(359deg); }    }
-@-ms-keyframes     _busy_rot  { from { -ms-transform: rotate(0deg); }     to { -ms-transform: rotate(359deg); }     }
-@-webkit-keyframes _busy_rot  { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); } }
-
-@keyframes         _busy_bar  { from { left: -50%; } to { left: 200%; } }
-@-moz-keyframes    _busy_bar  { from { left: -50%; } to { left: 200%; } }
-@-ms-keyframes     _busy_bar  { from { left: -50%; } to { left: 200%; } }
-@-webkit-keyframes _busy_bar  { from { left: -50%; } to { left: 200%; } }
-
+/* animated font glyphs */
 .ui-loading-icon.ui-icon-balls:before  { content: '\e712'; }
 .ui-loading-icon.ui-icon-circle:before { content: '\e713'; }
 .ui-loading-icon.ui-icon-comet:before  { content: '\e714'; }
 .ui-loading-icon.ui-icon-lines:before  { content: '\e715'; }
 .ui-loading-icon.ui-icon-planet:before { content: '\e716'; }
-.ui-loading-icon.ui-icon-balls,
-.ui-loading-icon.ui-icon-circle,
-.ui-loading-icon.ui-icon-comet,
-.ui-loading-icon.ui-icon-lines,
-.ui-loading-icon.ui-icon-planet {
-  animation: _busy_rot 1s infinite linear;
-  -moz-animation: _busy_rot 1s infinite linear;
-  -ms-animation: _busy_rot 1s infinite linear;
-  -webkit-animation: _busy_rot 1s infinite linear;
+
+
+
+/**
+ * Animations
+ */
+
+/* animation keyframes rotate 360 clockwise */
+@keyframes clockwise {
+  from { transform: rotate(0deg);   -moz-transform: rotate(0deg);   -ms-transform: rotate(0deg);   -webkit-transform: rotate(0deg); }
+  to   { transform: rotate(359deg); -moz-transform: rotate(359deg); -ms-transform: rotate(359deg); -webkit-transform: rotate(359deg); }
+}
+@-moz-keyframes    clockwise { from { transform: rotate(0deg); -moz-transform: rotate(0deg); }    to { transform: rotate(359deg); -moz-transform: rotate(359deg); }    }
+@-ms-keyframes     clockwise { from { transform: rotate(0deg); -ms-transform: rotate(0deg); }     to { transform: rotate(359deg); -ms-transform: rotate(359deg); }     }
+@-webkit-keyframes clockwise { from { transform: rotate(0deg); -webkit-transform: rotate(0deg); } to { transform: rotate(359deg); -webkit-transform: rotate(359deg); } }
+
+/* animation keyframes for bouncing */
+@keyframes bounce  {
+  0%, 100% { transform: scale(0.2); -moz-transform: scale(0.2); -ms-transform: scale(0.2); -webkit-transform: scale(0.2); }
+  50%      { transform: scale(1.0); -moz-transform: scale(1.0); -ms-transform: scale(1.0); -webkit-transform: scale(1.0); }
+}
+@-moz-keyframes bounce    { 0%, 100% { transform: scale(0.2); -moz-transform: scale(0.2); }    50% { transform: scale(1.0); -moz-transform: scale(1.0); } }
+@-ms-keyframes bounce     { 0%, 100% { transform: scale(0.2); -ms-transform: scale(0.2); }     50% { transform: scale(1.0); -ms-transform: scale(1.0); }  }
+@-webkit-keyframes bounce { 0%, 100% { transform: scale(0.2); -webkit-transform: scale(0.2); } 50% { transform: scale(1.0); -webkit-transform: scale(1.0); }  }
+
+/* animation keyframes translate */
+@keyframes translate {
+  0%,100% { transform: translate(0,0);    -moz-transform: translate(0,0);    -ms-transform: translate(0,0);    -webkit-transform: translate(0,0); }
+  50%     { transform: translate(100%,0); -moz-transform: translate(100%,0); -ms-transform: translate(100%,0); -webkit-transform: translate(100%,0); width: 0.6em; }
+}
+@-moz-keyframes translate    { 0%,100% { transform: translate(0,0); -moz-transform: translate(0,0); }    50% { transform: translate(100%,0); -moz-transform: translate(100%,0);    width: 0.6em; } }
+@-ms-keyframes translate     { 0%,100% { transform: translate(0,0); -ms-transform: translate(0,0); }     50% { transform: translate(100%,0); -ms-transform: translate(100%,0);     width: 0.6em; } }
+@-webkit-keyframes translate { 0%,100% { transform: translate(0,0); -webkit-transform: translate(0,0); } 50% { transform: translate(100%,0); -webkit-transform: translate(100%,0); width: 0.6em; } }
+
+/* animation keyframes move from left to right */
+@keyframes         move-right { from { left: -100%; } to { left: 100%; } }
+@-moz-keyframes    move-right { from { left: -100%; } to { left: 100%; } }
+@-ms-keyframes     move-right { from { left: -100%; } to { left: 100%; } }
+@-webkit-keyframes move-right { from { left: -100%; } to { left: 100%; } }
+
+/* animation keyframes fill and rotate */
+@keyframes         square-fill { 0%, 25%, 100% { height: 0; } 50%, 75% { height: 100%; } }
+@-moz-keyframes    square-fill { 0%, 25%, 100% { height: 0; } 50%, 75% { height: 100%; } }
+@-ms-keyframes     square-fill { 0%, 25%, 100% { height: 0; } 50%, 75% { height: 100%; } }
+@-webkit-keyframes square-fill { 0%, 25%, 100% { height: 0; } 50%, 75% { height: 100%; } }
+@keyframes square-clockwise {
+  0%        { transform: rotate(0deg);   -moz-transform: rotate(0deg);   -ms-transform: rotate(0deg);   -webkit-transform: rotate(0deg); }
+  25%, 50%  { transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); }
+  75%, 100% { transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes square-clockwise    { 0% { transform: rotate(0deg); -moz-transform: rotate(0deg); }    25%, 50% { transform: rotate(180deg); -moz-transform: rotate(180deg);}     75%, 100% { transform: rotate(360deg); -moz-transform: rotate(360deg); } }
+@-ms-keyframes square-clockwise     { 0% { transform: rotate(0deg); -ms-transform: rotate(0deg); }     25%, 50% { transform: rotate(180deg); -ms-transform: rotate(180deg); }     75%, 100% { transform: rotate(360deg); -ms-transform: rotate(360deg); } }
+@-webkit-keyframes square-clockwise { 0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); } 25%, 50% { transform: rotate(180deg); -webkit-transform: rotate(180deg); } 75%, 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg); } }
+
+/* animated font glyphs */
+.ui-animate.clockwise .ui-icon,
+.ui-animate.anti-clockwise .ui-icon {
+  animation: clockwise 1s infinite linear;
+  -moz-animation: clockwise 1s infinite linear;
+  -ms-animation: clockwise 1s infinite linear;
+  -webkit-animation: clockwise 1s infinite linear;
+}
+.ui-animate.anti-clockwise .ui-icon {
+  animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+}
+.ui-animate.bounce .ui-icon:before,
+.ui-animate.bounce-reverse .ui-icon:before {
+  animation: bounce 1s infinite ease-in-out;
+  -moz-animation: bounce 1s infinite ease-in-out;
+  -ms-animation: bounce 1s infinite ease-in-out;
+  -webkit-animation: bounce 1s infinite ease-in-out;
+}
+.ui-animate.bounce-reverse .ui-icon:before {
+  animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 }
 
-.ui-busy-icon {
-  background: transparent none no-repeat scroll 0 0 !important;
-  display: block;
-  font: normal normal normal 14px/16px sans-serif;
-  overflow: hidden;
-  height: 1em;
-  margin: 0;
-  padding: 0;
-  position: relative;
+.ui-loading-icon.ui-icon-circle,
+.ui-loading-icon.ui-icon-comet,
+.ui-loading-icon.ui-icon-planet {
+  animation: clockwise 1s infinite linear;
+  -moz-animation: clockwise 1s infinite linear;
+  -ms-animation: clockwise 1s infinite linear;
+  -webkit-animation: clockwise 1s infinite linear;
+}
+.ui-loading-icon.ui-icon-balls,
+.ui-loading-icon.ui-icon-lines {
+  animation: clockwise 1s infinite ease-in-out;
+  -moz-animation: clockwise 1s infinite ease-in-out;
+  -ms-animation: clockwise 1s infinite ease-in-out;
+  -webkit-animation: clockwise 1s infinite ease-in-out;
+}
+
+
+/* animated css generated icons basic settings */
+.ui-busy-icon:after,
+.ui-busy-icon:before {
   text-indent: -99999px;
-  transform: translate(0,0);
-  width: 1em;
-  -moz-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  -webkit-transform: translate(0,0);
 }
 .ui-busy-icon:after,
 .ui-busy-icon:before {
   content: '';
+  display: block;
+  height: 1em;
   left: 50%;
+  line-height: 1;
   margin-left: -0.5em;
   margin-top: -0.5em;
   position: absolute;
   top: 50%;
-}
-
-/* Loader-Animation: Circle */
-.ui-busy-icon-circle:after,
-.ui-busy-icon-circle:before {
-  border-radius: 100%;
-  box-sizing: border-box;
-  height: 1em;
   width: 1em;
-  -moz-border-radius: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-border-radius: 100%;
-  -webkit-box-sizing: border-box;
-}
-.ui-busy-icon-circle:after,
-.ui-busy-icon-circle:before {
-  border: 0.2em solid;
-}
-.ui-busy-icon-circle:before {
-  opacity: 0.25;
-}
-.ui-busy-icon-circle:after {
-  border-bottom-color: transparent;
-  animation: _busy_rot 1s infinite linear;
-  -moz-animation: _busy_rot 1s infinite linear;
-  -ms-animation: _busy_rot 1s infinite linear;
-  -webkit-animation: _busy_rot 1s infinite linear;
 }
 
-/* Loader-Animation: Clock */
-.ui-busy-icon-clock,
-.ui-busy-icon-clock:after,
-.ui-busy-icon-clock:before {
-  border: 0.1em solid;
-}
-.ui-busy-icon-clock {
+/* round icons: circle, clock, comet, planet, radar */
+.ui-busy-icon-balls:after, .ui-busy-icon-balls:before,
+.ui-busy-icon-circle, .ui-busy-icon-circle:after, .ui-busy-icon-circle:before,
+.ui-busy-icon-clock, .ui-busy-icon-clock:after, .ui-busy-icon-clock:before,
+.ui-busy-icon-comet, .ui-busy-icon-comet:after, .ui-busy-icon-comet:before,
+.ui-busy-icon-planet:after, .ui-busy-icon-planet:before,
+.ui-busy-icon-radar, .ui-busy-icon-radar:after, .ui-busy-icon-radar:before {
   border-radius: 100%;
   box-sizing: border-box;
   -moz-border-radius: 100%;
@@ -669,69 +723,105 @@
   -webkit-border-radius: 100%;
   -webkit-box-sizing: border-box;
 }
+
+/* round icons rotate clockwise: circle, comet, planet, radar */
+.ui-busy-icon-circle:after,
+.ui-busy-icon-comet,
+.ui-busy-icon-planet,
+.ui-busy-icon-radar:before {
+  animation: clockwise 1s linear infinite;
+  -moz-animation: clockwise 1s linear infinite;
+  -ms-animation: clockwise 1s linear infinite;
+  -webkit-animation: clockwise 1s linear infinite;
+}
+
+/* fill icons with base color */
+.ui-busy-icon-balls:after, .ui-busy-icon-balls:before,
+.ui-busy-icon-clock:after, .ui-busy-icon-clock:before,
+.ui-busy-icon-comet:before,
+.ui-busy-icon-line:before,
+.ui-busy-icon-planet:after,
+.ui-busy-icon-progress:before,
+.ui-busy-icon-radar:after,
+.ui-busy-icon-square:before {
+  box-shadow: 0 0 0 1em inset;
+  -moz-box-shadow: 0 0 0 1em inset;
+  -webkit-box-shadow: 0 0 0 1em inset;
+}
+
+
+/* ball icons styles */
+.ui-busy-icon-balls {
+  width: 1em;
+  height: 1em;
+  animation: clockwise 2s linear infinite;
+  -moz-animation: clockwise 2s linear infinite;
+  -ms-animation: clockwise 2s linear infinite;
+  -webkit-animation: clockwise 2s linear infinite;
+}
+.ui-busy-icon-balls:after,
+.ui-busy-icon-balls:before {
+  height: 0.5em;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0;
+  border-radius: 100%;
+  top: 0;
+  width: 0.5em;
+  animation: bounce 2s ease-in-out infinite;
+  -moz-animation: bounce 2s ease-in-out infinite;
+  -ms-animation: bounce 2s ease-in-out infinite;
+  -webkit-animation: bounce 2s ease-in-out infinite;
+}
+.ui-busy-icon-balls:before {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1.0s;
+  -moz-animation-delay: -1.0s;
+  -ms-animation-delay: -1.0s;
+  -webkit-animation-delay: -1.0s;
+}
+
+/* circle icon styles */
+.ui-busy-icon-circle:after, .ui-busy-icon-circle:before { border: 0.2em solid; }
+.ui-busy-icon-circle:after { border-top-color: transparent; }
+.ui-busy-icon-circle:before { opacity: 0.25; }
+
+/* clock icon styles */
+.ui-busy-icon-clock { border: 0.2em solid; }
 .ui-busy-icon-clock:after,
 .ui-busy-icon-clock:before {
-  border-radius: 1em;
-  position: absolute;
+  border-radius: 0.1em;
   margin-left: -0.1em;
   margin-top: -0.1em;
-  width: 0;
+  width: 0.2em;
   transform-origin: 0.1em 0.1em;
   -moz-transform-origin: 0.1em 0.1em;
   -ms-transform-origin: 0.1em 0.1em;
   -webkit-transform-origin: 0.1em 0.1em;
 }
+/* animate clock 'minutes' */
 .ui-busy-icon-clock:after {
-  height: 0.3em;
-  animation: _busy_rot 2s linear infinite;
-  -moz-animation: _busy_rot 2s linear infinite;
-  -ms-animation: _busy_rot 2s linear infinite;
-  -webkit-animation: _busy_rot 2s linear infinite;
+  height: 0.7em;
+  animation: clockwise 2s linear infinite;
+  -moz-animation: clockwise 2s linear infinite;
+  -ms-animation: clockwise 2s linear infinite;
+  -webkit-animation: clockwise 2s linear infinite;
 }
+/* animate clock 'hours' */
 .ui-busy-icon-clock:before {
-  animation: _busy_rotate 12s linear infinite;
-  height: 0.2em;
-  -moz-animation: _busy_rot 12s linear infinite;
-  -ms-animation: _busy_rot 12s linear infinite;
-  -webkit-animation: _busy_rot 12s linear infinite;
+  height: 0.4em;
+  animation: clockwiseate 12s linear infinite;
+  -moz-animation: clockwise 12s linear infinite;
+  -ms-animation: clockwise 12s linear infinite;
+  -webkit-animation: clockwise 12s linear infinite;
 }
 
-/* Loader-Animation: Planet und Comet */
-.ui-busy-icon-comet,
-.ui-busy-icon-comet:after,
-.ui-busy-icon-comet:before,
-.ui-busy-icon-planet:after,
-.ui-busy-icon-planet:before {
-  border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-}
-.ui-busy-icon-comet {
-  border-bottom-right-radius: 0.4em;
-  -moz-border-bottom-right-radius: 0.4em;
-  -webkit-border-bottom-right-radius: 0.4em;
-  box-shadow: -0.1em 0.1em 0.1em 0 inset;
-  -moz-box-shadow: -0.1em 0.1em 0.1em 0 inset;
-  -webkit-box-shadow: -0.1em 0.1em 0.1em 0 inset;
-  animation: _busy_rot 1s ease-in-out infinite;
-  -moz-animation: _busy_rot 1s ease-in-out infinite;
-  -ms-animation: _busy_rot 1s ease-in-out infinite;
-  -webkit-animation: _busy_rot 1s ease-in-out infinite;
-}
-.ui-busy-icon-comet:after,
-.ui-busy-icon-comet:before,
+/* comet and planet styles */
+.ui-busy-icon-comet:after, .ui-busy-icon-comet:before,
 .ui-busy-icon-planet:after {
   margin-left: 0;
   margin-top: 0;
-}
-.ui-busy-icon-comet:after {
-  height: 1em;
-  left: 0;
-  width: 1em;
-  top: 0;
-  box-shadow: -0.2em -0.1em 0.1em -0.2em;
-  -moz-box-shadow: 0.1em 0 0.1em -0.1em;
-  -webkit-box-shadow: 0.1em 0.1em 0.1em -0.1em;
 }
 .ui-busy-icon-comet:before,
 .ui-busy-icon-planet:after {
@@ -739,72 +829,82 @@
   left: 0.6em;
   top: 0.6em;
   width: 0.4em;
-  box-shadow: 0 0 4em 4em inset;
-  -moz-box-shadow: 0 0 4em 4em inset;
-  -webkit-box-shadow: 0 0 4em 4em inset;
 }
-.ui-busy-icon-planet {
-  animation: _busy_rot 1s linear infinite;
-  -moz-animation: _busy_rot 1s linear infinite;
-  -ms-animation: _busy_rot 1s linear infinite;
-  -webkit-animation: _busy_rot 1s linear infinite;
+.ui-busy-icon-comet {
+  border-bottom-right-radius: 0.4em;
+  box-shadow: -0.1em 0.1em 0.1em 0 inset;
+  -moz-box-shadow: -0.1em 0.1em 0.1em 0 inset;
+  -moz-border-bottom-right-radius: 0.4em;
+  -webkit-border-bottom-right-radius: 0.4em;
+  -webkit-box-shadow: -0.1em 0.1em 0.1em 0 inset;
+}
+.ui-busy-icon-comet:after {
+  box-shadow: -0.2em -0.1em 0.1em -0.2em;
+  left: 0;
+  top: 0;
+  -moz-box-shadow: 0.1em 0 0.1em -0.1em;
+  -webkit-box-shadow: 0.1em 0.1em 0.1em -0.1em;
 }
 .ui-busy-icon-planet:before {
-  height: 1em;
-  width: 1em;
   box-shadow: 0 0 0.1em 0 inset;
   -moz-box-shadow: 0 0 0.1em 0 inset;
   -webkit-box-shadow: 0 0 0.1em 0 inset;
 }
 
-/* Loader-Animation: Progress-Bar */
-.ui-busy-icon-progress {
-  border: 0.1em solid;
-  border-radius: 0.1em;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.ui-busy-icon-progress:before {
-  border-left: 0.4em solid;
-  border-right: 0.4em solid;
-  height: 1em;
-  width: 0.4em;
-  animation: _busy_bar 2s linear infinite;
-  transform-origin: 0 0;
-  -moz-animation: _busy_bar 2s linear infinite;
-  -moz-transform-origin: 0 0;
-  -ms-animation: _busy_bar 2s linear infinite;
-  -ms-transform-origin: 0 0;
-  -webkit-animation: _busy_bar 2s linear infinite;
-  -webkit-transform-origin: 0 0;
+/* line progress styles */
+.ui-busy-icon-line { }
+.ui-busy-icon-line:before {
+  height: 0.2em;
+  margin-top: -0.1em;
+  width: 0.2em;
+  animation: translate 2s infinite;
 }
 
-.ui-busy-icon-radar,
-.ui-busy-icon-radar:after,
-.ui-busy-icon-radar:before {
-  width: 1em;
-  height: 1em;
-  border-radius: 100%;
+/* square and progress */
+.ui-busy-icon-progress,
+.ui-busy-icon-square {
+  border: 0.2em solid;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+.ui-busy-icon-progress:before,
+.ui-busy-icon-square:before {
+  height: 100%;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0;
+  top: 0;
+  width: 100%;
+}
+.ui-busy-icon-progress:before {
+  animation: move-right 2s linear infinite;
+  -moz-animation: move-right 2s linear infinite;
+  -ms-animation: move-right 2s linear infinite;
+  -webkit-animation: move-right 2s linear infinite;
+}
+.ui-busy-icon-square {
+  animation: square-clockwise 3s ease infinite;
+  -moz-animation: square-clockwise 3s ease infinite;
+  -ms-animation: square-clockwise 3s ease infinite;
+  -webkit-animation: square-clockwise 3s ease infinite;
+}
+.ui-busy-icon-square:before {
+  animation: square-fill 3s ease infinite;
+  -moz-animation: square-fill 3s ease infinite;
+  -ms-animation: square-fill 3s ease infinite;
+  -webkit-animation: square-fill 3s ease infinite;
+}
+
+/* radar icon styles */
 .ui-busy-icon-radar:before {
   border: 0.2em solid;
   border-bottom-color: transparent;
   border-top-color: transparent;
-  animation: _busy_rot 1s ease infinite;
-  -moz-animation: _busy_rot 1s ease infinite;
-  -ms-animation: _busy_rot 1s ease infinite;
-  -webkit-animation: _busy_rot 1s ease infinite;
 }
 .ui-busy-icon-radar:after {
   height: 0.4em;
   margin-left: -0.2em;
   margin-top: -0.2em;
   width: 0.4em;
-  box-shadow: 0 0 4em 4em inset;
-  -moz-box-shadow: 0 0 4em 4em inset;
-  -webkit-box-shadow: 0 0 4em 4em inset;
 }

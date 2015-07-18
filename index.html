@@ -20,10 +20,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
   <script src="preview.js" type="text/javascript"></script>
   <script type="text/javascript">
-  /*<![CDATA[*/
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-64592666-1', 'auto'); ga('require', 'linkid', 'linkid.js'); ga('send', 'pageview');
-  /*]]>*/
+    /*<![CDATA[*/
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-64592666-1', 'auto'); ga('require', 'linkid', 'linkid.js'); ga('send', 'pageview');
+    /*]]>*/
   </script>
 </head>
 <body>
@@ -43,11 +43,40 @@
     </ul>
     <p class="hl-3">Changelog:</p>
     <ul>
+      <li>2015-07-18
+        <ul>
+          <li>Font Version 1.4:
+            <ol>
+              <li>New icon 'ui-icon-window-minimize'</li>
+              <li>For loading-animation some glyphs in font optimized</li>
+            </ol>
+          </li>
+          <li>Styles Updated:
+            <ol>
+              <li>New: ui-busy-icon-<strong>balls</strong></li>
+              <li>New: ui-busy-icon-<strong>line</strong></li>
+              <li>New: ui-busy-icon-<strong>square</strong></li>
+              <li>Updated: ui-busy-icon-<strong>progress</strong></li>
+            </ol>
+          </li>
+        </ul>
+      </li>
       <li>2015-07-12
         <ul>
-          <li>Font updated: Font has baseline 0em. This should remove problems descripted in Issue <a href="https://github.com/mkkeck/jquery-ui-icons/issues/2">#2</a> &amp; <a href="https://github.com/mkkeck/jquery-ui-icons/issues/3">#3</a>.</li>
-          <li>New CSS-Animated loaders</li>
-          <li>Improved icon picker</li>
+          <li>Font Version 1.2:
+            <ol>
+              <li>Descent set to 0 (zero) / baseline 0:<br />
+                This should remove problems descripted in Issue
+                <a href="https://github.com/mkkeck/jquery-ui-icons/issues/2">#2</a> &amp;
+                <a href="https://github.com/mkkeck/jquery-ui-icons/issues/3">#3</a>.</li>
+            </ol>
+          </li>
+          <li>Styles Updated:
+            <ol>
+              <li>New CSS-animated loading icons</li>
+              <li>Icon picker improved</li>
+            </ol>
+          </li>
         </ul>
       </li>
     </ul>
@@ -73,6 +102,15 @@
           </select>
         </p>
         <p>
+          <label for="icon-animate">Animation:</label>
+          <select id="icon-animate">
+            <option value="" selected="selected">None</option>
+            <option value="ui-animate clockwise">Rotate clockwise</option>
+            <option value="ui-animate anti-clockwise">Rotate anti clockwise</option>
+            <option value="ui-animate bounce">Bouncing</option>
+          </select>
+        </p>
+        <p>
           <label for="icon-color">Icon color:</label>
           <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-color" type="text" value="#c00000" /></span>
         </p>
@@ -86,28 +124,6 @@
       </div>
     </div>
   </div>
-
-
-  <h2 class="hl-2">Busy Icons (Loaders/Spinners)</h2>
-  <p class="hl-3">Font-Icons</p>
-  <p class="ui-widget">Usage Example:<br />&lt;span class=&quot;ui-icon ui-loading-icon ui-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
-  <ul class="icons-busy ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-balls"><span class="ui-icon ui-loading-icon ui-icon-balls"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle"><span class="ui-icon ui-loading-icon ui-icon-circle"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-comet"><span class="ui-icon ui-loading-icon ui-icon-comet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-lines"><span class="ui-icon ui-loading-icon ui-icon-lines"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-planet"><span class="ui-icon ui-loading-icon ui-icon-planet"></span></li>
-  </ul>
-  <p class="hl-3">CSS-Icons</p>
-  <p class="ui-widget">Usage Example:<br />&lt;span class=&quot;ui-busy-icon ui-busy-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
-  <ul class="icons-busy ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-circle"><span class="ui-busy-icon ui-busy-icon-circle"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-clock"><span class="ui-busy-icon ui-busy-icon-clock"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-comet"><span class="ui-busy-icon ui-busy-icon-comet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-planet"><span class="ui-busy-icon ui-busy-icon-planet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-progress"><span class="ui-busy-icon ui-busy-icon-progress"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-radar"><span class="ui-busy-icon ui-busy-icon-radar"></span></li>
-  </ul>
 
   <h2 class="hl-2">Download and sources</h2>
   <div class="ui-widget">
@@ -229,6 +245,29 @@
       enim ad minim veniam, quis nostrud exercitation ullamco laboris
       nisi ut aliquip ex ea commodo consequat.</p>
   </div>
+
+  <h3 class="hl-3">Busy Icons (Loaders/Spinners)</h3>
+  <p class="ui-widget">Icons from font - example:<br />&lt;span class=&quot;ui-icon ui-loading-icon ui-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
+  <ul class="icons-busy ui-widget ui-helper-clearfix">
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-balls"><span class="ui-icon ui-loading-icon ui-icon-balls"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle"><span class="ui-icon ui-loading-icon ui-icon-circle"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-comet"><span class="ui-icon ui-loading-icon ui-icon-comet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-lines"><span class="ui-icon ui-loading-icon ui-icon-lines"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-planet"><span class="ui-icon ui-loading-icon ui-icon-planet"></span></li>
+  </ul>
+  <p class="ui-widget">Icons generated via CSS - example:<br />&lt;span class=&quot;ui-busy-icon ui-busy-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
+  <ul class="icons-busy ui-widget ui-helper-clearfix">
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-balls"><span class="ui-busy-icon ui-busy-icon-balls"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-circle"><span class="ui-busy-icon ui-busy-icon-circle"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-clock"><span class="ui-busy-icon ui-busy-icon-clock"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-comet"><span class="ui-busy-icon ui-busy-icon-comet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-line"><span class="ui-busy-icon ui-busy-icon-line"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-planet"><span class="ui-busy-icon ui-busy-icon-planet"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-progress"><span class="ui-busy-icon ui-busy-icon-progress"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-radar"><span class="ui-busy-icon ui-busy-icon-radar"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-square"><span class="ui-busy-icon ui-busy-icon-square"></span></li>
+  </ul>
+
   <h3 class="hl-3">Framework Icons (content color preview)</h3>
   <ul id="icons-grid" class="ui-widget ui-helper-clearfix">
     <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
@@ -449,6 +488,7 @@
     <li class="ui-state-default ui-corner-all" title=".ui-icon-retweet"><span class="ui-icon ui-icon-retweet"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-link-broken"><span class="ui-icon ui-icon-link-broken"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-window"><span class="ui-icon ui-icon-window"></span></li>
+    <li class="ui-state-default ui-corner-all" title=".ui-icon-window-minimize"><span class="ui-icon ui-icon-window-minimize"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-window-sidebar"><span class="ui-icon ui-icon-window-sidebar"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-menu"><span class="ui-icon ui-icon-menu"></span></li>
     <li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark-b"><span class="ui-icon ui-icon-bookmark-b"></span></li>
@@ -921,6 +961,7 @@
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-on" class="ui-icon ui-icon-volume-on"></label><input readonly="readonly" id="item-volume-on" value="ui-icon-volume-on" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-on-b" class="ui-icon ui-icon-volume-on-b"></label><input readonly="readonly" id="item-volume-on-b" value="ui-icon-volume-on-b" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window" class="ui-icon ui-icon-window"></label><input readonly="readonly" id="item-window" value="ui-icon-window" /></li>
+    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window-minimize" class="ui-icon ui-icon-window-minimize"></label><input readonly="readonly" id="item-window-minimize" value="ui-icon-window-minimize" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window-sidebar" class="ui-icon ui-icon-window-sidebar"></label><input readonly="readonly" id="item-window-sidebar" value="ui-icon-window-sidebar" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-wrench" class="ui-icon ui-icon-wrench"></label><input readonly="readonly" id="item-wrench" value="ui-icon-wrench" /></li>
     <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-zoomin" class="ui-icon ui-icon-zoomin"></label><input readonly="readonly" id="item-zoomin" value="ui-icon-zoomin" /></li>
@@ -1042,6 +1083,11 @@
 
     /* Icon size */
     isize.selectmenu({ 'change': function(e, d) { $('.ui-icon',iview).css({ 'font-size': d.item.value }); } });
+    $('#icon-animate').selectmenu({ 'change': function(e, d) {
+      $('option', $('#icon-animate')).each(function() { if ($(this).val() !== '') { iview.removeClass($(this).val()); } });
+      if (d.item.value === '') { return; }
+      iview.addClass(d.item.value);
+    } });
 
     /* Initial icon settings */
     $(iview).css({'background-color': bcolor.val() });
