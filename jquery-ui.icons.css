@@ -659,19 +659,13 @@
   -ms-animation-direction: reverse;
   -webkit-animation-direction: reverse;
 }
-.ui-animate.bounce .ui-icon:before,
-.ui-animate.bounce-reverse .ui-icon:before {
+.ui-animate.bounce .ui-icon:before {
   animation: bounce 1s infinite ease-in-out;
   -moz-animation: bounce 1s infinite ease-in-out;
   -ms-animation: bounce 1s infinite ease-in-out;
   -webkit-animation: bounce 1s infinite ease-in-out;
 }
-.ui-animate.bounce-reverse .ui-icon:before {
-  animation-direction: reverse;
-  -moz-animation-direction: reverse;
-  -ms-animation-direction: reverse;
-  -webkit-animation-direction: reverse;
-}
+
 
 .ui-loading-icon.ui-icon-circle,
 .ui-loading-icon.ui-icon-comet,

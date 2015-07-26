@@ -7,7 +7,11 @@
 * Works with all jQuery UI Themes (see "Sample Components")
 * Icon License [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-The perfect size of the icons is 14 pixels. 
+The perfect (pixel-)size of the icons is 14 pixels.
+
+
+**Note:**
+Please only use the class names in the CSS-file to display the required icon and never the unicode value (e.g. "\e601"). I could not guarantee that the entered unicode will show the requested glyph on future releases.
 
 ###Example Usage
     <head>
@@ -26,6 +30,11 @@ Take a look at the demo under http://mkkeck.github.io/jquery-ui-icons/
   
   
 ###Changelog
+* 2015-07-26
+  First official release: 
+  https://github.com/mkkeck/jquery-ui-icons/releases
+
+
 * 2015-07-18
  * Font Version 1.4:
    1. **New** icon 'ui-icon-window-minimize'
