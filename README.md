@@ -22,34 +22,34 @@ Please only use the class names in the CSS-file to display the required icon and
     <script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
     <!-- ... -->
 
-Please report bugs or feature requests on the [issue-tracker](https://github.com/mkkeck/jquery-ui-icons/issues).
+Please report bugs or feature requests on the [issue-tracker](https://github.com/mkkeck/jquery-ui-iconfont/issues).
   
   
 ###Demo
-Take a look at the demo under http://mkkeck.github.io/jquery-ui-icons/ 
+Take a look at the demo under http://mkkeck.github.io/jquery-ui-iconfont/ 
   
   
 ###Changelog
 * 2015-07-26
   First official release: 
-  https://github.com/mkkeck/jquery-ui-icons/releases
+  https://github.com/mkkeck/jquery-ui-iconfont/releases
 
 
 * 2015-07-18
- * Font Version 1.4:
-   1. **New** icon 'ui-icon-window-minimize'
-   2. For loading-animation some glyphs in font are optimized
- * Styles Updated:
-  1. **New:**
-     * ui-busy-icon-balls
-     * ui-busy-icon-line
-     * ui-busy-icon-square
-  2. **Updated:**
-     * ui-busy-icon-progress
+  * Font Version 1.4:
+    * **New** icon 'ui-icon-window-minimize'
+    * For loading-animation some glyphs in font are optimized
+  * Styles Updated:
+    * **New:**
+      ui-busy-icon-balls,
+      ui-busy-icon-line,
+      ui-busy-icon-square
+    * **Updated:**
+      ui-busy-icon-progress
   
 * 2015-07-12 
-  * Font Version 1.2: 
-    Descent set to 0 (zero) / baseline 0. 
-    This should remove problems descripted in Issue [#2](https://github.com/mkkeck/jquery-ui-icons/issues/2) & [#3](https://github.com/mkkeck/jquery-ui-icons/issues/3). 
-  * New CSS-Animated loaders 
-  * Improved icon picker 
+ * Font Version 1.2: 
+   Descent set to 0 (zero) / baseline 0. 
+   This should remove problems descripted in Issue [#2](https://github.com/mkkeck/jquery-ui-iconfont/issues/2) & [#3](https://github.com/mkkeck/jquery-ui-iconfont/issues/3). 
+ * New CSS-Animated loaders 
+ * Improved icon picker 
