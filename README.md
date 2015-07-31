@@ -14,14 +14,15 @@ The perfect (pixel-)size of the icons is 14 pixels.
 Please only use the class names in the CSS-file to display the required icon and never the unicode value (e.g. "\e601"). I could not guarantee that the entered unicode will show the requested glyph on future releases.
 
 ###Example Usage
-    <head>
-    <!-- ... -->
-    <link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="jquery/jquery-ui.icons.css" rel="stylesheet" type="text/css" />
-    <script src="jquery/jquery.min.js" type="text/javascript"></script>  
-    <script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
-    <!-- ... -->
-
+```html
+<head>
+<!-- ... -->
+<link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="jquery/jquery-ui.icons.css" rel="stylesheet" type="text/css" />
+<script src="jquery/jquery.min.js" type="text/javascript"></script>  
+<script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
+<!-- ... -->
+```
 Please report bugs or feature requests on the [issue-tracker](https://github.com/mkkeck/jquery-ui-iconfont/issues).
   
   
