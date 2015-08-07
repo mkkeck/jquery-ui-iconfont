@@ -1,4 +1,4 @@
-#Icons for jQuery-UI
+# Icons for jQuery-UI #
 * Complete new redesigned icons for jQuery UI as font
 * Support mobile devices
 * Clear and resizable icons
@@ -13,23 +13,26 @@ The perfect (pixel-)size of the icons is 14 pixels.
 **Note:**
 Please only use the class names in the CSS-file to display the required icon and never the unicode value (e.g. "\e601"). I could not guarantee that the entered unicode will show the requested glyph on future releases.
 
-###Example Usage
+### Example Usage ###
+```html
     <head>
     <!-- ... -->
     <link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="jquery/jquery-ui.icons.css" rel="stylesheet" type="text/css" />
+    <link href="jquery/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" />
     <script src="jquery/jquery.min.js" type="text/javascript"></script>  
     <script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
     <!-- ... -->
+    </head>
+```
 
 Please report bugs or feature requests on the [issue-tracker](https://github.com/mkkeck/jquery-ui-iconfont/issues).
   
   
-###Demo
+### Demo ###
 Take a look at the demo under http://mkkeck.github.io/jquery-ui-iconfont/ 
   
   
-###Changelog
+### Changelog ###
 * 2015-07-26
   First official release: 
   https://github.com/mkkeck/jquery-ui-iconfont/releases
@@ -53,3 +56,5 @@ Take a look at the demo under http://mkkeck.github.io/jquery-ui-iconfont/
    This should remove problems descripted in Issue [#2](https://github.com/mkkeck/jquery-ui-iconfont/issues/2) & [#3](https://github.com/mkkeck/jquery-ui-iconfont/issues/3). 
  * New CSS-Animated loaders 
  * Improved icon picker 
+
+
