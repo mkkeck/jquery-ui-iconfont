@@ -5,18 +5,18 @@
  * License:   CC BY-SA 3.0
  *            https://creativecommons.org/licenses/by-sa/3.0/
  * Update:    2015-07-18
- * Version:   Font 1.4
- *            Styles 1.4
+ * Version:   Font 1.4.1
+ *            Styles 1.4.1
  */
 
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('fonts/jquery-ui.eot?jquf1.4');
-  src: url('fonts/jquery-ui.eot?#iefixjquf1.4') format('embedded-opentype'),
-       url('fonts/jquery-ui.woff?jquf1.4') format('woff'),
-       url('fonts/jquery-ui.ttf?jquf1.4') format('truetype'),
-       url('fonts/jquery-ui.svg?jquf1.4#jquery-ui') format('svg');
+  src: url('font/jquery-ui.eot?jquf1.4.1');
+  src: url('font/jquery-ui.eot?#iefixjquf1.4.1') format('embedded-opentype'),
+       url('font/jquery-ui.woff?jquf1.4.1') format('woff'),
+       url('font/jquery-ui.ttf?jquf1.4.1') format('truetype'),
+       url('font/jquery-ui.svg?jquf1.4.1#jquery-ui') format('svg');
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
