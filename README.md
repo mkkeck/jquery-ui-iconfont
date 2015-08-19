@@ -25,7 +25,13 @@ Please only use the class names in the CSS-file to display the required icon and
     </head>
 ```
 
+### Bugs, features and feedback ###
 Please report bugs or feature requests on the [issue-tracker](https://github.com/mkkeck/jquery-ui-iconfont/issues).
+
+### Please note for feature releases ###
+Some CSS classnames are renamed, deleted or replaced in future release.
+The goal is, to make usage for you much easier and better quality.
+Please take look at [issue #8](https://github.com/mkkeck/jquery-ui-iconfont/issues/8)
   
   
 ### Demo ###
