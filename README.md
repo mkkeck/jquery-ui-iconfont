@@ -15,14 +15,14 @@ Please only use the class names in the CSS-file to display the required icon and
 
 ### Example Usage ###
 ```html
-    <head>
-      <!-- ... -->
-      <link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" /> 
-      <link href="jquery/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" /> 
-      <script src="jquery/jquery.min.js" type="text/javascript"></script> 
-      <script src="jquery/jquery-ui.min.js" type="text/javascript"></script> 
-      <!-- ... --> 
-    </head>
+  <head>
+    <!-- ... -->
+    <link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" /> 
+    <link href="jquery/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" /> 
+    <script src="jquery/jquery.min.js" type="text/javascript"></script> 
+    <script src="jquery/jquery-ui.min.js" type="text/javascript"></script> 
+    <!-- ... --> 
+  </head>
 ```
 
 To display an icon is really simple:
@@ -43,4 +43,4 @@ Please report bugs or feature requests on the [issue-tracker](https://github.com
 Take a look at the demo under [http://mkkeck.github.io/jquery-ui-iconfont/](http://mkkeck.github.io/jquery-ui-iconfont/)
 
 ### Screenshot ###
-![Screenshot](http://i.imgur.com/GCfp4E9.png)
+![Screenshot](https://raw.githubusercontent.com/mkkeck/jquery-ui-iconfont/master/screen.png)
