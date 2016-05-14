@@ -1,1100 +1,325 @@
 <!DOCTYPE html>
-<html lang="us">
+<!--[if lt IE 7]>
+<html class="js-off lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="js-off lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="js-off lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="js-off notranslate" translate="no" lang="en">
+<!--<![endif]-->
 <head>
-  <title>Icon-Font for jQuery-UI</title>
-  <meta name="Description" content="Icon-Font for jQuery-UI. Complete redesigned icons as web font for jQuery UI."/>
-  <meta name="Keywords" content="jquery, ui, font, icon, svg, iconfont, awesome, sheet"/>
-  <meta name="author" content="Michael Keck"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="content-language" content="en" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="IE_RM_OFF" content="true" />
+
+  <title>Icon Font for jQuery-UI</title>
+  <meta name="description" content="Icon Font for jQuery-UI: Complete redesigned, mobile friendly, clear and resizable icons as web font for jQuery UI." />
+  <meta name="keywords" content="iconfont, symbol, symbols, glyph, glyphs, jquery, ui, user, interface, mobile, icon, icons, font, fonts, web font, webfont, awesome, resizable, cheat, sheet" />
+  <meta name="date" content="2016-05-14" />
   <meta name="robots" content="noodp" />
+  <meta name="author" content="Michael Keck" />
+  <meta name="publisher" content="Michael Keck" />
+  <meta name="copyright" content="Michael Keck" />
 
-  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
-  <link href="jquery-ui.icons.css" rel="stylesheet" type="text/css" />
-  <link href="preview.css" rel="stylesheet" type="text/css" />
+  <meta name="DC.Title" content="Icon Font for jQuery-UI" />
+  <meta name="DC.Creator.PersonalName" content="Michael Keck" />
+  <meta name="DC.Date.Created" content="(Scheme=ISO.31-1:1992) 2016-05-14" />
+  <meta name="DC.Date.Modified" content="(Scheme=ISO.31-1:1992) 2016-05-14" />
+  <meta name="DC.Subject.Keywords" content="jquery" />
+  <meta name="DC.Subject.Keywords" content="jquery ui" />
+  <meta name="DC.Subject.Keywords" content="icon" />
+  <meta name="DC.Subject.Keywords" content="font" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" type="text/javascript"></script>
-  <script src="preview.js" type="text/javascript"></script>
+  <link href="styles/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="styles/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" />
+  <link href="styles/content.css" rel="stylesheet" type="text/css" />
+
+  <script src="jscripts/fontobserver.js" type="text/javascript"></script>
+  <script src="jscripts/jquery.min.js" type="text/javascript"></script>
+  <script src="jscripts/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="jscripts/jquery.custom.min.js" type="text/javascript"></script>
   <script type="text/javascript">
     /*<![CDATA[*/
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-64592666-1', 'auto'); ga('require', 'linkid', 'linkid.js'); ga('send', 'pageview');
+    (function(j,s,o,k){o=j.documentElement;k=o.className||'';if(k.indexOf('js-off')!==-1){k=k.replace('js-off','js-on');k=k.replace(s,'');}o.className=k.replace(s,'');})(document,/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g);
+    (function($,w,d,s){if(d.all&&!d.addEventListener){return;}s=$(['<scr','ipt />'].join('')).attr({'src':'jscripts/prism.min.js','type':'text/javascript'}).data({'manual':'manual'});$('head').append(s);})(jQuery,window,document);
     /*]]>*/
   </script>
 </head>
 <body>
-
-<div id="body">
-  <h1 class="hl-1">Icon-Font for jQuery-UI</h1>
-  <div class="ui-widget">
-    <ul class="ul-1">
-      <li><span class="ui-icon ui-icon-pencil"></span>Complete new redesigned icons for jQuery UI as font</li>
-      <li><span class="ui-icon ui-icon-mobile"></span>Support mobile devices</li>
-      <li><span class="ui-icon ui-icon-arrow-4-diag"></span>Clear and resizable icons</li>
-      <li><span class="ui-icon ui-icon-circle-b-check"></span>Changeable color of icons without the need to export new graphic files</li>
-      <li><span class="ui-icon ui-icon-circle-b-check"></span>Supported by many browsers<br />(tested on Firefox 36, Chrome 42, Internet-Explorer 8-10)</li>
-      <li><span class="ui-icon ui-icon-circle-b-check"></span>Works with all jQuery UI Themes (see &#34;Sample Components&#34;)</li>
-      <li><span class="ui-icon ui-icon-file-txt"></span>Icon License <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="Creative Commons Attribution-ShareAlike">CC BY-SA 3.0</a></li>
-      <li><span class="ui-icon ui-icon-comments"></span>Please report bugs or feature requests on the <a href="https://github.com/mkkeck/jquery-ui-iconfont/issues">issue-tracker</a>.</li>
-    </ul>
-    <p class="hl-3">Changelog:</p>
-    <ul>
-      <li>2015-07-18
-        <ul>
-          <li>Font Version 1.4:
-            <ol>
-              <li>New icon 'ui-icon-window-minimize'</li>
-              <li>For loading-animation some glyphs in font optimized</li>
-            </ol>
-          </li>
-          <li>Styles Updated:
-            <ol>
-              <li>New: ui-busy-icon-<strong>balls</strong></li>
-              <li>New: ui-busy-icon-<strong>line</strong></li>
-              <li>New: ui-busy-icon-<strong>square</strong></li>
-              <li>Updated: ui-busy-icon-<strong>progress</strong></li>
-            </ol>
-          </li>
-        </ul>
-      </li>
-      <li>2015-07-12
-        <ul>
-          <li>Font Version 1.2:
-            <ol>
-              <li>Descent set to 0 (zero) / baseline 0:<br />
-                This should remove problems descripted in Issue
-                <a href="https://github.com/mkkeck/jquery-ui-iconfont/issues/2">#2</a> &amp;
-                <a href="https://github.com/mkkeck/jquery-ui-iconfont/issues/3">#3</a>.</li>
-            </ol>
-          </li>
-          <li>Styles Updated:
-            <ol>
-              <li>New CSS-animated loading icons</li>
-              <li>Icon picker improved</li>
-            </ol>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <h2 class="hl-2">Icon Picker</h2>
-  <div class="ui-widget">
-    <p>Here you can search an icon and change its color and/or size</p>
-    <div class="ui-widget-content ui-corner-all" id="icon-picker">
-      <div id="icon-params">
-        <p>
-          <label for="icon-name">Icon:</label>
-          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-name" type="text" value="alert" /></span>
-        </p>
-        <p>
-          <label for="icon-size">Icon size:</label>
-          <select id="icon-size">
-            <option value="1em">Default</option>
-            <option value="2em">2 em</option>
-            <option value="4em">4 em</option>
-            <option value="6em">6 em</option>
-            <option value="8em" selected="selected">8 em</option>
-          </select>
-        </p>
-        <p>
-          <label for="icon-animate">Animation:</label>
-          <select id="icon-animate">
-            <option value="" selected="selected">None</option>
-            <option value="ui-animate clockwise">Rotate clockwise</option>
-            <option value="ui-animate anti-clockwise">Rotate anti clockwise</option>
-            <option value="ui-animate bounce">Bouncing</option>
-          </select>
-        </p>
-        <p>
-          <label for="icon-color">Icon color:</label>
-          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="icon-color" type="text" value="#c00000" /></span>
-        </p>
-        <p>
-          <label for="back-color">Backcolor:</label>
-          <span class="ui-input-wrap ui-state-default ui-corner-all ui-helper-clearfix"><input id="back-color" type="text" value="#ffffff" /></span>
-        </p>
-      </div>
-      <div id="icon-preview" class="ui-widget-content ui-corner-all">
-        <div class="ui-icon ui-icon-alert"></div>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="hl-2">Download and sources</h2>
-  <div class="ui-widget">
-    <p class="ui-helper-clearfix">
-      <a href="https://github.com/mkkeck/jquery-ui-iconfont" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-script"></span>Source on GitHub</a>
-      <a href="https://github.com/mkkeck/jquery-ui-iconfont/archive/master.zip" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-file-zip"></span>Download as ZIP</a>
+<div id="top"></div>
+<div id="loading"><div class="overlay"></div><div class="throbber"></div></div>
+<div id="head" class="head">
+  <div class="wrapper">
+    <h1 class="head-hl-1">Icon Font for jQuery UI</h1>
+    <p class="head-hl-2">Replace <abbr title="Portable Network Graphics">PNG</abbr>-icons
+      of jQuery UI with web font.
     </p>
-  </div>
-
-  <h2 class="hl-2">Sample components</h2>
-  <div class="ui-widget">
-    <div class="ui-theme-switch">
-      <p>This demonstrates widgets and themes with the new icons.</p>
-    </div>
-    <p><strong>Please note:</strong><br />
-      Make sure you are using them with a compatible jQuery version.<br />
-      This demo uses the complete jQuery UI 1.11.3 and
-      jQuery Core 1.11.3.<br />
-      Internet Explorer 7 is not supported and Internet Explorer 8 will not render all
-      things correctly.
-    </p>
-  </div>
-
-  <!-- Accordion -->
-  <h3 class="hl-3">Accordion</h3>
-  <div id="accordion">
-    <h4>First</h4>
-    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-    <h4>Second</h4>
-    <p>Phasellus mattis tincidunt nibh.</p>
-    <h4>Third</h4>
-    <p>Nam dui erat, auctor a, dignissim quis.</p>
-  </div>
-
-  <!-- Autocomplete -->
-  <form>
-    <h3 class="hl-3"><label for="autocomplete">Autocomplete</label></h3>
-    <input id="autocomplete" title="type &quot;a&quot;" />
-  </form>
-
-  <!-- Button -->
-  <h3 class="hl-3">Button</h3>
-  <button id="button">A button element</button>
-  <div class="space"></div>
-  <h3 class="hl-3">Radio Buttons</h3>
-  <form>
-    <div id="radioset">
-      <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
-      <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
-      <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
-    </div>
-  </form>
-
-  <!-- Tabs -->
-  <h3 class="hl-3">Tabs</h3>
-  <div id="tabs">
-    <ul>
-      <li><a href="#tabs-1">First</a></li>
-      <li><a href="#tabs-2">Second</a></li>
-      <li><a href="#tabs-3">Third</a></li>
-    </ul>
-    <div id="tabs-1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat.
-    </div>
-    <div id="tabs-2">
-      Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium
-      vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce
-      sed lorem in enim dictum bibendum.
-    </div>
-    <div id="tabs-3">
-      Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
-      Pellentesque nisi urna, interdum eget, sagittis et, consequat
-      vestibulum, lacus. Mauris porttitor ullamcorper augue.
-    </div>
-  </div>
-
-
-  <!-- Dialog NOTE: Dialog is not generated by UI in this demo so it can be visually styled in themeroller-->
-  <h3 class="hl-3">Dialog</h3>
-  <p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all ui-button-text-icon-primary as-button"><span class="ui-icon ui-icon-newwin"></span>Open Dialog</a></p>
-
-  <h3 class="hl-3">Overlay and Shadow Classes <em>(not currently used in UI widgets)</em></h3>
-  <div id="overlay-example">
-    <p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis
-      purus consectetur consequat. </p>
-    <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet,
-      venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse
-      scelerisque dui nec velit. Duis augue augue, gravida euismod,
-      vulputate ac, facilisis id, sem. Morbi in orci. </p>
-    <p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam.
-      Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem
-      ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus,
-      commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor.
-      Donec id elit quis purus consectetur consequat. </p>
-
-    <!-- ui-dialog -->
-    <div class="ui-overlay">
-      <div class="ui-widget-overlay"></div>
-      <div class="ui-widget-shadow ui-corner-all"></div>
-    </div>
-    <div class="ui-widget ui-widget-content ui-corner-all">
-      <div class="ui-dialog-content ui-widget-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ui-dialog -->
-  <div id="dialog" title="Dialog Title">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-      enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-
-  <h3 class="hl-3">Busy Icons (Loaders/Spinners)</h3>
-  <p class="ui-widget">Icons from font - example:<br />&lt;span class=&quot;ui-icon ui-loading-icon ui-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
-  <ul class="icons-busy ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-balls"><span class="ui-icon ui-loading-icon ui-icon-balls"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle"><span class="ui-icon ui-loading-icon ui-icon-circle"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-comet"><span class="ui-icon ui-loading-icon ui-icon-comet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-lines"><span class="ui-icon ui-loading-icon ui-icon-lines"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-planet"><span class="ui-icon ui-loading-icon ui-icon-planet"></span></li>
-  </ul>
-  <p class="ui-widget">Icons generated via CSS - example:<br />&lt;span class=&quot;ui-busy-icon ui-busy-icon-<strong>name</strong>&gt;&lt;/span&gt;</p>
-  <ul class="icons-busy ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-balls"><span class="ui-busy-icon ui-busy-icon-balls"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-circle"><span class="ui-busy-icon ui-busy-icon-circle"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-clock"><span class="ui-busy-icon ui-busy-icon-clock"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-comet"><span class="ui-busy-icon ui-busy-icon-comet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-line"><span class="ui-busy-icon ui-busy-icon-line"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-planet"><span class="ui-busy-icon ui-busy-icon-planet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-progress"><span class="ui-busy-icon ui-busy-icon-progress"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-radar"><span class="ui-busy-icon ui-busy-icon-radar"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-busy-icon-square"><span class="ui-busy-icon ui-busy-icon-square"></span></li>
-  </ul>
-
-  <h3 class="hl-3">Framework Icons (content color preview)</h3>
-  <ul id="icons-grid" class="ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-e"><span class="ui-icon ui-icon-arrow-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-se"><span class="ui-icon ui-icon-arrow-1-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-s"><span class="ui-icon ui-icon-arrow-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-sw"><span class="ui-icon ui-icon-arrow-1-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-w"><span class="ui-icon ui-icon-arrow-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-nw"><span class="ui-icon ui-icon-arrow-1-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-n"><span class="ui-icon ui-icon-arrowstop-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-e"><span class="ui-icon ui-icon-arrowstop-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-s"><span class="ui-icon ui-icon-arrowstop-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-w"><span class="ui-icon ui-icon-arrowstop-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-n"><span class="ui-icon ui-icon-arrowreturn-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-e"><span class="ui-icon ui-icon-arrowreturn-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-s"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-w"><span class="ui-icon ui-icon-arrowreturn-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-n"><span class="ui-icon ui-icon-arrowrefresh-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-e"><span class="ui-icon ui-icon-arrowrefresh-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-s"><span class="ui-icon ui-icon-arrowrefresh-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-w"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-n-s"><span class="ui-icon ui-icon-arrow-2-n-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-ne-sw"><span class="ui-icon ui-icon-arrow-2-ne-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-e-w"><span class="ui-icon ui-icon-arrow-2-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-se-nw"><span class="ui-icon ui-icon-arrow-2-se-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4"><span class="ui-icon ui-icon-arrow-4"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4-diag"><span class="ui-icon ui-icon-arrow-4-diag"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-n"><span class="ui-icon ui-icon-arrowthick-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-ne"><span class="ui-icon ui-icon-arrowthick-1-ne"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-e"><span class="ui-icon ui-icon-arrowthick-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-se"><span class="ui-icon ui-icon-arrowthick-1-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-s"><span class="ui-icon ui-icon-arrowthick-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-sw"><span class="ui-icon ui-icon-arrowthick-1-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-w"><span class="ui-icon ui-icon-arrowthick-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-nw"><span class="ui-icon ui-icon-arrowthick-1-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-n"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-e"><span class="ui-icon ui-icon-arrowthickstop-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-s"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-w"><span class="ui-icon ui-icon-arrowthickstop-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-n"><span class="ui-icon ui-icon-arrowreturnthick-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-e"><span class="ui-icon ui-icon-arrowreturnthick-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-s"><span class="ui-icon ui-icon-arrowreturnthick-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-w"><span class="ui-icon ui-icon-arrowreturnthick-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-n-s"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-ne-sw"><span class="ui-icon ui-icon-arrowthick-2-ne-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-e-w"><span class="ui-icon ui-icon-arrowthick-2-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-se-nw"><span class="ui-icon ui-icon-arrowthick-2-se-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-n"><span class="ui-icon ui-icon-circle-arrow-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-e"><span class="ui-icon ui-icon-circle-arrow-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-s"><span class="ui-icon ui-icon-circle-arrow-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-w"><span class="ui-icon ui-icon-circle-arrow-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-n"><span class="ui-icon ui-icon-carat-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-ne"><span class="ui-icon ui-icon-carat-1-ne"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-e"><span class="ui-icon ui-icon-carat-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-se"><span class="ui-icon ui-icon-carat-1-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-s"><span class="ui-icon ui-icon-carat-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-sw"><span class="ui-icon ui-icon-carat-1-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-w"><span class="ui-icon ui-icon-carat-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-nw"><span class="ui-icon ui-icon-carat-1-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-n-s"><span class="ui-icon ui-icon-carat-2-n-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-e-w"><span class="ui-icon ui-icon-carat-2-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-n"><span class="ui-icon ui-icon-triangle-1-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-ne"><span class="ui-icon ui-icon-triangle-1-ne"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-e"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-se"><span class="ui-icon ui-icon-triangle-1-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-s"><span class="ui-icon ui-icon-triangle-1-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-sw"><span class="ui-icon ui-icon-triangle-1-sw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-w"><span class="ui-icon ui-icon-triangle-1-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-nw"><span class="ui-icon ui-icon-triangle-1-nw"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-end"><span class="ui-icon ui-icon-seek-end"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-first"><span class="ui-icon ui-icon-seek-first"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-next"><span class="ui-icon ui-icon-seek-next"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-seek-prev"><span class="ui-icon ui-icon-seek-prev"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-n-s"><span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-e-w"><span class="ui-icon ui-icon-triangle-2-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-n"><span class="ui-icon ui-icon-circle-triangle-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-e"><span class="ui-icon ui-icon-circle-triangle-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-s"><span class="ui-icon ui-icon-circle-triangle-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-w"><span class="ui-icon ui-icon-circle-triangle-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-bullet"><span class="ui-icon ui-icon-bullet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-radio-off"><span class="ui-icon ui-icon-radio-off"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-alert"><span class="ui-icon ui-icon-alert"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-help"><span class="ui-icon ui-icon-help"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-info"><span class="ui-icon ui-icon-info"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-notice"><span class="ui-icon ui-icon-notice"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-grip-diagonal-se"><span class="ui-icon ui-icon-grip-diagonal-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-gripsmall-diagonal-se"><span class="ui-icon ui-icon-gripsmall-diagonal-se"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-horizontal"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-horizontal"><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-vertical"><span class="ui-icon ui-icon-grip-solid-vertical"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-vertical"><span class="ui-icon ui-icon-grip-dotted-vertical"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-check"><span class="ui-icon ui-icon-check"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-check"><span class="ui-icon ui-icon-circle-check"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cancel"><span class="ui-icon ui-icon-cancel"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-close"><span class="ui-icon ui-icon-close"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-close"><span class="ui-icon ui-icon-circle-close"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-closethick"><span class="ui-icon ui-icon-closethick"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-close"><span class="ui-icon ui-icon-squaresmall-close"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-close"><span class="ui-icon ui-icon-circlesmall-close"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-minus"><span class="ui-icon ui-icon-minus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-minus"><span class="ui-icon ui-icon-circle-minus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-minusthick"><span class="ui-icon ui-icon-minusthick"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-minus"><span class="ui-icon ui-icon-squaresmall-minus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-minus"><span class="ui-icon ui-icon-circlesmall-minus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-plus"><span class="ui-icon ui-icon-plus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-plus"><span class="ui-icon ui-icon-circle-plus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-plusthick"><span class="ui-icon ui-icon-plusthick"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-plus"><span class="ui-icon ui-icon-squaresmall-plus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-plus"><span class="ui-icon ui-icon-circlesmall-plus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-pencil"><span class="ui-icon ui-icon-pencil"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-copy"><span class="ui-icon ui-icon-copy"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-scissors"><span class="ui-icon ui-icon-scissors"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-clipboard"><span class="ui-icon ui-icon-clipboard"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-disk"><span class="ui-icon ui-icon-disk"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-trash"><span class="ui-icon ui-icon-trash"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-print"><span class="ui-icon ui-icon-print"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-note"><span class="ui-icon ui-icon-note"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-tag"><span class="ui-icon ui-icon-tag"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-folder-collapsed"><span class="ui-icon ui-icon-folder-collapsed"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-folder-open"><span class="ui-icon ui-icon-folder-open"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-document"><span class="ui-icon ui-icon-document"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-document-b"><span class="ui-icon ui-icon-document-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-video"><span class="ui-icon ui-icon-video"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-image"><span class="ui-icon ui-icon-image"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-script"><span class="ui-icon ui-icon-script"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-play"><span class="ui-icon ui-icon-play"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-pause"><span class="ui-icon ui-icon-pause"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-stop"><span class="ui-icon ui-icon-stop"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-volume-off"><span class="ui-icon ui-icon-volume-off"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-volume-on"><span class="ui-icon ui-icon-volume-on"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-shuffle"><span class="ui-icon ui-icon-shuffle"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-eject"><span class="ui-icon ui-icon-eject"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-link"><span class="ui-icon ui-icon-link"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-extlink"><span class="ui-icon ui-icon-extlink"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-locked"><span class="ui-icon ui-icon-locked"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-unlocked"><span class="ui-icon ui-icon-unlocked"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-newwin"><span class="ui-icon ui-icon-newwin"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-home"><span class="ui-icon ui-icon-home"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark"><span class="ui-icon ui-icon-bookmark"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-power"><span class="ui-icon ui-icon-power"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-refresh"><span class="ui-icon ui-icon-refresh"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-person"><span class="ui-icon ui-icon-person"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-heart"><span class="ui-icon ui-icon-heart"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-key"><span class="ui-icon ui-icon-key"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-lightbulb"><span class="ui-icon ui-icon-lightbulb"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cart"><span class="ui-icon ui-icon-cart"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-clock"><span class="ui-icon ui-icon-clock"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-comment"><span class="ui-icon ui-icon-comment"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-gear"><span class="ui-icon ui-icon-gear"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-flag"><span class="ui-icon ui-icon-flag"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-transfer-e-w"><span class="ui-icon ui-icon-transfer-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-transferthick-e-w"><span class="ui-icon ui-icon-transferthick-e-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-search"><span class="ui-icon ui-icon-search"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-wrench"><span class="ui-icon ui-icon-wrench"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-radio-on"><span class="ui-icon ui-icon-radio-on"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-suitcase"><span class="ui-icon ui-icon-suitcase"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-calculator"><span class="ui-icon ui-icon-calculator"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-calendar"><span class="ui-icon ui-icon-calendar"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-contact"><span class="ui-icon ui-icon-contact"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-closed"><span class="ui-icon ui-icon-mail-closed"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-open"><span class="ui-icon ui-icon-mail-open"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-pin-s"><span class="ui-icon ui-icon-pin-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-pin-w"><span class="ui-icon ui-icon-pin-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-zoomin"><span class="ui-icon ui-icon-zoomin"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomin"><span class="ui-icon ui-icon-circle-zoomin"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-zoomout"><span class="ui-icon ui-icon-zoomout"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomout"><span class="ui-icon ui-icon-circle-zoomout"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-0"><span class="ui-icon ui-icon-battery-0"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-1"><span class="ui-icon ui-icon-battery-1"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-2"><span class="ui-icon ui-icon-battery-2"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-battery-3"><span class="ui-icon ui-icon-battery-3"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-signal"><span class="ui-icon ui-icon-signal"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-signal-diag"><span class="ui-icon ui-icon-signal-diag"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-arrow-n"><span class="ui-icon ui-icon-circle-b-arrow-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-arrow-e"><span class="ui-icon ui-icon-circle-b-arrow-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-arrow-s"><span class="ui-icon ui-icon-circle-b-arrow-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-arrow-w"><span class="ui-icon ui-icon-circle-b-arrow-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-n"><span class="ui-icon ui-icon-carat-2-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-e"><span class="ui-icon ui-icon-carat-2-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-s"><span class="ui-icon ui-icon-carat-2-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-w"><span class="ui-icon ui-icon-carat-2-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-n-stop"><span class="ui-icon ui-icon-triangle-1-n-stop"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-s-stop"><span class="ui-icon ui-icon-triangle-1-s-stop"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-triangle-n"><span class="ui-icon ui-icon-circle-b-triangle-n"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-triangle-e"><span class="ui-icon ui-icon-circle-b-triangle-e"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-triangle-s"><span class="ui-icon ui-icon-circle-b-triangle-s"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-triangle-w"><span class="ui-icon ui-icon-circle-b-triangle-w"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-alert-b"><span class="ui-icon ui-icon-alert-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-help-plain"><span class="ui-icon ui-icon-help-plain"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-help"><span class="ui-icon ui-icon-circle-b-help"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-info-plain"><span class="ui-icon ui-icon-info-plain"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-info"><span class="ui-icon ui-icon-circle-b-info"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-notice-plain"><span class="ui-icon ui-icon-notice-plain"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-notice"><span class="ui-icon ui-icon-circle-b-notice"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-check"><span class="ui-icon ui-icon-circle-b-check"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-check-off"><span class="ui-icon ui-icon-check-off"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-check-on"><span class="ui-icon ui-icon-check-on"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-close"><span class="ui-icon ui-icon-circle-b-close"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-minus"><span class="ui-icon ui-icon-circle-b-minus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-b-plus"><span class="ui-icon ui-icon-circle-b-plus"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-undo"><span class="ui-icon ui-icon-undo"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-redo"><span class="ui-icon ui-icon-redo"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-rename"><span class="ui-icon ui-icon-rename"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-print-b"><span class="ui-icon ui-icon-print-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-table"><span class="ui-icon ui-icon-table"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-ticket"><span class="ui-icon ui-icon-ticket"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-audio"><span class="ui-icon ui-icon-audio"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-movie"><span class="ui-icon ui-icon-movie"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-pdf"><span class="ui-icon ui-icon-file-pdf"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-rtf"><span class="ui-icon ui-icon-file-rtf"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-spreadsheet"><span class="ui-icon ui-icon-file-spreadsheet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-txt"><span class="ui-icon ui-icon-file-txt"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-word"><span class="ui-icon ui-icon-file-word"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-file-zip"><span class="ui-icon ui-icon-file-zip"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-volume-on-b"><span class="ui-icon ui-icon-volume-on-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-retweet"><span class="ui-icon ui-icon-retweet"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-link-broken"><span class="ui-icon ui-icon-link-broken"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-window"><span class="ui-icon ui-icon-window"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-window-minimize"><span class="ui-icon ui-icon-window-minimize"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-window-sidebar"><span class="ui-icon ui-icon-window-sidebar"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-menu"><span class="ui-icon ui-icon-menu"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark-b"><span class="ui-icon ui-icon-bookmark-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-star-b"><span class="ui-icon ui-icon-star-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-addon"><span class="ui-icon ui-icon-addon"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-plugin"><span class="ui-icon ui-icon-plugin"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-package"><span class="ui-icon ui-icon-package"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-group"><span class="ui-icon ui-icon-group"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-heart-b"><span class="ui-icon ui-icon-heart-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-heart-beat"><span class="ui-icon ui-icon-heart-beat"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cart-b"><span class="ui-icon ui-icon-cart-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-clock-b"><span class="ui-icon ui-icon-clock-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cloud"><span class="ui-icon ui-icon-cloud"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cloud-b"><span class="ui-icon ui-icon-cloud-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cloud-download"><span class="ui-icon ui-icon-cloud-download"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-cloud-upload"><span class="ui-icon ui-icon-cloud-upload"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-comments"><span class="ui-icon ui-icon-comments"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-globe"><span class="ui-icon ui-icon-globe"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-globe-b"><span class="ui-icon ui-icon-globe-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-location"><span class="ui-icon ui-icon-location"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-navigation"><span class="ui-icon ui-icon-navigation"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-gears"><span class="ui-icon ui-icon-gears"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-camera"><span class="ui-icon ui-icon-camera"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-eye"><span class="ui-icon ui-icon-eye"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-box"><span class="ui-icon ui-icon-box"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-sign-in"><span class="ui-icon ui-icon-sign-in"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-sign-out"><span class="ui-icon ui-icon-sign-out"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-toggle-off"><span class="ui-icon ui-icon-toggle-off"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-toggle-on"><span class="ui-icon ui-icon-toggle-on"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-settings"><span class="ui-icon ui-icon-settings"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-selectbox"><span class="ui-icon ui-icon-selectbox"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-truck"><span class="ui-icon ui-icon-truck"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-database"><span class="ui-icon ui-icon-database"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-databases"><span class="ui-icon ui-icon-databases"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-book"><span class="ui-icon ui-icon-book"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-book-b"><span class="ui-icon ui-icon-book-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-calculator-b"><span class="ui-icon ui-icon-calculator-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-calendar-b"><span class="ui-icon ui-icon-calendar-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-calendar-day"><span class="ui-icon ui-icon-calendar-day"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-address"><span class="ui-icon ui-icon-address"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-phone"><span class="ui-icon ui-icon-phone"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-circle-phone"><span class="ui-icon ui-icon-circle-phone"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-reply"><span class="ui-icon ui-icon-mail-reply"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-replyall"><span class="ui-icon ui-icon-mail-replyall"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-forward"><span class="ui-icon ui-icon-mail-forward"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-mail-send"><span class="ui-icon ui-icon-mail-send"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-newspaper"><span class="ui-icon ui-icon-newspaper"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-screen-display"><span class="ui-icon ui-icon-screen-display"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-screen-laptop"><span class="ui-icon ui-icon-screen-laptop"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-screen-mobile"><span class="ui-icon ui-icon-screen-mobile"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-view-icons"><span class="ui-icon ui-icon-view-icons"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-view-icons-b"><span class="ui-icon ui-icon-view-icons-b"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-view-list"><span class="ui-icon ui-icon-view-list"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-sorting"><span class="ui-icon ui-icon-sorting"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-sorting-asc"><span class="ui-icon ui-icon-sorting-asc"></span></li>
-    <li class="ui-state-default ui-corner-all" title=".ui-icon-sorting-desc"><span class="ui-icon ui-icon-sorting-desc"></span></li>
-  </ul>
-
-  <!-- Slider -->
-  <h3 class="hl-3">Slider</h3>
-  <div id="slider"></div>
-
-  <!-- Datepicker -->
-  <h3 class="hl-3">Datepicker</h3>
-  <div id="datepicker"></div>
-
-  <!-- Progressbar -->
-  <h3 class="hl-3">Progressbar</h3>
-  <div id="progressbar"></div>
-
-  <!-- Progressbar -->
-  <h3 class="hl-3"><label for="selectmenu">Selectmenu</label></h3>
-  <form class="ui-sample">
-    <select id="selectmenu">
-      <option>Slower</option>
-      <option>Slow</option>
-      <option selected="selected">Medium</option>
-      <option>Fast</option>
-      <option>Faster</option>
-    </select>
-  </form>
-
-  <!-- Spinner -->
-  <h3 class="hl-3"><label for="spinner">Spinner</label></h3>
-  <input id="spinner" />
-
-  <!-- Menu -->
-  <h3 class="hl-3">Menu</h3>
-  <ul id="menu">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3
+    <div class="nav nav-main">
       <ul>
-        <li>Item 3-1</li>
-        <li>Item 3-2</li>
-        <li>Item 3-3</li>
-        <li>Item 3-4</li>
-        <li>Item 3-5</li>
+        <li><a href="#start" title="Introduction">Intro</a></li>
+        <li><a href="#icons" title="List of available icons">Icons</a></li>
+        <li><a href="#usage" title="How to include and use">Usage</a></li>
+        <li><a href="#demos" title="Demonstrates widgets and themes with the new icons">Demos</a></li>
       </ul>
-    </li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-  </ul>
-
-  <!-- Tooltip -->
-  <h3 class="hl-3">Tooltip</h3>
-  <p id="tooltip">
-    <a href="#tooltip" title="That&apos;s what this widget is">Tooltips</a>
-    can be attached to any element. When you hover the element with your
-    mouse, the title attribute is displayed in a little box next to the
-    element, just like a native tooltip.
-  </p>
-
-  <!-- Highlight / Error -->
-  <h3 class="hl-3">Highlight / Error</h3>
-  <div class="ui-sample ui-widget ui-helper-clearfix ui-corner-all ui-state-highlight">
-    <span class="ui-icon ui-icon-info"></span>
-    <strong>Hey!</strong>
-    Sample &raquo;ui-state-highlight&laquo; style.
+    </div>
   </div>
-  <div class="space"></div>
-  <div class="ui-sample ui-widget ui-helper-clearfix ui-corner-all ui-state-error">
-    <span class="ui-icon ui-icon-alert"></span>
-    <strong>Alert:</strong>
-    Sample &raquo;ui-state-error&laquo; style.
-  </div>
-  <div class="space"></div>
-  <div class="ui-sample ui-sample-large-icon ui-widget ui-helper-clearfix ui-corner-all ui-state-default">
-    <span class="ui-icon ui-icon-circle-b-check"></span>
-    <strong>Message:</strong><br />
-    Sample &raquo;ui-state-default&laquo; style with <strong>large</strong> icon.
-  </div>
-
-  <h3 class="hl-3">Icons as list</h3>
-  <div class="ui-widget">
-    <p>Clicking on the icon you can copy its class name to the clipboard.</p>
-  </div>
-  <ul id="icons-list" class="ui-widget ui-helper-clearfix">
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-action" class="ui-icon ui-icon-action"></label><input readonly="readonly" id="item-action" value="ui-icon-action" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-addon" class="ui-icon ui-icon-addon"></label><input readonly="readonly" id="item-addon" value="ui-icon-addon" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-address" class="ui-icon ui-icon-address"></label><input readonly="readonly" id="item-address" value="ui-icon-address" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-alert" class="ui-icon ui-icon-alert"></label><input readonly="readonly" id="item-alert" value="ui-icon-alert" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-alert-b" class="ui-icon ui-icon-alert-b"></label><input readonly="readonly" id="item-alert-b" value="ui-icon-alert-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-e" class="ui-icon ui-icon-arrow-1-e"></label><input readonly="readonly" id="item-arrow-1-e" value="ui-icon-arrow-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-n" class="ui-icon ui-icon-arrow-1-n"></label><input readonly="readonly" id="item-arrow-1-n" value="ui-icon-arrow-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-ne" class="ui-icon ui-icon-arrow-1-ne"></label><input readonly="readonly" id="item-arrow-1-ne" value="ui-icon-arrow-1-ne" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-nw" class="ui-icon ui-icon-arrow-1-nw"></label><input readonly="readonly" id="item-arrow-1-nw" value="ui-icon-arrow-1-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-s" class="ui-icon ui-icon-arrow-1-s"></label><input readonly="readonly" id="item-arrow-1-s" value="ui-icon-arrow-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-se" class="ui-icon ui-icon-arrow-1-se"></label><input readonly="readonly" id="item-arrow-1-se" value="ui-icon-arrow-1-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-sw" class="ui-icon ui-icon-arrow-1-sw"></label><input readonly="readonly" id="item-arrow-1-sw" value="ui-icon-arrow-1-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-1-w" class="ui-icon ui-icon-arrow-1-w"></label><input readonly="readonly" id="item-arrow-1-w" value="ui-icon-arrow-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-2-e-w" class="ui-icon ui-icon-arrow-2-e-w"></label><input readonly="readonly" id="item-arrow-2-e-w" value="ui-icon-arrow-2-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-2-n-s" class="ui-icon ui-icon-arrow-2-n-s"></label><input readonly="readonly" id="item-arrow-2-n-s" value="ui-icon-arrow-2-n-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-2-ne-sw" class="ui-icon ui-icon-arrow-2-ne-sw"></label><input readonly="readonly" id="item-arrow-2-ne-sw" value="ui-icon-arrow-2-ne-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-2-se-nw" class="ui-icon ui-icon-arrow-2-se-nw"></label><input readonly="readonly" id="item-arrow-2-se-nw" value="ui-icon-arrow-2-se-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-4" class="ui-icon ui-icon-arrow-4"></label><input readonly="readonly" id="item-arrow-4" value="ui-icon-arrow-4" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-4-diag" class="ui-icon ui-icon-arrow-4-diag"></label><input readonly="readonly" id="item-arrow-4-diag" value="ui-icon-arrow-4-diag" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-d" class="ui-icon ui-icon-arrow-d"></label><input readonly="readonly" id="item-arrow-d" value="ui-icon-arrow-d" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-d-l" class="ui-icon ui-icon-arrow-d-l"></label><input readonly="readonly" id="item-arrow-d-l" value="ui-icon-arrow-d-l" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-d-r" class="ui-icon ui-icon-arrow-d-r"></label><input readonly="readonly" id="item-arrow-d-r" value="ui-icon-arrow-d-r" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-l" class="ui-icon ui-icon-arrow-l"></label><input readonly="readonly" id="item-arrow-l" value="ui-icon-arrow-l" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-r" class="ui-icon ui-icon-arrow-r"></label><input readonly="readonly" id="item-arrow-r" value="ui-icon-arrow-r" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-u" class="ui-icon ui-icon-arrow-u"></label><input readonly="readonly" id="item-arrow-u" value="ui-icon-arrow-u" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-u-l" class="ui-icon ui-icon-arrow-u-l"></label><input readonly="readonly" id="item-arrow-u-l" value="ui-icon-arrow-u-l" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrow-u-r" class="ui-icon ui-icon-arrow-u-r"></label><input readonly="readonly" id="item-arrow-u-r" value="ui-icon-arrow-u-r" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowrefresh-1-e" class="ui-icon ui-icon-arrowrefresh-1-e"></label><input readonly="readonly" id="item-arrowrefresh-1-e" value="ui-icon-arrowrefresh-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowrefresh-1-n" class="ui-icon ui-icon-arrowrefresh-1-n"></label><input readonly="readonly" id="item-arrowrefresh-1-n" value="ui-icon-arrowrefresh-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowrefresh-1-s" class="ui-icon ui-icon-arrowrefresh-1-s"></label><input readonly="readonly" id="item-arrowrefresh-1-s" value="ui-icon-arrowrefresh-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowrefresh-1-w" class="ui-icon ui-icon-arrowrefresh-1-w"></label><input readonly="readonly" id="item-arrowrefresh-1-w" value="ui-icon-arrowrefresh-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturn-1-e" class="ui-icon ui-icon-arrowreturn-1-e"></label><input readonly="readonly" id="item-arrowreturn-1-e" value="ui-icon-arrowreturn-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturn-1-n" class="ui-icon ui-icon-arrowreturn-1-n"></label><input readonly="readonly" id="item-arrowreturn-1-n" value="ui-icon-arrowreturn-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturn-1-s" class="ui-icon ui-icon-arrowreturn-1-s"></label><input readonly="readonly" id="item-arrowreturn-1-s" value="ui-icon-arrowreturn-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturn-1-w" class="ui-icon ui-icon-arrowreturn-1-w"></label><input readonly="readonly" id="item-arrowreturn-1-w" value="ui-icon-arrowreturn-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturnthick-1-e" class="ui-icon ui-icon-arrowreturnthick-1-e"></label><input readonly="readonly" id="item-arrowreturnthick-1-e" value="ui-icon-arrowreturnthick-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturnthick-1-n" class="ui-icon ui-icon-arrowreturnthick-1-n"></label><input readonly="readonly" id="item-arrowreturnthick-1-n" value="ui-icon-arrowreturnthick-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturnthick-1-s" class="ui-icon ui-icon-arrowreturnthick-1-s"></label><input readonly="readonly" id="item-arrowreturnthick-1-s" value="ui-icon-arrowreturnthick-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowreturnthick-1-w" class="ui-icon ui-icon-arrowreturnthick-1-w"></label><input readonly="readonly" id="item-arrowreturnthick-1-w" value="ui-icon-arrowreturnthick-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowstop-1-e" class="ui-icon ui-icon-arrowstop-1-e"></label><input readonly="readonly" id="item-arrowstop-1-e" value="ui-icon-arrowstop-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowstop-1-n" class="ui-icon ui-icon-arrowstop-1-n"></label><input readonly="readonly" id="item-arrowstop-1-n" value="ui-icon-arrowstop-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowstop-1-s" class="ui-icon ui-icon-arrowstop-1-s"></label><input readonly="readonly" id="item-arrowstop-1-s" value="ui-icon-arrowstop-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowstop-1-w" class="ui-icon ui-icon-arrowstop-1-w"></label><input readonly="readonly" id="item-arrowstop-1-w" value="ui-icon-arrowstop-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-e" class="ui-icon ui-icon-arrowthick-1-e"></label><input readonly="readonly" id="item-arrowthick-1-e" value="ui-icon-arrowthick-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-n" class="ui-icon ui-icon-arrowthick-1-n"></label><input readonly="readonly" id="item-arrowthick-1-n" value="ui-icon-arrowthick-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-ne" class="ui-icon ui-icon-arrowthick-1-ne"></label><input readonly="readonly" id="item-arrowthick-1-ne" value="ui-icon-arrowthick-1-ne" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-nw" class="ui-icon ui-icon-arrowthick-1-nw"></label><input readonly="readonly" id="item-arrowthick-1-nw" value="ui-icon-arrowthick-1-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-s" class="ui-icon ui-icon-arrowthick-1-s"></label><input readonly="readonly" id="item-arrowthick-1-s" value="ui-icon-arrowthick-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-se" class="ui-icon ui-icon-arrowthick-1-se"></label><input readonly="readonly" id="item-arrowthick-1-se" value="ui-icon-arrowthick-1-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-sw" class="ui-icon ui-icon-arrowthick-1-sw"></label><input readonly="readonly" id="item-arrowthick-1-sw" value="ui-icon-arrowthick-1-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-1-w" class="ui-icon ui-icon-arrowthick-1-w"></label><input readonly="readonly" id="item-arrowthick-1-w" value="ui-icon-arrowthick-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-2-e-w" class="ui-icon ui-icon-arrowthick-2-e-w"></label><input readonly="readonly" id="item-arrowthick-2-e-w" value="ui-icon-arrowthick-2-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-2-n-s" class="ui-icon ui-icon-arrowthick-2-n-s"></label><input readonly="readonly" id="item-arrowthick-2-n-s" value="ui-icon-arrowthick-2-n-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-2-ne-sw" class="ui-icon ui-icon-arrowthick-2-ne-sw"></label><input readonly="readonly" id="item-arrowthick-2-ne-sw" value="ui-icon-arrowthick-2-ne-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthick-2-se-nw" class="ui-icon ui-icon-arrowthick-2-se-nw"></label><input readonly="readonly" id="item-arrowthick-2-se-nw" value="ui-icon-arrowthick-2-se-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthickstop-1-e" class="ui-icon ui-icon-arrowthickstop-1-e"></label><input readonly="readonly" id="item-arrowthickstop-1-e" value="ui-icon-arrowthickstop-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthickstop-1-n" class="ui-icon ui-icon-arrowthickstop-1-n"></label><input readonly="readonly" id="item-arrowthickstop-1-n" value="ui-icon-arrowthickstop-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthickstop-1-s" class="ui-icon ui-icon-arrowthickstop-1-s"></label><input readonly="readonly" id="item-arrowthickstop-1-s" value="ui-icon-arrowthickstop-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-arrowthickstop-1-w" class="ui-icon ui-icon-arrowthickstop-1-w"></label><input readonly="readonly" id="item-arrowthickstop-1-w" value="ui-icon-arrowthickstop-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-audio" class="ui-icon ui-icon-audio"></label><input readonly="readonly" id="item-audio" value="ui-icon-audio" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-back" class="ui-icon ui-icon-back"></label><input readonly="readonly" id="item-back" value="ui-icon-back" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-bars" class="ui-icon ui-icon-bars"></label><input readonly="readonly" id="item-bars" value="ui-icon-bars" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-battery-0" class="ui-icon ui-icon-battery-0"></label><input readonly="readonly" id="item-battery-0" value="ui-icon-battery-0" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-battery-1" class="ui-icon ui-icon-battery-1"></label><input readonly="readonly" id="item-battery-1" value="ui-icon-battery-1" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-battery-2" class="ui-icon ui-icon-battery-2"></label><input readonly="readonly" id="item-battery-2" value="ui-icon-battery-2" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-battery-3" class="ui-icon ui-icon-battery-3"></label><input readonly="readonly" id="item-battery-3" value="ui-icon-battery-3" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-book" class="ui-icon ui-icon-book"></label><input readonly="readonly" id="item-book" value="ui-icon-book" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-book-b" class="ui-icon ui-icon-book-b"></label><input readonly="readonly" id="item-book-b" value="ui-icon-book-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-bookmark" class="ui-icon ui-icon-bookmark"></label><input readonly="readonly" id="item-bookmark" value="ui-icon-bookmark" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-bookmark-b" class="ui-icon ui-icon-bookmark-b"></label><input readonly="readonly" id="item-bookmark-b" value="ui-icon-bookmark-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-box" class="ui-icon ui-icon-box"></label><input readonly="readonly" id="item-box" value="ui-icon-box" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-bullet" class="ui-icon ui-icon-bullet"></label><input readonly="readonly" id="item-bullet" value="ui-icon-bullet" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-calculator" class="ui-icon ui-icon-calculator"></label><input readonly="readonly" id="item-calculator" value="ui-icon-calculator" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-calculator-b" class="ui-icon ui-icon-calculator-b"></label><input readonly="readonly" id="item-calculator-b" value="ui-icon-calculator-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-calendar" class="ui-icon ui-icon-calendar"></label><input readonly="readonly" id="item-calendar" value="ui-icon-calendar" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-calendar-b" class="ui-icon ui-icon-calendar-b"></label><input readonly="readonly" id="item-calendar-b" value="ui-icon-calendar-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-calendar-day" class="ui-icon ui-icon-calendar-day"></label><input readonly="readonly" id="item-calendar-day" value="ui-icon-calendar-day" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-camera" class="ui-icon ui-icon-camera"></label><input readonly="readonly" id="item-camera" value="ui-icon-camera" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cancel" class="ui-icon ui-icon-cancel"></label><input readonly="readonly" id="item-cancel" value="ui-icon-cancel" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-e" class="ui-icon ui-icon-carat-1-e"></label><input readonly="readonly" id="item-carat-1-e" value="ui-icon-carat-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-n" class="ui-icon ui-icon-carat-1-n"></label><input readonly="readonly" id="item-carat-1-n" value="ui-icon-carat-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-ne" class="ui-icon ui-icon-carat-1-ne"></label><input readonly="readonly" id="item-carat-1-ne" value="ui-icon-carat-1-ne" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-nw" class="ui-icon ui-icon-carat-1-nw"></label><input readonly="readonly" id="item-carat-1-nw" value="ui-icon-carat-1-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-s" class="ui-icon ui-icon-carat-1-s"></label><input readonly="readonly" id="item-carat-1-s" value="ui-icon-carat-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-se" class="ui-icon ui-icon-carat-1-se"></label><input readonly="readonly" id="item-carat-1-se" value="ui-icon-carat-1-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-sw" class="ui-icon ui-icon-carat-1-sw"></label><input readonly="readonly" id="item-carat-1-sw" value="ui-icon-carat-1-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-1-w" class="ui-icon ui-icon-carat-1-w"></label><input readonly="readonly" id="item-carat-1-w" value="ui-icon-carat-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-e" class="ui-icon ui-icon-carat-2-e"></label><input readonly="readonly" id="item-carat-2-e" value="ui-icon-carat-2-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-e-w" class="ui-icon ui-icon-carat-2-e-w"></label><input readonly="readonly" id="item-carat-2-e-w" value="ui-icon-carat-2-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-n" class="ui-icon ui-icon-carat-2-n"></label><input readonly="readonly" id="item-carat-2-n" value="ui-icon-carat-2-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-n-s" class="ui-icon ui-icon-carat-2-n-s"></label><input readonly="readonly" id="item-carat-2-n-s" value="ui-icon-carat-2-n-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-s" class="ui-icon ui-icon-carat-2-s"></label><input readonly="readonly" id="item-carat-2-s" value="ui-icon-carat-2-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-carat-2-w" class="ui-icon ui-icon-carat-2-w"></label><input readonly="readonly" id="item-carat-2-w" value="ui-icon-carat-2-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-caret-d" class="ui-icon ui-icon-caret-d"></label><input readonly="readonly" id="item-caret-d" value="ui-icon-caret-d" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-caret-l" class="ui-icon ui-icon-caret-l"></label><input readonly="readonly" id="item-caret-l" value="ui-icon-caret-l" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-caret-r" class="ui-icon ui-icon-caret-r"></label><input readonly="readonly" id="item-caret-r" value="ui-icon-caret-r" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-caret-u" class="ui-icon ui-icon-caret-u"></label><input readonly="readonly" id="item-caret-u" value="ui-icon-caret-u" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cart" class="ui-icon ui-icon-cart"></label><input readonly="readonly" id="item-cart" value="ui-icon-cart" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cart-b" class="ui-icon ui-icon-cart-b"></label><input readonly="readonly" id="item-cart-b" value="ui-icon-cart-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-check" class="ui-icon ui-icon-check"></label><input readonly="readonly" id="item-check" value="ui-icon-check" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-check-off" class="ui-icon ui-icon-check-off"></label><input readonly="readonly" id="item-check-off" value="ui-icon-check-off" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-check-on" class="ui-icon ui-icon-check-on"></label><input readonly="readonly" id="item-check-on" value="ui-icon-check-on" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle" class="ui-icon ui-icon-circle"></label><input readonly="readonly" id="item-circle" value="ui-icon-circle" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-arrow-e" class="ui-icon ui-icon-circle-arrow-e"></label><input readonly="readonly" id="item-circle-arrow-e" value="ui-icon-circle-arrow-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-arrow-n" class="ui-icon ui-icon-circle-arrow-n"></label><input readonly="readonly" id="item-circle-arrow-n" value="ui-icon-circle-arrow-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-arrow-s" class="ui-icon ui-icon-circle-arrow-s"></label><input readonly="readonly" id="item-circle-arrow-s" value="ui-icon-circle-arrow-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-arrow-w" class="ui-icon ui-icon-circle-arrow-w"></label><input readonly="readonly" id="item-circle-arrow-w" value="ui-icon-circle-arrow-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-arrow-e" class="ui-icon ui-icon-circle-b-arrow-e"></label><input readonly="readonly" id="item-circle-b-arrow-e" value="ui-icon-circle-b-arrow-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-arrow-n" class="ui-icon ui-icon-circle-b-arrow-n"></label><input readonly="readonly" id="item-circle-b-arrow-n" value="ui-icon-circle-b-arrow-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-arrow-s" class="ui-icon ui-icon-circle-b-arrow-s"></label><input readonly="readonly" id="item-circle-b-arrow-s" value="ui-icon-circle-b-arrow-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-arrow-w" class="ui-icon ui-icon-circle-b-arrow-w"></label><input readonly="readonly" id="item-circle-b-arrow-w" value="ui-icon-circle-b-arrow-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-check" class="ui-icon ui-icon-circle-b-check"></label><input readonly="readonly" id="item-circle-b-check" value="ui-icon-circle-b-check" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-close" class="ui-icon ui-icon-circle-b-close"></label><input readonly="readonly" id="item-circle-b-close" value="ui-icon-circle-b-close" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-help" class="ui-icon ui-icon-circle-b-help"></label><input readonly="readonly" id="item-circle-b-help" value="ui-icon-circle-b-help" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-info" class="ui-icon ui-icon-circle-b-info"></label><input readonly="readonly" id="item-circle-b-info" value="ui-icon-circle-b-info" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-minus" class="ui-icon ui-icon-circle-b-minus"></label><input readonly="readonly" id="item-circle-b-minus" value="ui-icon-circle-b-minus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-notice" class="ui-icon ui-icon-circle-b-notice"></label><input readonly="readonly" id="item-circle-b-notice" value="ui-icon-circle-b-notice" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-plus" class="ui-icon ui-icon-circle-b-plus"></label><input readonly="readonly" id="item-circle-b-plus" value="ui-icon-circle-b-plus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-triangle-e" class="ui-icon ui-icon-circle-b-triangle-e"></label><input readonly="readonly" id="item-circle-b-triangle-e" value="ui-icon-circle-b-triangle-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-triangle-n" class="ui-icon ui-icon-circle-b-triangle-n"></label><input readonly="readonly" id="item-circle-b-triangle-n" value="ui-icon-circle-b-triangle-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-triangle-s" class="ui-icon ui-icon-circle-b-triangle-s"></label><input readonly="readonly" id="item-circle-b-triangle-s" value="ui-icon-circle-b-triangle-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-b-triangle-w" class="ui-icon ui-icon-circle-b-triangle-w"></label><input readonly="readonly" id="item-circle-b-triangle-w" value="ui-icon-circle-b-triangle-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-check" class="ui-icon ui-icon-circle-check"></label><input readonly="readonly" id="item-circle-check" value="ui-icon-circle-check" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-close" class="ui-icon ui-icon-circle-close"></label><input readonly="readonly" id="item-circle-close" value="ui-icon-circle-close" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-help" class="ui-icon ui-icon-circle-help"></label><input readonly="readonly" id="item-circle-help" value="ui-icon-circle-help" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-info" class="ui-icon ui-icon-circle-info"></label><input readonly="readonly" id="item-circle-info" value="ui-icon-circle-info" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-minus" class="ui-icon ui-icon-circle-minus"></label><input readonly="readonly" id="item-circle-minus" value="ui-icon-circle-minus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-notice" class="ui-icon ui-icon-circle-notice"></label><input readonly="readonly" id="item-circle-notice" value="ui-icon-circle-notice" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-phone" class="ui-icon ui-icon-circle-phone"></label><input readonly="readonly" id="item-circle-phone" value="ui-icon-circle-phone" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-plus" class="ui-icon ui-icon-circle-plus"></label><input readonly="readonly" id="item-circle-plus" value="ui-icon-circle-plus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-triangle-e" class="ui-icon ui-icon-circle-triangle-e"></label><input readonly="readonly" id="item-circle-triangle-e" value="ui-icon-circle-triangle-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-triangle-n" class="ui-icon ui-icon-circle-triangle-n"></label><input readonly="readonly" id="item-circle-triangle-n" value="ui-icon-circle-triangle-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-triangle-s" class="ui-icon ui-icon-circle-triangle-s"></label><input readonly="readonly" id="item-circle-triangle-s" value="ui-icon-circle-triangle-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-triangle-w" class="ui-icon ui-icon-circle-triangle-w"></label><input readonly="readonly" id="item-circle-triangle-w" value="ui-icon-circle-triangle-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-zoomin" class="ui-icon ui-icon-circle-zoomin"></label><input readonly="readonly" id="item-circle-zoomin" value="ui-icon-circle-zoomin" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circle-zoomout" class="ui-icon ui-icon-circle-zoomout"></label><input readonly="readonly" id="item-circle-zoomout" value="ui-icon-circle-zoomout" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circlesmall-close" class="ui-icon ui-icon-circlesmall-close"></label><input readonly="readonly" id="item-circlesmall-close" value="ui-icon-circlesmall-close" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circlesmall-minus" class="ui-icon ui-icon-circlesmall-minus"></label><input readonly="readonly" id="item-circlesmall-minus" value="ui-icon-circlesmall-minus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-circlesmall-plus" class="ui-icon ui-icon-circlesmall-plus"></label><input readonly="readonly" id="item-circlesmall-plus" value="ui-icon-circlesmall-plus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-clipboard" class="ui-icon ui-icon-clipboard"></label><input readonly="readonly" id="item-clipboard" value="ui-icon-clipboard" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-clock" class="ui-icon ui-icon-clock"></label><input readonly="readonly" id="item-clock" value="ui-icon-clock" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-clock-b" class="ui-icon ui-icon-clock-b"></label><input readonly="readonly" id="item-clock-b" value="ui-icon-clock-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-close" class="ui-icon ui-icon-close"></label><input readonly="readonly" id="item-close" value="ui-icon-close" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-closethick" class="ui-icon ui-icon-closethick"></label><input readonly="readonly" id="item-closethick" value="ui-icon-closethick" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cloud" class="ui-icon ui-icon-cloud"></label><input readonly="readonly" id="item-cloud" value="ui-icon-cloud" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cloud-b" class="ui-icon ui-icon-cloud-b"></label><input readonly="readonly" id="item-cloud-b" value="ui-icon-cloud-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cloud-download" class="ui-icon ui-icon-cloud-download"></label><input readonly="readonly" id="item-cloud-download" value="ui-icon-cloud-download" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cloud-upload" class="ui-icon ui-icon-cloud-upload"></label><input readonly="readonly" id="item-cloud-upload" value="ui-icon-cloud-upload" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-comment" class="ui-icon ui-icon-comment"></label><input readonly="readonly" id="item-comment" value="ui-icon-comment" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-comments" class="ui-icon ui-icon-comments"></label><input readonly="readonly" id="item-comments" value="ui-icon-comments" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-contact" class="ui-icon ui-icon-contact"></label><input readonly="readonly" id="item-contact" value="ui-icon-contact" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-copy" class="ui-icon ui-icon-copy"></label><input readonly="readonly" id="item-copy" value="ui-icon-copy" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-cut" class="ui-icon ui-icon-cut"></label><input readonly="readonly" id="item-cut" value="ui-icon-cut" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-database" class="ui-icon ui-icon-database"></label><input readonly="readonly" id="item-database" value="ui-icon-database" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-databases" class="ui-icon ui-icon-databases"></label><input readonly="readonly" id="item-databases" value="ui-icon-databases" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-delete" class="ui-icon ui-icon-delete"></label><input readonly="readonly" id="item-delete" value="ui-icon-delete" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-desktop" class="ui-icon ui-icon-desktop"></label><input readonly="readonly" id="item-desktop" value="ui-icon-desktop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-dialog" class="ui-icon ui-icon-dialog"></label><input readonly="readonly" id="item-dialog" value="ui-icon-dialog" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-disk" class="ui-icon ui-icon-disk"></label><input readonly="readonly" id="item-disk" value="ui-icon-disk" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-document" class="ui-icon ui-icon-document"></label><input readonly="readonly" id="item-document" value="ui-icon-document" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-document-b" class="ui-icon ui-icon-document-b"></label><input readonly="readonly" id="item-document-b" value="ui-icon-document-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-edit" class="ui-icon ui-icon-edit"></label><input readonly="readonly" id="item-edit" value="ui-icon-edit" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-eject" class="ui-icon ui-icon-eject"></label><input readonly="readonly" id="item-eject" value="ui-icon-eject" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-extlink" class="ui-icon ui-icon-extlink"></label><input readonly="readonly" id="item-extlink" value="ui-icon-extlink" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-eye" class="ui-icon ui-icon-eye"></label><input readonly="readonly" id="item-eye" value="ui-icon-eye" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file" class="ui-icon ui-icon-file"></label><input readonly="readonly" id="item-file" value="ui-icon-file" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-b" class="ui-icon ui-icon-file-b"></label><input readonly="readonly" id="item-file-b" value="ui-icon-file-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-pdf" class="ui-icon ui-icon-file-pdf"></label><input readonly="readonly" id="item-file-pdf" value="ui-icon-file-pdf" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-rtf" class="ui-icon ui-icon-file-rtf"></label><input readonly="readonly" id="item-file-rtf" value="ui-icon-file-rtf" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-spreadsheet" class="ui-icon ui-icon-file-spreadsheet"></label><input readonly="readonly" id="item-file-spreadsheet" value="ui-icon-file-spreadsheet" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-text" class="ui-icon ui-icon-file-text"></label><input readonly="readonly" id="item-file-text" value="ui-icon-file-text" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-txt" class="ui-icon ui-icon-file-txt"></label><input readonly="readonly" id="item-file-txt" value="ui-icon-file-txt" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-word" class="ui-icon ui-icon-file-word"></label><input readonly="readonly" id="item-file-word" value="ui-icon-file-word" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-xls" class="ui-icon ui-icon-file-xls"></label><input readonly="readonly" id="item-file-xls" value="ui-icon-file-xls" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-file-zip" class="ui-icon ui-icon-file-zip"></label><input readonly="readonly" id="item-file-zip" value="ui-icon-file-zip" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-files" class="ui-icon ui-icon-files"></label><input readonly="readonly" id="item-files" value="ui-icon-files" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-film" class="ui-icon ui-icon-film"></label><input readonly="readonly" id="item-film" value="ui-icon-film" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-flag" class="ui-icon ui-icon-flag"></label><input readonly="readonly" id="item-flag" value="ui-icon-flag" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-folder" class="ui-icon ui-icon-folder"></label><input readonly="readonly" id="item-folder" value="ui-icon-folder" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-folder-collapsed" class="ui-icon ui-icon-folder-collapsed"></label><input readonly="readonly" id="item-folder-collapsed" value="ui-icon-folder-collapsed" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-folder-expanded" class="ui-icon ui-icon-folder-expanded"></label><input readonly="readonly" id="item-folder-expanded" value="ui-icon-folder-expanded" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-folder-open" class="ui-icon ui-icon-folder-open"></label><input readonly="readonly" id="item-folder-open" value="ui-icon-folder-open" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-forbidden" class="ui-icon ui-icon-forbidden"></label><input readonly="readonly" id="item-forbidden" value="ui-icon-forbidden" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-forward" class="ui-icon ui-icon-forward"></label><input readonly="readonly" id="item-forward" value="ui-icon-forward" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-fullscreen" class="ui-icon ui-icon-fullscreen"></label><input readonly="readonly" id="item-fullscreen" value="ui-icon-fullscreen" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-gear" class="ui-icon ui-icon-gear"></label><input readonly="readonly" id="item-gear" value="ui-icon-gear" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-gears" class="ui-icon ui-icon-gears"></label><input readonly="readonly" id="item-gears" value="ui-icon-gears" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-globe" class="ui-icon ui-icon-globe"></label><input readonly="readonly" id="item-globe" value="ui-icon-globe" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-globe-b" class="ui-icon ui-icon-globe-b"></label><input readonly="readonly" id="item-globe-b" value="ui-icon-globe-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grid" class="ui-icon ui-icon-grid"></label><input readonly="readonly" id="item-grid" value="ui-icon-grid" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grip-diagonal-se" class="ui-icon ui-icon-grip-diagonal-se"></label><input readonly="readonly" id="item-grip-diagonal-se" value="ui-icon-grip-diagonal-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grip-dotted-horizontal" class="ui-icon ui-icon-grip-dotted-horizontal"></label><input readonly="readonly" id="item-grip-dotted-horizontal" value="ui-icon-grip-dotted-horizontal" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grip-dotted-vertical" class="ui-icon ui-icon-grip-dotted-vertical"></label><input readonly="readonly" id="item-grip-dotted-vertical" value="ui-icon-grip-dotted-vertical" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grip-solid-horizontal" class="ui-icon ui-icon-grip-solid-horizontal"></label><input readonly="readonly" id="item-grip-solid-horizontal" value="ui-icon-grip-solid-horizontal" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-grip-solid-vertical" class="ui-icon ui-icon-grip-solid-vertical"></label><input readonly="readonly" id="item-grip-solid-vertical" value="ui-icon-grip-solid-vertical" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-gripsmall-diagonal-se" class="ui-icon ui-icon-gripsmall-diagonal-se"></label><input readonly="readonly" id="item-gripsmall-diagonal-se" value="ui-icon-gripsmall-diagonal-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-group" class="ui-icon ui-icon-group"></label><input readonly="readonly" id="item-group" value="ui-icon-group" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-heart" class="ui-icon ui-icon-heart"></label><input readonly="readonly" id="item-heart" value="ui-icon-heart" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-heart-b" class="ui-icon ui-icon-heart-b"></label><input readonly="readonly" id="item-heart-b" value="ui-icon-heart-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-heart-beat" class="ui-icon ui-icon-heart-beat"></label><input readonly="readonly" id="item-heart-beat" value="ui-icon-heart-beat" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-help" class="ui-icon ui-icon-help"></label><input readonly="readonly" id="item-help" value="ui-icon-help" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-help-plain" class="ui-icon ui-icon-help-plain"></label><input readonly="readonly" id="item-help-plain" value="ui-icon-help-plain" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-home" class="ui-icon ui-icon-home"></label><input readonly="readonly" id="item-home" value="ui-icon-home" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-image" class="ui-icon ui-icon-image"></label><input readonly="readonly" id="item-image" value="ui-icon-image" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-info" class="ui-icon ui-icon-info"></label><input readonly="readonly" id="item-info" value="ui-icon-info" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-info-plain" class="ui-icon ui-icon-info-plain"></label><input readonly="readonly" id="item-info-plain" value="ui-icon-info-plain" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-key" class="ui-icon ui-icon-key"></label><input readonly="readonly" id="item-key" value="ui-icon-key" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-lightbulb" class="ui-icon ui-icon-lightbulb"></label><input readonly="readonly" id="item-lightbulb" value="ui-icon-lightbulb" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-link" class="ui-icon ui-icon-link"></label><input readonly="readonly" id="item-link" value="ui-icon-link" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-link-broken" class="ui-icon ui-icon-link-broken"></label><input readonly="readonly" id="item-link-broken" value="ui-icon-link-broken" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-linkext" class="ui-icon ui-icon-linkext"></label><input readonly="readonly" id="item-linkext" value="ui-icon-linkext" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-list" class="ui-icon ui-icon-list"></label><input readonly="readonly" id="item-list" value="ui-icon-list" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-location" class="ui-icon ui-icon-location"></label><input readonly="readonly" id="item-location" value="ui-icon-location" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-locked" class="ui-icon ui-icon-locked"></label><input readonly="readonly" id="item-locked" value="ui-icon-locked" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-login" class="ui-icon ui-icon-login"></label><input readonly="readonly" id="item-login" value="ui-icon-login" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-logoff" class="ui-icon ui-icon-logoff"></label><input readonly="readonly" id="item-logoff" value="ui-icon-logoff" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-logout" class="ui-icon ui-icon-logout"></label><input readonly="readonly" id="item-logout" value="ui-icon-logout" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail" class="ui-icon ui-icon-mail"></label><input readonly="readonly" id="item-mail" value="ui-icon-mail" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-closed" class="ui-icon ui-icon-mail-closed"></label><input readonly="readonly" id="item-mail-closed" value="ui-icon-mail-closed" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-forward" class="ui-icon ui-icon-mail-forward"></label><input readonly="readonly" id="item-mail-forward" value="ui-icon-mail-forward" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-open" class="ui-icon ui-icon-mail-open"></label><input readonly="readonly" id="item-mail-open" value="ui-icon-mail-open" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-reply" class="ui-icon ui-icon-mail-reply"></label><input readonly="readonly" id="item-mail-reply" value="ui-icon-mail-reply" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-replyall" class="ui-icon ui-icon-mail-replyall"></label><input readonly="readonly" id="item-mail-replyall" value="ui-icon-mail-replyall" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mail-send" class="ui-icon ui-icon-mail-send"></label><input readonly="readonly" id="item-mail-send" value="ui-icon-mail-send" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-menu" class="ui-icon ui-icon-menu"></label><input readonly="readonly" id="item-menu" value="ui-icon-menu" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-minus" class="ui-icon ui-icon-minus"></label><input readonly="readonly" id="item-minus" value="ui-icon-minus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-minusthick" class="ui-icon ui-icon-minusthick"></label><input readonly="readonly" id="item-minusthick" value="ui-icon-minusthick" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mobile" class="ui-icon ui-icon-mobile"></label><input readonly="readonly" id="item-mobile" value="ui-icon-mobile" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-move" class="ui-icon ui-icon-move"></label><input readonly="readonly" id="item-move" value="ui-icon-move" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-movie" class="ui-icon ui-icon-movie"></label><input readonly="readonly" id="item-movie" value="ui-icon-movie" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-music" class="ui-icon ui-icon-music"></label><input readonly="readonly" id="item-music" value="ui-icon-music" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-mute" class="ui-icon ui-icon-mute"></label><input readonly="readonly" id="item-mute" value="ui-icon-mute" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-navigation" class="ui-icon ui-icon-navigation"></label><input readonly="readonly" id="item-navigation" value="ui-icon-navigation" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-newsletter" class="ui-icon ui-icon-newsletter"></label><input readonly="readonly" id="item-newsletter" value="ui-icon-newsletter" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-newspaper" class="ui-icon ui-icon-newspaper"></label><input readonly="readonly" id="item-newspaper" value="ui-icon-newspaper" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-newwin" class="ui-icon ui-icon-newwin"></label><input readonly="readonly" id="item-newwin" value="ui-icon-newwin" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-note" class="ui-icon ui-icon-note"></label><input readonly="readonly" id="item-note" value="ui-icon-note" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-notice" class="ui-icon ui-icon-notice"></label><input readonly="readonly" id="item-notice" value="ui-icon-notice" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-notice-plain" class="ui-icon ui-icon-notice-plain"></label><input readonly="readonly" id="item-notice-plain" value="ui-icon-notice-plain" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-package" class="ui-icon ui-icon-package"></label><input readonly="readonly" id="item-package" value="ui-icon-package" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-paste" class="ui-icon ui-icon-paste"></label><input readonly="readonly" id="item-paste" value="ui-icon-paste" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-pause" class="ui-icon ui-icon-pause"></label><input readonly="readonly" id="item-pause" value="ui-icon-pause" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-pencil" class="ui-icon ui-icon-pencil"></label><input readonly="readonly" id="item-pencil" value="ui-icon-pencil" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-person" class="ui-icon ui-icon-person"></label><input readonly="readonly" id="item-person" value="ui-icon-person" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-phone" class="ui-icon ui-icon-phone"></label><input readonly="readonly" id="item-phone" value="ui-icon-phone" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-picture" class="ui-icon ui-icon-picture"></label><input readonly="readonly" id="item-picture" value="ui-icon-picture" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-pin-s" class="ui-icon ui-icon-pin-s"></label><input readonly="readonly" id="item-pin-s" value="ui-icon-pin-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-pin-w" class="ui-icon ui-icon-pin-w"></label><input readonly="readonly" id="item-pin-w" value="ui-icon-pin-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-play" class="ui-icon ui-icon-play"></label><input readonly="readonly" id="item-play" value="ui-icon-play" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-plugin" class="ui-icon ui-icon-plugin"></label><input readonly="readonly" id="item-plugin" value="ui-icon-plugin" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-plus" class="ui-icon ui-icon-plus"></label><input readonly="readonly" id="item-plus" value="ui-icon-plus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-plusthick" class="ui-icon ui-icon-plusthick"></label><input readonly="readonly" id="item-plusthick" value="ui-icon-plusthick" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-popup" class="ui-icon ui-icon-popup"></label><input readonly="readonly" id="item-popup" value="ui-icon-popup" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-power" class="ui-icon ui-icon-power"></label><input readonly="readonly" id="item-power" value="ui-icon-power" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-print" class="ui-icon ui-icon-print"></label><input readonly="readonly" id="item-print" value="ui-icon-print" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-print-b" class="ui-icon ui-icon-print-b"></label><input readonly="readonly" id="item-print-b" value="ui-icon-print-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-puzzle" class="ui-icon ui-icon-puzzle"></label><input readonly="readonly" id="item-puzzle" value="ui-icon-puzzle" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-radio-off" class="ui-icon ui-icon-radio-off"></label><input readonly="readonly" id="item-radio-off" value="ui-icon-radio-off" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-radio-on" class="ui-icon ui-icon-radio-on"></label><input readonly="readonly" id="item-radio-on" value="ui-icon-radio-on" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-recycle" class="ui-icon ui-icon-recycle"></label><input readonly="readonly" id="item-recycle" value="ui-icon-recycle" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-redo" class="ui-icon ui-icon-redo"></label><input readonly="readonly" id="item-redo" value="ui-icon-redo" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-refresh" class="ui-icon ui-icon-refresh"></label><input readonly="readonly" id="item-refresh" value="ui-icon-refresh" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-rename" class="ui-icon ui-icon-rename"></label><input readonly="readonly" id="item-rename" value="ui-icon-rename" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-retweet" class="ui-icon ui-icon-retweet"></label><input readonly="readonly" id="item-retweet" value="ui-icon-retweet" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-save" class="ui-icon ui-icon-save"></label><input readonly="readonly" id="item-save" value="ui-icon-save" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-scissors" class="ui-icon ui-icon-scissors"></label><input readonly="readonly" id="item-scissors" value="ui-icon-scissors" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-screen-display" class="ui-icon ui-icon-screen-display"></label><input readonly="readonly" id="item-screen-display" value="ui-icon-screen-display" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-screen-laptop" class="ui-icon ui-icon-screen-laptop"></label><input readonly="readonly" id="item-screen-laptop" value="ui-icon-screen-laptop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-screen-mobile" class="ui-icon ui-icon-screen-mobile"></label><input readonly="readonly" id="item-screen-mobile" value="ui-icon-screen-mobile" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-script" class="ui-icon ui-icon-script"></label><input readonly="readonly" id="item-script" value="ui-icon-script" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-search" class="ui-icon ui-icon-search"></label><input readonly="readonly" id="item-search" value="ui-icon-search" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-seek-end" class="ui-icon ui-icon-seek-end"></label><input readonly="readonly" id="item-seek-end" value="ui-icon-seek-end" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-seek-first" class="ui-icon ui-icon-seek-first"></label><input readonly="readonly" id="item-seek-first" value="ui-icon-seek-first" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-seek-next" class="ui-icon ui-icon-seek-next"></label><input readonly="readonly" id="item-seek-next" value="ui-icon-seek-next" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-seek-prev" class="ui-icon ui-icon-seek-prev"></label><input readonly="readonly" id="item-seek-prev" value="ui-icon-seek-prev" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-selectbox" class="ui-icon ui-icon-selectbox"></label><input readonly="readonly" id="item-selectbox" value="ui-icon-selectbox" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-settings" class="ui-icon ui-icon-settings"></label><input readonly="readonly" id="item-settings" value="ui-icon-settings" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-shop" class="ui-icon ui-icon-shop"></label><input readonly="readonly" id="item-shop" value="ui-icon-shop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-shuffle" class="ui-icon ui-icon-shuffle"></label><input readonly="readonly" id="item-shuffle" value="ui-icon-shuffle" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-sign-in" class="ui-icon ui-icon-sign-in"></label><input readonly="readonly" id="item-sign-in" value="ui-icon-sign-in" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-sign-out" class="ui-icon ui-icon-sign-out"></label><input readonly="readonly" id="item-sign-out" value="ui-icon-sign-out" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-signal" class="ui-icon ui-icon-signal"></label><input readonly="readonly" id="item-signal" value="ui-icon-signal" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-signal-diag" class="ui-icon ui-icon-signal-diag"></label><input readonly="readonly" id="item-signal-diag" value="ui-icon-signal-diag" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-sorting" class="ui-icon ui-icon-sorting"></label><input readonly="readonly" id="item-sorting" value="ui-icon-sorting" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-sorting-asc" class="ui-icon ui-icon-sorting-asc"></label><input readonly="readonly" id="item-sorting-asc" value="ui-icon-sorting-asc" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-sorting-desc" class="ui-icon ui-icon-sorting-desc"></label><input readonly="readonly" id="item-sorting-desc" value="ui-icon-sorting-desc" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-squaresmall-close" class="ui-icon ui-icon-squaresmall-close"></label><input readonly="readonly" id="item-squaresmall-close" value="ui-icon-squaresmall-close" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-squaresmall-minus" class="ui-icon ui-icon-squaresmall-minus"></label><input readonly="readonly" id="item-squaresmall-minus" value="ui-icon-squaresmall-minus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-squaresmall-plus" class="ui-icon ui-icon-squaresmall-plus"></label><input readonly="readonly" id="item-squaresmall-plus" value="ui-icon-squaresmall-plus" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-star" class="ui-icon ui-icon-star"></label><input readonly="readonly" id="item-star" value="ui-icon-star" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-star-b" class="ui-icon ui-icon-star-b"></label><input readonly="readonly" id="item-star-b" value="ui-icon-star-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-stop" class="ui-icon ui-icon-stop"></label><input readonly="readonly" id="item-stop" value="ui-icon-stop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-suitcase" class="ui-icon ui-icon-suitcase"></label><input readonly="readonly" id="item-suitcase" value="ui-icon-suitcase" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-switch" class="ui-icon ui-icon-switch"></label><input readonly="readonly" id="item-switch" value="ui-icon-switch" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-table" class="ui-icon ui-icon-table"></label><input readonly="readonly" id="item-table" value="ui-icon-table" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-tag" class="ui-icon ui-icon-tag"></label><input readonly="readonly" id="item-tag" value="ui-icon-tag" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-ticket" class="ui-icon ui-icon-ticket"></label><input readonly="readonly" id="item-ticket" value="ui-icon-ticket" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-toggle-off" class="ui-icon ui-icon-toggle-off"></label><input readonly="readonly" id="item-toggle-off" value="ui-icon-toggle-off" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-toggle-on" class="ui-icon ui-icon-toggle-on"></label><input readonly="readonly" id="item-toggle-on" value="ui-icon-toggle-on" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-transfer-e-w" class="ui-icon ui-icon-transfer-e-w"></label><input readonly="readonly" id="item-transfer-e-w" value="ui-icon-transfer-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-transferthick-e-w" class="ui-icon ui-icon-transferthick-e-w"></label><input readonly="readonly" id="item-transferthick-e-w" value="ui-icon-transferthick-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-trash" class="ui-icon ui-icon-trash"></label><input readonly="readonly" id="item-trash" value="ui-icon-trash" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-e" class="ui-icon ui-icon-triangle-1-e"></label><input readonly="readonly" id="item-triangle-1-e" value="ui-icon-triangle-1-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-e-stop" class="ui-icon ui-icon-triangle-1-e-stop"></label><input readonly="readonly" id="item-triangle-1-e-stop" value="ui-icon-triangle-1-e-stop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-n" class="ui-icon ui-icon-triangle-1-n"></label><input readonly="readonly" id="item-triangle-1-n" value="ui-icon-triangle-1-n" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-n-stop" class="ui-icon ui-icon-triangle-1-n-stop"></label><input readonly="readonly" id="item-triangle-1-n-stop" value="ui-icon-triangle-1-n-stop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-ne" class="ui-icon ui-icon-triangle-1-ne"></label><input readonly="readonly" id="item-triangle-1-ne" value="ui-icon-triangle-1-ne" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-nw" class="ui-icon ui-icon-triangle-1-nw"></label><input readonly="readonly" id="item-triangle-1-nw" value="ui-icon-triangle-1-nw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-s" class="ui-icon ui-icon-triangle-1-s"></label><input readonly="readonly" id="item-triangle-1-s" value="ui-icon-triangle-1-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-s-stop" class="ui-icon ui-icon-triangle-1-s-stop"></label><input readonly="readonly" id="item-triangle-1-s-stop" value="ui-icon-triangle-1-s-stop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-se" class="ui-icon ui-icon-triangle-1-se"></label><input readonly="readonly" id="item-triangle-1-se" value="ui-icon-triangle-1-se" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-sw" class="ui-icon ui-icon-triangle-1-sw"></label><input readonly="readonly" id="item-triangle-1-sw" value="ui-icon-triangle-1-sw" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-w" class="ui-icon ui-icon-triangle-1-w"></label><input readonly="readonly" id="item-triangle-1-w" value="ui-icon-triangle-1-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-1-w-stop" class="ui-icon ui-icon-triangle-1-w-stop"></label><input readonly="readonly" id="item-triangle-1-w-stop" value="ui-icon-triangle-1-w-stop" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-2-e" class="ui-icon ui-icon-triangle-2-e"></label><input readonly="readonly" id="item-triangle-2-e" value="ui-icon-triangle-2-e" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-2-e-w" class="ui-icon ui-icon-triangle-2-e-w"></label><input readonly="readonly" id="item-triangle-2-e-w" value="ui-icon-triangle-2-e-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-2-n-s" class="ui-icon ui-icon-triangle-2-n-s"></label><input readonly="readonly" id="item-triangle-2-n-s" value="ui-icon-triangle-2-n-s" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-triangle-2-w" class="ui-icon ui-icon-triangle-2-w"></label><input readonly="readonly" id="item-triangle-2-w" value="ui-icon-triangle-2-w" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-truck" class="ui-icon ui-icon-truck"></label><input readonly="readonly" id="item-truck" value="ui-icon-truck" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-undo" class="ui-icon ui-icon-undo"></label><input readonly="readonly" id="item-undo" value="ui-icon-undo" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-unlocked" class="ui-icon ui-icon-unlocked"></label><input readonly="readonly" id="item-unlocked" value="ui-icon-unlocked" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-user" class="ui-icon ui-icon-user"></label><input readonly="readonly" id="item-user" value="ui-icon-user" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-users" class="ui-icon ui-icon-users"></label><input readonly="readonly" id="item-users" value="ui-icon-users" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-video" class="ui-icon ui-icon-video"></label><input readonly="readonly" id="item-video" value="ui-icon-video" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-view-icons" class="ui-icon ui-icon-view-icons"></label><input readonly="readonly" id="item-view-icons" value="ui-icon-view-icons" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-view-icons-b" class="ui-icon ui-icon-view-icons-b"></label><input readonly="readonly" id="item-view-icons-b" value="ui-icon-view-icons-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-view-list" class="ui-icon ui-icon-view-list"></label><input readonly="readonly" id="item-view-list" value="ui-icon-view-list" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-high" class="ui-icon ui-icon-volume-high"></label><input readonly="readonly" id="item-volume-high" value="ui-icon-volume-high" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-low" class="ui-icon ui-icon-volume-low"></label><input readonly="readonly" id="item-volume-low" value="ui-icon-volume-low" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-mute" class="ui-icon ui-icon-volume-mute"></label><input readonly="readonly" id="item-volume-mute" value="ui-icon-volume-mute" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-off" class="ui-icon ui-icon-volume-off"></label><input readonly="readonly" id="item-volume-off" value="ui-icon-volume-off" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-on" class="ui-icon ui-icon-volume-on"></label><input readonly="readonly" id="item-volume-on" value="ui-icon-volume-on" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-volume-on-b" class="ui-icon ui-icon-volume-on-b"></label><input readonly="readonly" id="item-volume-on-b" value="ui-icon-volume-on-b" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window" class="ui-icon ui-icon-window"></label><input readonly="readonly" id="item-window" value="ui-icon-window" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window-minimize" class="ui-icon ui-icon-window-minimize"></label><input readonly="readonly" id="item-window-minimize" value="ui-icon-window-minimize" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-window-sidebar" class="ui-icon ui-icon-window-sidebar"></label><input readonly="readonly" id="item-window-sidebar" value="ui-icon-window-sidebar" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-wrench" class="ui-icon ui-icon-wrench"></label><input readonly="readonly" id="item-wrench" value="ui-icon-wrench" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-zoomin" class="ui-icon ui-icon-zoomin"></label><input readonly="readonly" id="item-zoomin" value="ui-icon-zoomin" /></li>
-    <li class="ui-state-default ui-corner-all ui-helper-clearfix"><label for="item-zoomout" class="ui-icon ui-icon-zoomout"></label><input readonly="readonly" id="item-zoomout" value="ui-icon-zoomout" /></li>
-  </ul>
 </div>
+
+<div id="main" class="main">
+
+  <div class="section" id="start">
+    <div class="base">
+      <h2 class="base-hl">Complete new redesigned icons as web font for <span class="no-wrap">jQuery UI</span></h2>
+      <ul class="has-icon">
+        <li class="ui-icon-pencil">All icons are complete drawn by hand and optimized for a minimal size of 14&times;14 pixels.</li>
+        <li class="ui-icon-mobile">Resizable and mobile friendly icons.</li>
+        <li class="ui-icon-bucket">Change the color of icons without generating graphic files.</li>
+        <li class="ui-icon-palette">Works with all jQuery UI themes (versions: 1.11.2, 1.11.3 &amp; 1.11.4).</li>
+        <li class="ui-icon-shuttle">Easy to use, no extra plugins or hacks needed.</li>
+        <li class="ui-icon-gear">Included <abbr title="Cascading Stylesheet">CSS</abbr>3 animation for e.g. AJAX loading status.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" id="icons">
+    <div class="base">
+      <h2 class="base-hl">326 Unique icons for <span class="no-wrap">jQuery UI</span> / <span class="no-wrap">jQuery Mobile</span></h2>
+      <p>
+        This list shows all available icon names in alphabetical order without the prefix <span class="no-wrap">'ui-icon-'</span>.<br />
+        <span class="no-wrap"><sup title="alias">a)</sup> alias of another</span>;
+        <span class="no-wrap"><sup title="deprecated">d)</sup> deprected</span>
+      </p>
+      <div class="has-icon icon-list">
+        <ul><li data-ui="m" class="ui-icon-action"><span>action</span> <sup title="extlink">a</sup></li><li class="ui-icon-addon"><span>addon</span></li><li class="ui-icon-address"><span>address</span></li><li data-ui="bm" class="ui-icon-alert"><span>alert</span></li><li class="ui-icon-alert-b"><span>alert-b</span></li><li class="ui-icon-anchor"><span>anchor</span></li><li class="ui-icon-archive"><span>archive</span></li><li data-ui="b" class="ui-icon-arrow-1-e"><span>arrow-1-e</span></li><li data-ui="b" class="ui-icon-arrow-1-n"><span>arrow-1-n</span></li><li data-ui="b" class="ui-icon-arrow-1-ne"><span>arrow-1-ne</span></li><li data-ui="b" class="ui-icon-arrow-1-nw"><span>arrow-1-nw</span></li><li data-ui="b" class="ui-icon-arrow-1-s"><span>arrow-1-s</span></li><li data-ui="b" class="ui-icon-arrow-1-se"><span>arrow-1-se</span></li><li data-ui="b" class="ui-icon-arrow-1-sw"><span>arrow-1-sw</span></li><li data-ui="b" class="ui-icon-arrow-1-w"><span>arrow-1-w</span></li><li data-ui="b" class="ui-icon-arrow-2-e-w"><span>arrow-2-e-w</span></li><li data-ui="b" class="ui-icon-arrow-2-n-s"><span>arrow-2-n-s</span></li><li data-ui="b" class="ui-icon-arrow-2-ne-sw"><span>arrow-2-ne-sw</span></li><li data-ui="b" class="ui-icon-arrow-2-se-nw"><span>arrow-2-se-nw</span></li><li data-ui="b" class="ui-icon-arrow-4"><span>arrow-4</span></li><li data-ui="b" class="ui-icon-arrow-4-diag"><span>arrow-4-diag</span></li><li data-ui="m" class="ui-icon-arrow-d"><span>arrow-d</span> <sup title="arrow-1-s">a</sup></li><li data-ui="m" class="ui-icon-arrow-d-l"><span>arrow-d-l</span> <sup title="arrow-1-sw">a</sup></li><li data-ui="m" class="ui-icon-arrow-d-r"><span>arrow-d-r</span> <sup title="arrow-1-se">a</sup></li><li data-ui="m" class="ui-icon-arrow-l"><span>arrow-l</span> <sup title="arrow-1-w">a</sup></li><li data-ui="m" class="ui-icon-arrow-r"><span>arrow-r</span> <sup title="arrow-1-e">a</sup></li><li data-ui="m" class="ui-icon-arrow-u"><span>arrow-u</span> <sup title="arrow-1-n">a</sup></li><li data-ui="m" class="ui-icon-arrow-u-l"><span>arrow-u-l</span> <sup title="arrow-1-nw">a</sup></li><li data-ui="m" class="ui-icon-arrow-u-r"><span>arrow-u-r</span> <sup title="arrow-1-ne">a</sup></li><li data-ui="b" class="ui-icon-arrowrefresh-1-e"><span>arrowrefresh-1-e</span></li><li data-ui="b" class="ui-icon-arrowrefresh-1-n"><span>arrowrefresh-1-n</span></li><li data-ui="b" class="ui-icon-arrowrefresh-1-s"><span>arrowrefresh-1-s</span></li><li data-ui="b" class="ui-icon-arrowrefresh-1-w"><span>arrowrefresh-1-w</span></li><li data-ui="b" class="ui-icon-arrowreturn-1-e"><span>arrowreturn-1-e</span></li><li data-ui="b" class="ui-icon-arrowreturn-1-n"><span>arrowreturn-1-n</span></li><li data-ui="b" class="ui-icon-arrowreturn-1-s"><span>arrowreturn-1-s</span></li><li data-ui="b" class="ui-icon-arrowreturn-1-w"><span>arrowreturn-1-w</span></li><li data-ui="b" class="ui-icon-arrowreturnthick-1-e"><span>arrowreturnthick-1-e</span></li><li data-ui="b" class="ui-icon-arrowreturnthick-1-n"><span>arrowreturnthick-1-n</span></li><li data-ui="b" class="ui-icon-arrowreturnthick-1-s"><span>arrowreturnthick-1-s</span></li><li data-ui="b" class="ui-icon-arrowreturnthick-1-w"><span>arrowreturnthick-1-w</span></li><li data-ui="b" class="ui-icon-arrowstop-1-e"><span>arrowstop-1-e</span></li><li data-ui="b" class="ui-icon-arrowstop-1-n"><span>arrowstop-1-n</span></li><li data-ui="b" class="ui-icon-arrowstop-1-s"><span>arrowstop-1-s</span></li><li data-ui="b" class="ui-icon-arrowstop-1-w"><span>arrowstop-1-w</span></li><li data-ui="b" class="ui-icon-arrowthick-1-e"><span>arrowthick-1-e</span></li><li data-ui="b" class="ui-icon-arrowthick-1-n"><span>arrowthick-1-n</span></li><li data-ui="b" class="ui-icon-arrowthick-1-ne"><span>arrowthick-1-ne</span></li><li data-ui="b" class="ui-icon-arrowthick-1-nw"><span>arrowthick-1-nw</span></li><li data-ui="b" class="ui-icon-arrowthick-1-s"><span>arrowthick-1-s</span></li><li data-ui="b" class="ui-icon-arrowthick-1-se"><span>arrowthick-1-se</span></li><li data-ui="b" class="ui-icon-arrowthick-1-sw"><span>arrowthick-1-sw</span></li><li data-ui="b" class="ui-icon-arrowthick-1-w"><span>arrowthick-1-w</span></li><li data-ui="b" class="ui-icon-arrowthick-2-e-w"><span>arrowthick-2-e-w</span></li><li data-ui="b" class="ui-icon-arrowthick-2-n-s"><span>arrowthick-2-n-s</span></li><li data-ui="b" class="ui-icon-arrowthick-2-ne-sw"><span>arrowthick-2-ne-sw</span></li><li data-ui="b" class="ui-icon-arrowthick-2-se-nw"><span>arrowthick-2-se-nw</span></li><li data-ui="b" class="ui-icon-arrowthickstop-1-e"><span>arrowthickstop-1-e</span></li><li data-ui="b" class="ui-icon-arrowthickstop-1-n"><span>arrowthickstop-1-n</span></li><li data-ui="b" class="ui-icon-arrowthickstop-1-s"><span>arrowthickstop-1-s</span></li><li data-ui="b" class="ui-icon-arrowthickstop-1-w"><span>arrowthickstop-1-w</span></li><li data-ui="m" class="ui-icon-audio"><span>audio</span> <sup title="file-audio">a</sup></li><li data-ui="m" class="ui-icon-back"><span>back</span> <sup title="arrowreturn-1-s">a</sup></li><li data-ui="m" class="ui-icon-bars"><span>bars</span> <sup title="menu">a</sup></li><li data-ui="b" class="ui-icon-battery-0"><span>battery-0</span></li><li data-ui="b" class="ui-icon-battery-1"><span>battery-1</span></li><li data-ui="b" class="ui-icon-battery-2"><span>battery-2</span></li><li data-ui="b" class="ui-icon-battery-3"><span>battery-3</span></li><li class="ui-icon-book"><span>book</span></li><li class="ui-icon-book-b"><span>book-b</span></li><li data-ui="b" class="ui-icon-bookmark"><span>bookmark</span></li><li class="ui-icon-bookmark-b"><span>bookmark-b</span></li><li class="ui-icon-box"><span>box</span></li><li class="ui-icon-bucket"><span>bucket</span></li><li class="ui-icon-bug"><span>bug</span></li><li data-ui="b" class="ui-icon-bullet"><span>bullet</span></li><li data-ui="m" class="ui-icon-bullets"><span>bullets</span> <sup title="view-list">a</sup></li><li class="ui-icon-bullhorn"><span>bullhorn</span></li><li data-ui="b" class="ui-icon-calculator"><span>calculator</span></li><li class="ui-icon-calculator-b"><span>calculator-b</span></li><li data-ui="bm" class="ui-icon-calendar"><span>calendar</span></li><li class="ui-icon-calendar-b"><span>calendar-b</span></li><li class="ui-icon-calendar-day"><span>calendar-day</span></li><li data-ui="m" class="ui-icon-camera"><span>camera</span></li><li data-ui="b" class="ui-icon-cancel"><span>cancel</span></li><li data-ui="b" class="ui-icon-carat-1-e"><span>carat-1-e</span></li><li data-ui="b" class="ui-icon-carat-1-n"><span>carat-1-n</span></li><li data-ui="b" class="ui-icon-carat-1-ne"><span>carat-1-ne</span></li><li data-ui="b" class="ui-icon-carat-1-nw"><span>carat-1-nw</span></li><li data-ui="b" class="ui-icon-carat-1-s"><span>carat-1-s</span></li><li data-ui="b" class="ui-icon-carat-1-se"><span>carat-1-se</span></li><li data-ui="b" class="ui-icon-carat-1-sw"><span>carat-1-sw</span></li><li data-ui="b" class="ui-icon-carat-1-w"><span>carat-1-w</span></li><li class="ui-icon-carat-2-e"><span>carat-2-e</span></li><li data-ui="b" class="ui-icon-carat-2-e-w"><span>carat-2-e-w</span></li><li class="ui-icon-carat-2-n"><span>carat-2-n</span></li><li data-ui="b" class="ui-icon-carat-2-n-s"><span>carat-2-n-s</span></li><li class="ui-icon-carat-2-s"><span>carat-2-s</span></li><li class="ui-icon-carat-2-w"><span>carat-2-w</span></li><li data-ui="m" class="ui-icon-carat-d"><span>carat-d</span> <sup title="carat-1-s">a</sup></li><li data-ui="m" class="ui-icon-carat-l"><span>carat-l</span> <sup title="carat-1-w">a</sup></li><li data-ui="m" class="ui-icon-carat-r"><span>carat-r</span> <sup title="carat-1-e">a</sup></li><li data-ui="m" class="ui-icon-carat-u"><span>carat-u</span> <sup title="carat-1-n">a</sup></li><li data-ui="b" class="ui-icon-cart"><span>cart</span></li><li class="ui-icon-cart-b"><span>cart-b</span></li><li class="ui-icon-chart-bars"><span>chart-bars</span></li><li class="ui-icon-chart-line"><span>chart-line</span></li><li class="ui-icon-chart-pie"><span>chart-pie</span></li><li data-ui="bm" class="ui-icon-check"><span>check</span></li><li class="ui-icon-check-off"><span>check-off</span></li><li class="ui-icon-check-on"><span>check-on</span></li><li class="ui-icon-checkbox"><span>checkbox</span> <sup title="check-off">a</sup></li><li class="ui-icon-checkbox-checked"><span>checkbox-checked</span> <sup title="check-on">a</sup></li><li class="ui-icon-checkbox-off"><span>checkbox-off</span> <sup title="check-off">a</sup></li><li class="ui-icon-checkbox-on"><span>checkbox-on</span> <sup title="check-on">a</sup></li><li class="ui-icon-checkbox-unchecked"><span>checkbox-unchecked</span> <sup title="check-off">a</sup></li><li class="ui-icon-circle"><span>circle</span></li><li data-ui="b" class="ui-icon-circle-arrow-e"><span>circle-arrow-e</span></li><li data-ui="b" class="ui-icon-circle-arrow-n"><span>circle-arrow-n</span></li><li data-ui="b" class="ui-icon-circle-arrow-s"><span>circle-arrow-s</span></li><li data-ui="b" class="ui-icon-circle-arrow-w"><span>circle-arrow-w</span></li><li class="ui-icon-circle-b-arrow-e"><span>circle-b-arrow-e</span></li><li class="ui-icon-circle-b-arrow-n"><span>circle-b-arrow-n</span></li><li class="ui-icon-circle-b-arrow-s"><span>circle-b-arrow-s</span></li><li class="ui-icon-circle-b-arrow-w"><span>circle-b-arrow-w</span></li><li class="ui-icon-circle-b-check"><span>circle-b-check</span></li><li class="ui-icon-circle-b-close"><span>circle-b-close</span></li><li class="ui-icon-circle-b-help"><span>circle-b-help</span></li><li class="ui-icon-circle-b-info"><span>circle-b-info</span></li><li class="ui-icon-circle-b-minus"><span>circle-b-minus</span></li><li class="ui-icon-circle-b-notice"><span>circle-b-notice</span></li><li class="ui-icon-circle-b-plus"><span>circle-b-plus</span></li><li class="ui-icon-circle-b-triangle-e"><span>circle-b-triangle-e</span></li><li class="ui-icon-circle-b-triangle-n"><span>circle-b-triangle-n</span></li><li class="ui-icon-circle-b-triangle-s"><span>circle-b-triangle-s</span></li><li class="ui-icon-circle-b-triangle-w"><span>circle-b-triangle-w</span></li><li data-ui="b" class="ui-icon-circle-check"><span>circle-check</span></li><li data-ui="b" class="ui-icon-circle-close"><span>circle-close</span></li><li class="ui-icon-circle-help"><span>circle-help</span></li><li class="ui-icon-circle-info"><span>circle-info</span></li><li data-ui="b" class="ui-icon-circle-minus"><span>circle-minus</span></li><li class="ui-icon-circle-notice"><span>circle-notice</span></li><li class="ui-icon-circle-phone"><span>circle-phone</span></li><li data-ui="b" class="ui-icon-circle-plus"><span>circle-plus</span></li><li data-ui="b" class="ui-icon-circle-triangle-e"><span>circle-triangle-e</span></li><li data-ui="b" class="ui-icon-circle-triangle-n"><span>circle-triangle-n</span></li><li data-ui="b" class="ui-icon-circle-triangle-s"><span>circle-triangle-s</span></li><li data-ui="b" class="ui-icon-circle-triangle-w"><span>circle-triangle-w</span></li><li class="ui-icon-circle-zoom"><span>circle-zoom</span></li><li data-ui="b" class="ui-icon-circle-zoomin"><span>circle-zoomin</span></li><li data-ui="b" class="ui-icon-circle-zoomout"><span>circle-zoomout</span></li><li data-ui="b" class="ui-icon-circlesmall-close"><span>circlesmall-close</span></li><li data-ui="b" class="ui-icon-circlesmall-minus"><span>circlesmall-minus</span></li><li data-ui="b" class="ui-icon-circlesmall-plus"><span>circlesmall-plus</span></li><li class="ui-icon-client"><span>client</span></li><li data-ui="b" class="ui-icon-clipboard"><span>clipboard</span></li><li data-ui="bm" class="ui-icon-clock"><span>clock</span></li><li class="ui-icon-clock-b"><span>clock-b</span></li><li data-ui="b" class="ui-icon-close"><span>close</span></li><li data-ui="b" class="ui-icon-closethick"><span>closethick</span></li><li data-ui="m" class="ui-icon-cloud"><span>cloud</span></li><li class="ui-icon-cloud-b"><span>cloud-b</span></li><li class="ui-icon-cloud-download"><span>cloud-download</span></li><li class="ui-icon-cloud-upload"><span>cloud-upload</span></li><li data-ui="bm" class="ui-icon-comment"><span>comment</span></li><li class="ui-icon-comments"><span>comments</span></li><li class="ui-icon-console"><span>console</span></li><li data-ui="b" class="ui-icon-contact"><span>contact</span></li><li data-ui="b" class="ui-icon-copy"><span>copy</span></li><li class="ui-icon-creditcard"><span>creditcard</span></li><li class="ui-icon-cut"><span>cut</span> <sup title="scissors">a</sup></li><li class="ui-icon-database"><span>database</span></li><li class="ui-icon-databases"><span>databases</span></li><li data-ui="m" class="ui-icon-delete"><span>delete</span> <sup title="close">a</sup></li><li class="ui-icon-desktop"><span>desktop</span> <sup title="screen-desktop">a</sup></li><li data-ui="b" class="ui-icon-disk"><span>disk</span></li><li data-ui="b" class="ui-icon-document"><span>document</span></li><li data-ui="b" class="ui-icon-document-b"><span>document-b</span></li><li class="ui-icon-download"><span>download</span></li><li data-ui="m" class="ui-icon-edit"><span>edit</span> <sup title="pencil">a</sup></li><li data-ui="b" class="ui-icon-eject"><span>eject</span></li><li class="ui-icon-email"><span>email</span> <sup title="mail-closed">a</sup></li><li class="ui-icon-erase"><span>erase</span></li><li data-ui="b" class="ui-icon-extlink"><span>extlink</span></li><li data-ui="m" class="ui-icon-eye"><span>eye</span></li><li class="ui-icon-feed"><span>feed</span> <sup title="signal-diag">a</sup></li><li class="ui-icon-file"><span>file</span> <sup title="document">a</sup></li><li class="ui-icon-file-audio"><span>file-audio</span></li><li class="ui-icon-file-image"><span>file-image</span> <sup title="image">a</sup></li><li class="ui-icon-file-movie"><span>file-movie</span> <sup title="movie">a</sup></li><li class="ui-icon-file-pdf"><span>file-pdf</span></li><li class="ui-icon-file-report"><span>file-report</span></li><li class="ui-icon-file-richtext"><span>file-richtext</span></li><li class="ui-icon-file-rtf"><span>file-rtf</span> <sup title="file-richtext">d</sup></li><li class="ui-icon-file-script"><span>file-script</span> <sup title="script">a</sup></li><li class="ui-icon-file-spreadsheet"><span>file-spreadsheet</span> <sup title="file-table">d</sup></li><li class="ui-icon-file-table"><span>file-table</span></li><li class="ui-icon-file-text"><span>file-text</span></li><li class="ui-icon-file-txt"><span>file-txt</span> <sup title="file-text">d</sup></li><li class="ui-icon-file-video"><span>file-video</span> <sup title="video">a</sup></li><li class="ui-icon-file-word"><span>file-word</span></li><li class="ui-icon-file-xls"><span>file-xls</span> <sup title="file-table">d</sup></li><li class="ui-icon-file-zip"><span>file-zip</span></li><li class="ui-icon-files"><span>files</span> <sup title="copy">a</sup></li><li data-ui="b" class="ui-icon-flag"><span>flag</span></li><li class="ui-icon-folder"><span>folder</span> <sup title="folder-collapsed">a</sup></li><li class="ui-icon-folder-closed"><span>folder-closed</span> <sup title="folder-collapsed">a</sup></li><li data-ui="b" class="ui-icon-folder-collapsed"><span>folder-collapsed</span></li><li data-ui="b" class="ui-icon-folder-open"><span>folder-open</span></li><li data-ui="m" class="ui-icon-forbidden"><span>forbidden</span> <sup title="cancel">a</sup></li><li data-ui="m" class="ui-icon-forward"><span>forward</span> <sup title="arrowreturn-1-e">a</sup></li><li class="ui-icon-fullscreen"><span>fullscreen</span> <sup title="arrow-4-diag">a</sup></li><li data-ui="bm" class="ui-icon-gear"><span>gear</span></li><li class="ui-icon-gears"><span>gears</span></li><li class="ui-icon-globe"><span>globe</span></li><li class="ui-icon-globe-b"><span>globe-b</span></li><li data-ui="m" class="ui-icon-grid"><span>grid</span> <sup title="view-icons-b">a</sup></li><li class="ui-icon-grid-b"><span>grid-b</span> <sup title="view-icons">a</sup></li><li data-ui="b" class="ui-icon-grip-diagonal-se"><span>grip-diagonal-se</span></li><li data-ui="b" class="ui-icon-grip-dotted-horizontal"><span>grip-dotted-horizontal</span></li><li data-ui="b" class="ui-icon-grip-dotted-vertical"><span>grip-dotted-vertical</span></li><li data-ui="b" class="ui-icon-grip-solid-horizontal"><span>grip-solid-horizontal</span></li><li data-ui="b" class="ui-icon-grip-solid-vertical"><span>grip-solid-vertical</span></li><li data-ui="b" class="ui-icon-gripsmall-diagonal-se"><span>gripsmall-diagonal-se</span></li><li class="ui-icon-group"><span>group</span> <sup title="persons">a</sup></li><li data-ui="bm" class="ui-icon-heart"><span>heart</span></li><li class="ui-icon-heart-b"><span>heart-b</span></li><li class="ui-icon-heart-beat"><span>heart-beat</span></li><li data-ui="b" class="ui-icon-help"><span>help</span> <sup title="circle-help">a</sup></li><li class="ui-icon-help-plain"><span>help-plain</span></li><li class="ui-icon-history"><span>history</span></li><li data-ui="bm" class="ui-icon-home"><span>home</span></li><li data-ui="b" class="ui-icon-image"><span>image</span></li><li data-ui="bm" class="ui-icon-info"><span>info</span> <sup title="circle-info">a</sup></li><li class="ui-icon-info-plain"><span>info-plain</span></li><li class="ui-icon-input"><span>input</span> <sup title="rename">a</sup></li><li class="ui-icon-jquery"><span>jquery</span></li><li data-ui="b" class="ui-icon-key"><span>key</span></li><li class="ui-icon-laptop"><span>laptop</span> <sup title="screen-laptop">a</sup></li><li data-ui="b" class="ui-icon-lightbulb"><span>lightbulb</span></li><li data-ui="b" class="ui-icon-link"><span>link</span></li><li class="ui-icon-link-broken"><span>link-broken</span></li><li class="ui-icon-linkext"><span>linkext</span> <sup title="extlink">a</sup></li><li class="ui-icon-list"><span>list</span> <sup title="view-list">a</sup></li><li class="ui-icon-loading-status-balls"><span>loading-status-balls</span></li><li class="ui-icon-loading-status-circle"><span>loading-status-circle</span></li><li class="ui-icon-loading-status-comet"><span>loading-status-comet</span></li><li class="ui-icon-loading-status-lines"><span>loading-status-lines</span></li><li class="ui-icon-loading-status-planet"><span>loading-status-planet</span></li><li data-ui="m" class="ui-icon-location"><span>location</span></li><li data-ui="m" class="ui-icon-lock"><span>lock</span> <sup title="locked">a</sup></li><li class="ui-icon-lock-open"><span>lock-open</span> <sup title="unlocked">a</sup></li><li data-ui="b" class="ui-icon-locked"><span>locked</span></li><li class="ui-icon-login"><span>login</span> <sup title="sign-in">a</sup></li><li class="ui-icon-logoff"><span>logoff</span> <sup title="sign-out">a</sup></li><li class="ui-icon-logout"><span>logout</span> <sup title="sign-out">a</sup></li><li data-ui="m" class="ui-icon-mail"><span>mail</span> <sup title="mail-closed">a</sup></li><li class="ui-icon-mail-attachment"><span>mail-attachment</span></li><li data-ui="b" class="ui-icon-mail-closed"><span>mail-closed</span></li><li class="ui-icon-mail-forward"><span>mail-forward</span></li><li data-ui="b" class="ui-icon-mail-open"><span>mail-open</span></li><li class="ui-icon-mail-read"><span>mail-read</span> <sup title="mail-open">a</sup></li><li class="ui-icon-mail-reply"><span>mail-reply</span></li><li class="ui-icon-mail-replyall"><span>mail-replyall</span></li><li class="ui-icon-mail-send"><span>mail-send</span></li><li class="ui-icon-marker"><span>marker</span></li><li class="ui-icon-menu"><span>menu</span></li><li class="ui-icon-microphone"><span>microphone</span></li><li class="ui-icon-microphone-off"><span>microphone-off</span></li><li data-ui="bm" class="ui-icon-minus"><span>minus</span></li><li data-ui="b" class="ui-icon-minusthick"><span>minusthick</span></li><li class="ui-icon-mobile"><span>mobile</span> <sup title="screen-mobile">a</sup></li><li class="ui-icon-move"><span>move</span> <sup title="arrow-4">a</sup></li><li class="ui-icon-move-h"><span>move-h</span> <sup title="arrow-2-e-w">a</sup></li><li class="ui-icon-move-v"><span>move-v</span> <sup title="arrow-2-n-s">a</sup></li><li class="ui-icon-movie"><span>movie</span></li><li data-ui="m" class="ui-icon-navigation"><span>navigation</span></li><li class="ui-icon-news"><span>news</span> <sup title="newspaper">a</sup></li><li class="ui-icon-newsletter"><span>newsletter</span> <sup title="newspaper">a</sup></li><li class="ui-icon-newspaper"><span>newspaper</span></li><li data-ui="b" class="ui-icon-newwin"><span>newwin</span></li><li data-ui="b" class="ui-icon-note"><span>note</span></li><li data-ui="b" class="ui-icon-notice"><span>notice</span> <sup title="circle-notice">a</sup></li><li class="ui-icon-notice-plain"><span>notice-plain</span></li><li class="ui-icon-package"><span>package</span></li><li class="ui-icon-palette"><span>palette</span></li><li class="ui-icon-paste"><span>paste</span> <sup title="clipboard">a</sup></li><li data-ui="b" class="ui-icon-pause"><span>pause</span></li><li data-ui="b" class="ui-icon-pencil"><span>pencil</span></li><li data-ui="b" class="ui-icon-person"><span>person</span></li><li class="ui-icon-persons"><span>persons</span></li><li data-ui="m" class="ui-icon-phone"><span>phone</span></li><li class="ui-icon-pilcrow"><span>pilcrow</span></li><li data-ui="b" class="ui-icon-pin-s"><span>pin-s</span></li><li data-ui="b" class="ui-icon-pin-w"><span>pin-w</span></li><li data-ui="b" class="ui-icon-play"><span>play</span></li><li class="ui-icon-plugin"><span>plugin</span></li><li data-ui="bm" class="ui-icon-plus"><span>plus</span></li><li data-ui="b" class="ui-icon-plusthick"><span>plusthick</span></li><li class="ui-icon-popup"><span>popup</span> <sup title="newwin">a</sup></li><li data-ui="bm" class="ui-icon-power"><span>power</span></li><li data-ui="b" class="ui-icon-print"><span>print</span></li><li class="ui-icon-print-b"><span>print-b</span></li><li class="ui-icon-print-layout"><span>print-layout</span></li><li class="ui-icon-prush"><span>prush</span></li><li class="ui-icon-puzzle"><span>puzzle</span> <sup title="addon">a</sup></li><li class="ui-icon-radio-btn"><span>radio-btn</span> <sup title="circle">a</sup></li><li class="ui-icon-radio-btn-checked"><span>radio-btn-checked</span> <sup title="radio-on">a</sup></li><li class="ui-icon-radio-btn-off"><span>radio-btn-off</span> <sup title="circle">a</sup></li><li class="ui-icon-radio-btn-on"><span>radio-btn-on</span> <sup title="radio-on">a</sup></li><li class="ui-icon-radio-btn-unchecked"><span>radio-btn-unchecked</span> <sup title="circle">a</sup></li><li data-ui="b" class="ui-icon-radio-off"><span>radio-off</span> <sup title="circle">a</sup></li><li data-ui="b" class="ui-icon-radio-on"><span>radio-on</span></li><li data-ui="m" class="ui-icon-recycle"><span>recycle</span> <sup title="trash">a</sup></li><li class="ui-icon-redo"><span>redo</span></li><li data-ui="bm" class="ui-icon-refresh"><span>refresh</span></li><li class="ui-icon-reload"><span>reload</span> <sup title="refresh">a</sup></li><li class="ui-icon-rename"><span>rename</span></li><li class="ui-icon-resize-h"><span>resize-h</span> <sup title="arrow-2-e-w">a</sup></li><li class="ui-icon-resize-v"><span>resize-v</span> <sup title="arrow-2-n-s">a</sup></li><li class="ui-icon-retweet"><span>retweet</span></li><li class="ui-icon-rss"><span>rss</span> <sup title="signal-diag">a</sup></li><li class="ui-icon-save"><span>save</span> <sup title="disk">a</sup></li><li data-ui="b" class="ui-icon-scissors"><span>scissors</span></li><li class="ui-icon-screen-desktop"><span>screen-desktop</span></li><li class="ui-icon-screen-laptop"><span>screen-laptop</span></li><li class="ui-icon-screen-mobile"><span>screen-mobile</span></li><li data-ui="b" class="ui-icon-script"><span>script</span></li><li data-ui="bm" class="ui-icon-search"><span>search</span></li><li data-ui="b" class="ui-icon-seek-end"><span>seek-end</span> <sup title="triangle-1-e-stop">a</sup></li><li data-ui="b" class="ui-icon-seek-first"><span>seek-first</span> <sup title="triangle-1-w-stop">a</sup></li><li data-ui="b" class="ui-icon-seek-next"><span>seek-next</span> <sup title="triangle-2-e">a</sup></li><li data-ui="b" class="ui-icon-seek-prev"><span>seek-prev</span> <sup title="triangle-2-w">a</sup></li><li class="ui-icon-select"><span>select</span></li><li class="ui-icon-selectbox"><span>selectbox</span></li><li class="ui-icon-server"><span>server</span></li><li class="ui-icon-settings"><span>settings</span></li><li class="ui-icon-shield"><span>shield</span></li><li data-ui="m" class="ui-icon-shop"><span>shop</span> <sup title="cart">a</sup></li><li class="ui-icon-shop-b"><span>shop-b</span> <sup title="cart-b">a</sup></li><li data-ui="b" class="ui-icon-shuffle"><span>shuffle</span></li><li class="ui-icon-shuttle"><span>shuttle</span></li><li class="ui-icon-sign-in"><span>sign-in</span></li><li class="ui-icon-sign-out"><span>sign-out</span></li><li data-ui="b" class="ui-icon-signal"><span>signal</span></li><li data-ui="b" class="ui-icon-signal-diag"><span>signal-diag</span></li><li class="ui-icon-sitemap"><span>sitemap</span></li><li class="ui-icon-sorting"><span>sorting</span></li><li class="ui-icon-sorting-asc"><span>sorting-asc</span></li><li class="ui-icon-sorting-desc"><span>sorting-desc</span></li><li data-ui="b" class="ui-icon-squaresmall-close"><span>squaresmall-close</span></li><li data-ui="b" class="ui-icon-squaresmall-minus"><span>squaresmall-minus</span></li><li data-ui="b" class="ui-icon-squaresmall-plus"><span>squaresmall-plus</span></li><li data-ui="bm" class="ui-icon-star"><span>star</span></li><li class="ui-icon-star-b"><span>star-b</span></li><li class="ui-icon-star-h"><span>star-h</span></li><li data-ui="b" class="ui-icon-stop"><span>stop</span></li><li class="ui-icon-structure"><span>structure</span></li><li data-ui="b" class="ui-icon-suitcase"><span>suitcase</span></li><li class="ui-icon-switch"><span>switch</span> <sup title="power">a</sup></li><li class="ui-icon-table"><span>table</span></li><li data-ui="bm" class="ui-icon-tag"><span>tag</span></li><li class="ui-icon-tags"><span>tags</span></li><li class="ui-icon-template"><span>template</span></li><li class="ui-icon-ticket"><span>ticket</span></li><li class="ui-icon-toggle-off"><span>toggle-off</span></li><li class="ui-icon-toggle-on"><span>toggle-on</span></li><li data-ui="b" class="ui-icon-transfer-e-w"><span>transfer-e-w</span></li><li data-ui="b" class="ui-icon-transferthick-e-w"><span>transferthick-e-w</span></li><li class="ui-icon-transform"><span>transform</span></li><li class="ui-icon-translate"><span>translate</span></li><li data-ui="b" class="ui-icon-trash"><span>trash</span></li><li class="ui-icon-trash-b"><span>trash-b</span></li><li data-ui="b" class="ui-icon-triangle-1-e"><span>triangle-1-e</span></li><li class="ui-icon-triangle-1-e-stop"><span>triangle-1-e-stop</span></li><li data-ui="b" class="ui-icon-triangle-1-n"><span>triangle-1-n</span></li><li class="ui-icon-triangle-1-n-stop"><span>triangle-1-n-stop</span></li><li data-ui="b" class="ui-icon-triangle-1-ne"><span>triangle-1-ne</span></li><li data-ui="b" class="ui-icon-triangle-1-nw"><span>triangle-1-nw</span></li><li data-ui="b" class="ui-icon-triangle-1-s"><span>triangle-1-s</span></li><li class="ui-icon-triangle-1-s-stop"><span>triangle-1-s-stop</span></li><li data-ui="b" class="ui-icon-triangle-1-se"><span>triangle-1-se</span></li><li data-ui="b" class="ui-icon-triangle-1-sw"><span>triangle-1-sw</span></li><li data-ui="b" class="ui-icon-triangle-1-w"><span>triangle-1-w</span></li><li class="ui-icon-triangle-1-w-stop"><span>triangle-1-w-stop</span></li><li class="ui-icon-triangle-2-e"><span>triangle-2-e</span></li><li data-ui="b" class="ui-icon-triangle-2-e-w"><span>triangle-2-e-w</span></li><li data-ui="b" class="ui-icon-triangle-2-n-s"><span>triangle-2-n-s</span></li><li class="ui-icon-triangle-2-w"><span>triangle-2-w</span></li><li class="ui-icon-truck"><span>truck</span></li><li class="ui-icon-undo"><span>undo</span></li><li data-ui="b" class="ui-icon-unlocked"><span>unlocked</span></li><li class="ui-icon-upload"><span>upload</span></li><li data-ui="m" class="ui-icon-user"><span>user</span> <sup title="person">a</sup></li><li class="ui-icon-users"><span>users</span> <sup title="persons">a</sup></li><li class="ui-icon-vcard"><span>vcard</span> <sup title="contact">a</sup></li><li class="ui-icon-vcs-branch"><span>vcs-branch</span></li><li class="ui-icon-vcs-compare"><span>vcs-compare</span></li><li class="ui-icon-vcs-fork"><span>vcs-fork</span></li><li class="ui-icon-vcs-merge"><span>vcs-merge</span></li><li class="ui-icon-vcs-pull-request"><span>vcs-pull-request</span></li><li data-ui="bm" class="ui-icon-video"><span>video</span></li><li class="ui-icon-view-icons"><span>view-icons</span></li><li class="ui-icon-view-icons-b"><span>view-icons-b</span></li><li class="ui-icon-view-list"><span>view-list</span></li><li class="ui-icon-volume-high"><span>volume-high</span> <sup title="volume-on">a</sup></li><li class="ui-icon-volume-low"><span>volume-low</span> <sup title="volume-on-b">a</sup></li><li class="ui-icon-volume-mute"><span>volume-mute</span> <sup title="volume-off">a</sup></li><li data-ui="b" class="ui-icon-volume-off"><span>volume-off</span></li><li data-ui="b" class="ui-icon-volume-on"><span>volume-on</span></li><li class="ui-icon-volume-on-b"><span>volume-on-b</span></li><li class="ui-icon-window"><span>window</span></li><li class="ui-icon-window-close"><span>window-close</span></li><li class="ui-icon-window-minimize"><span>window-minimize</span></li><li class="ui-icon-window-sidebar"><span>window-sidebar</span></li><li class="ui-icon-windows"><span>windows</span> <sup title="newwin">a</sup></li><li data-ui="b" class="ui-icon-wrench"><span>wrench</span></li><li class="ui-icon-zoom"><span>zoom</span></li><li class="ui-icon-zoomequal"><span>zoomequal</span></li><li data-ui="b" class="ui-icon-zoomin"><span>zoomin</span></li><li data-ui="b" class="ui-icon-zoomout"><span>zoomout</span></li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="usage">
+    <div class="base">
+      <h2 class="base-hl">Usage</h2>
+
+      <h3 class="base-hl">Include the Icon Font</h3>
+      <p>Copy the file &#34;jquery-ui.icon-font.css&#34; and the folder &#34;font&#34; into your folder, which holds
+        your <abbr title="Cascading Stylesheet">CSS</abbr>-files.</p>
+      <p>Add in the &#60;head&#62;-section of your html document a link to the &#34;jquery-ui.icon-font.css&#34;</p>
+
+      <h4 class="base-hl">Example</h4>
+<pre class="prism line-numbers" data-start="1"><code class="language-markup">
+  &#60;head&#62;
+    &#60;!-- &#8230; --&#62;
+    &#60;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34;
+      href=&#34;css/theme/jquery-ui.css&#34; /&#62;
+    &#60;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34;
+      href=&#34;css/theme/jquery-ui.icon-font.css&#34; /&#62;
+    &#60;script type=&#34;text/javascript&#34;
+      src=&#34;js/jquery.min.js&#34;&#62;&#60;/script&#62;
+    &#60;script type=&#34;text/javascript&#34;
+      src=&#34;js/jquery-ui.min.js&#34;&#62;&#60;/script&#62;
+    &#60;!-- &#8230; --&#62;
+  &#60;/head&#62;
+</code></pre>
+
+      <h3 class="base-hl">How to use an icon in HTML-markup</h3>
+      <p>To display an icon is really simple:</p>
+
+      <h4 class="base-hl">Example Code</h4>
+<pre class="prism line-numbers" data-start="1"><code class="language-markup">
+  &#60;p class="ui-widget-content
+    ui-state-default ui-helper-clearfix"&#62;
+    &#60;span style="float: left; margin-right: 0.5em;"
+      class="ui-icon ui-icon-jquery"&#62;icon&#60;/span&#62;
+    ui-icon-jquery
+  &#60;/p&#62;
+</code></pre>
+
+      <h4 class="base-hl">Example Result</h4>
+      <p class="ui-widget-content ui-state-default ui-helper-clearfix">
+        <span style="float:left;margin-right:0.5em" class="ui-icon ui-icon-jquery">icon</span>
+        ui-icon-jquery
+      </p>
+      <p>In the section <a href="#demos">Demos</a> are some more examples.</p>
+
+      <h3 class="base-hl">Supported jQuery UI</h3>
+      <p>Current supported jQuery UI Version: 1.11.2, 1.11.3 &amp; 1.11.4</p>
+
+      <h3 class="base-hl">Supported Browser</h3>
+      <div class="has-icon ui-icon-circle-b-check">
+        <p>All current major browsers should be supported. If you are using a browser,
+          which is not supported, except InternetExplorer (see below), please give me
+          <a href="https://github.com/mkkeck/jquery-ui-iconfont/issues" target="_blank">feedback</a>.</p>
+      </div>
+      <div class="has-icon ui-icon-circle-b-info">
+        <p><strong>Please note:</strong><br />
+          InternetExplorer below version 8 is not supported and InternetExplorer
+          version 8 may not display some elements correct, due limitation of
+          <abbr title="Cascading Stylesheet Version 3">CSS3</abbr> properties.
+          All versions of InternetExplorer below 10 can not
+          display <abbr title="Cascading Stylesheet Version 3">CSS3</abbr> animation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="demos">
+    <div class="base">
+      <h2 class="base-hl">Demos</h2>
+      <p>This demonstrates widgets and themes with the new icons.</p>
+      <div id="themeswitch"></div>
+      <p><strong>Please note:</strong><br />
+        Make sure you are using them with a compatible jQuery version.<br />
+        This demo uses jQuery 1.12.3 and jQuery UI 1.11.4.
+      </p>
+    </div>
+    <!-- Accordion -->
+    <div class="demo js">
+      <h3 class="base-hl">Accordion</h3>
+      <div id="demo-accordion">
+        <h4>First</h4>
+        <p>This is the content of the <strong>first</strong> accordion.</p>
+        <h4>Second</h4>
+        <p>This is the content of the <strong>second</strong> accordion.</p>
+        <h4>Third</h4>
+        <p>This is the content of the <strong>third</strong> accordion.</p>
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="demo demo-buttons js">
+      <h3 class="base-hl">Buttons</h3>
+      <button id="demo-button-1">Icon Only</button>
+      <button id="demo-button-2">Left Icon</button>
+      <button id="demo-button-3">Right Icon</button>
+      <button id="demo-button-4">Two Icons</button>
+    </div>
+    <form class="demo js">
+      <h3 class="base-hl">Radio Buttons</h3>
+      <div id="demo-radioset">
+        <input type="radio" id="radio1" name="radio"><label for="radio1">Choice 1</label>
+        <input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Choice 2</label>
+        <input type="radio" id="radio3" name="radio"><label for="radio3">Choice 3</label>
+      </div>
+    </form>
+    <!-- Dialog -->
+    <div class="demo js">
+      <h3 class="base-hl">Dialog</h3>
+      <p><button id="demo-dialog-link" class="ui-button ui-corner-all ui-widget ui-state-default ui-button-text-icon-primary">
+        <span class="ui-button-icon-primary ui-icon ui-icon-newwin"></span>
+        <span class="ui-button-text">Open Dialog</span>
+      </button></p>
+      <div id="demo-dialog" title="Dialog Title">
+        <p><strong>jQuery UI Dialog</strong></p>
+        <p>This is only a demo without any callback on close.</p>
+      </div>
+    </div>
+    <!-- Datepicker -->
+    <div class="demo js">
+      <h3 class="base-hl">Datepicker</h3>
+      <div id="demo-datepicker"></div>
+    </div>
+    <!-- Selectmenu -->
+    <form class="demo js">
+      <h3 class="base-hl"><label for="demo-selectmenu">Selectmenu</label></h3>
+      <select id="demo-selectmenu">
+        <option>Slower</option>
+        <option>Slow</option>
+        <option selected="selected">Medium</option>
+        <option>Fast</option>
+        <option>Faster</option>
+      </select>
+    </form>
+    <!-- Spinner -->
+    <form class="demo js">
+      <h3 class="base-hl"><label for="demo-spinner">Spinner</label></h3>
+      <input id="demo-spinner" />
+    </form>
+    <!-- Menu -->
+    <div class="demo js">
+      <h3 class="base-hl">Menu</h3>
+      <ul class="demo-menu" id="demo-menu">
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Item 2-1</li>
+            <li>Item 2-2
+              <ul>
+                <li>Item 2-2-1</li>
+                <li>Item 2-2-2</li>
+                <li>Item 2-2-3</li>
+              </ul>
+            </li>
+            <li>Item 2-3</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <!-- Highlight / Error -->
+    <div class="demo">
+      <h3 class="base-hl">Highlight / Error</h3>
+      <div class="ui-widget ui-widget-demo ui-helper-clearfix ui-corner-all ui-state-highlight">
+        <span class="ui-icon ui-icon-info"></span>
+        <strong>Hey!</strong> Sample &raquo;ui-state-highlight&laquo; style.
+      </div>
+      <div class="ui-widget ui-widget-demo ui-helper-clearfix ui-corner-all ui-state-error">
+        <span class="ui-icon ui-icon-alert"></span>
+        <strong>Alert:</strong> Sample &raquo;ui-state-error&laquo; style.
+      </div>
+      <div class="ui-widget ui-widget-demo ui-widget-demo-icon ui-helper-clearfix ui-corner-all ui-state-default">
+        <span class="ui-icon ui-icon-circle-b-check"></span>
+        <strong>Message:</strong><br />
+        Sample &raquo;ui-state-default&laquo; style with <strong>large</strong> icon.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="foot" class="foot">
+  <a href="#top" class="scroll" title="Scroll to Top"><span class="ui-icon ui-icon-triangle-1-n-stop">^</span></a>
+  <div class="wrapper">
+    <div class="nav">
+      <h4 class="base-hl">Downloads</h4>
+      <ul class="has-icon">
+        <li><a class="ui-icon-download" href="https://github.com/mkkeck/jquery-ui-iconfont/releases/latest" target="_blank" title="Download latest release">Latest release</a></li>
+        <li><a class="ui-icon-download" href="https://github.com/mkkeck/jquery-ui-iconfont/archive/master.zip" target="_blank" title="Download current development package">Develop package</a></li>
+        <li><a class="ui-icon-tags" href="https://github.com/mkkeck/jquery-ui-iconfont/releases" target="_blank" title="View all releases">All releases</a></li>
+      </ul>
+    </div>
+    <div class="nav">
+      <h4 class="base-hl">Develop</h4>
+      <ul class="has-icon">
+        <li><a class="ui-icon-vcs-fork" href="https://github.com/mkkeck/jquery-ui-iconfont" target="_blank" title="Fork project on Github">Repository</a></li>
+        <li><a class="ui-icon-circle-b-notice" href="https://github.com/mkkeck/jquery-ui-iconfont/issues" target="_blank" title="Issue tracker">Issues</a></li>
+        <li><a href="https://github.com/mkkeck/jquery-ui-iconfont/blob/master/Changelog.md" target="_blank" class="ui-icon-note" title="View changelog">Changelog</a></li>
+      </ul>
+    </div>
+    <p class="terms">
+      <span class="no-wrap">&#169; 2015-2016 Michael Keck.</span>
+      <span class="no-wrap">Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="Creative Commons Attribution-ShareAlike">CC BY-SA 3.0</a>.</span>
+      <span class="no-wrap">Last update 2016-05-14.</span>
+    </p>
+  </div>
+</div>
+
 <script type="text/javascript">
   /*<![CDATA[*/
-
-  /**
-   * jQuery UI Demos
-   * ----------------------------------------------------------------
-   */
-  var availableTags = [
-    'ActionScript', 'AppleScript', 'Asp', 'BASIC',
-    'C', 'C++', 'Clojure', 'COBOL', 'ColdFusion',
-    'Erlang', 'Fortran', 'Groovy', 'Haskell',
-    'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'Python',
-    'Ruby', 'Scala', 'Scheme'
-  ];
-
-  (function($) {
-
-    /* Buttons */
-    $('#button').button();
-    $('#radioset').buttonset();
-
-    /* Content */
-    $('#accordion').accordion();
-    $('#menu').menu();
-    $('#progressbar').progressbar({ value: 20 });
-    $('#tabs').tabs();
-    $('#tooltip').tooltip();
-
-    /* Dialog */
-    var dlg = $('#dialog');
-    dlg.dialog({
-      autoOpen: false,
-      width: 280,
-      buttons: [
-        { text: 'Ok', click: function() { $(this).dialog('close'); } },
-        { text: 'Cancel', click: function() { $(this).dialog('close'); }}
-      ]
-    });
-    $('#dialog-link').on('click',function(event) { dlg.dialog('open'); event.preventDefault(); });
-
-    /* Datepicker */
-    $('#datepicker').datepicker({ inline: true });
-
-    /* Inputs */
-    $('#autocomplete').autocomplete({ source: availableTags });
-    $('#selectmenu').selectmenu();
-    $('#slider').slider({ range: true,  values: [ 17, 67 ] });
-    $('#spinner').spinner();
-  })(jQuery, document);
-
-  /**
-   * Extra functions
-   */
-  (function($) {
-
-    /* Hover states on the static widgets */
-    $('body')
-      .on('mouseover', '.as-button, #icons-grid li, .icons-busy li', function() { $(this).addClass('ui-state-hover'); })
-      .on('mouseout', '.as-button, #icons-grid li, .icons-busy li', function()  { $(this).removeClass('ui-state-hover'); })
-      .on('mousedown', '#icons-grid li, .icons-busy li', function() { $(this).addClass('ui-state-highlight'); })
-      .on('mouseup', '#icons-grid li, .icons-busy li', function() { $(this).removeClass('ui-state-highlight'); });
-
-    var alist = $('#icons-list'), bcolor = $('#back-color'), icolor = $('#icon-color'), iname = $('#icon-name'), isize = $('#icon-size'), iview = $('#icon-preview'), ilist = [];
-    alist.on('focus', 'li input', function() {
-      $(this).select();
-      $(this).parent().addClass('ui-state-highlight');
-    }).on('blur', 'li input', function() {
-      $(this).parent().removeClass('ui-state-highlight');
-    });
-
-    /* Theme Switcher */
-    var theme = $('<p id="theme-switch"><span class="hl-3">Theme:&#160;&#160;</span> </p>').appendTo('.ui-theme-switch');
-    theme.themeswitch({
-      themeicon: { path : 'images/', 'width':'90', 'height':'90','type':'.png' },
-      themeversion: '1.11.3'
-    });
-
-    /* Get all icons from #icons-list */
-    $('input[value^="ui-icon-"]', alist).each(function() {
-      var v = $(this).val();
-      v = v.substring(8, v.length);
-      ilist.push(v);
-    });
-
-    /* Icon color selector */
-    icolor.attr('readonly','readonly').css({'cursor':'pointer'})
-      .colorpicker({ 'color':icolor.val(), 'displayIndicator': false, 'hideButton': false, 'history':false })
-      .on('change.color', function(e, c) { $('.ui-icon',iview).css({'color': c }); })
-      .on('mouseover.color', function(e, c) { if (c) { icolor.val(c).next('.evo-pointer').css({'background-color':c}); $('.ui-icon',iview).css({'color': c }); } });
-
-    /* Backcolor selector */
-    bcolor.attr('readonly','readonly').css({'cursor':'pointer'})
-      .colorpicker({ 'color':bcolor.val(), 'displayIndicator': false, 'hideButton': false, 'history':false })
-      .on('change.color', function(e, c) { $(iview).css({'background-color': c }); })
-      .on('mouseover.color', function(e, c) { if (c) { bcolor.val(c).next('.evo-pointer').css({'background-color':c}); $(iview).css({'background-color': c }); } });
-
-    /* Icon name */
-    iname.attr('autocomplete','off').on('focus',this, function() {
-      $(this).select();
-    }).autocomplete({
-      'source': ilist,
-      'appendTo': $('#icon-params'),
-      focus: function(event, ui) {
-        event.preventDefault();
-        $(this).val(ui.item.value);
-      },
-      select: function(event, ui) {
-        event.preventDefault();
-        $(this).val(ui.item.value);
-        $('.ui-icon',iview).attr({'class':'ui-icon ui-icon-'+ui.item.value });
-      }
-    });
-
-    /* Icon size */
-    isize.selectmenu({ 'change': function(e, d) { $('.ui-icon',iview).css({ 'font-size': d.item.value }); } });
-    $('#icon-animate').selectmenu({ 'change': function(e, d) {
-      $('option', $('#icon-animate')).each(function() { if ($(this).val() !== '') { iview.removeClass($(this).val()); } });
-      if (d.item.value === '') { return; }
-      iview.addClass(d.item.value);
-    } });
-
-    /* Initial icon settings */
-    $(iview).css({'background-color': bcolor.val() });
-    $('.ui-icon', iview).css({'color': icolor.val(), 'font-size': isize.val() }).attr({'class':'ui-icon ui-icon-'+iname.val() });
-
-  })(jQuery, document);
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)};i[r].l=1*new Date();a=s.createElement(o);m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-64592666-1','auto');ga('require','linkid','linkid.js');ga('send','pageview');
   /*]]>*/
 </script>
+<noscript>
+  <div id="browser-error">
+    <div class="wrapper">
+      <span class="ui-icon ui-icon-alert">!</span>
+      <strong>JavaScript is deactivated in your browser.</strong>
+      Some illustrations and functions of this website are just available after activation.
+    </div>
+  </div>
+</noscript>
+<script src="jscripts/jquery.content.js" type="text/javascript"></script>
 </body>
 </html>

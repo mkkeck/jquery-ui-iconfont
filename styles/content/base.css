@@ -1,0 +1,610 @@
+/**
+ * ------------------------------------------------------------
+ * BASE - 2016-04-30
+ * https://github.com/mkkeck/jquery-ui-icons
+ * Copyright: 2015-2016 Michael Keck
+ * Licensed:  GPL; http://www.gnu.org/licenses/gpl.html
+ * ------------------------------------------------------------
+ */
+
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, td, th,
+form, fieldset, button, input, label, legend, select, textarea,
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* default font */
+html {
+  font: normal normal normal 13px/16px Arial, Tahoma, Helvetica, Verdana, sans-serif;
+  line-height: normal;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body, button, input, select, textarea, td, th {
+  font-size: 1em;
+}
+address, blockquote, em, i, q {
+  font-style: normal;
+}
+b, strong {
+  font-weight: bold;
+}
+code, pre {
+  font: normal normal normal 14px/16px 'Consolas', 'Courier New', 'Courier', sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+abbr, acronym {
+  border: 0 none;
+  text-decoration: none;
+}
+.button,
+a,
+button,
+input[type='button'],
+input[type='checkbox'],
+input[type='radio'],
+input[type='reset'],
+input[type='submit'] {
+  cursor: pointer;
+  text-decoration: none;
+}
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  border: 0 none;
+  -webkit-appearance: button;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.disabled,
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  cursor: default;
+}
+fieldset {
+  border: 0 none;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+img {
+  border: 0 none;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+.hidden,
+.no-screen,
+html [hidden] {
+  display: none;
+}
+
+nav ul, nav li,
+.nav ul, .nav li {
+  list-style: none outside none;
+  min-height: 0;
+}
+
+*:focus, embed, object {
+  outline: 0 none;
+}
+::-moz-focus-inner {
+  border: 0 none;
+  outline: 0 none;
+  padding: 0;
+}
+
+/* hidden, but available for screen readers */
+.non-visual {
+  border: 0 none;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.non-visual.focusable:active,
+.non-visual.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* no line wrap */
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+/*
+ * Container
+ */
+
+.base, .demo,
+.foot, .head, .main,
+.section, .wrapper {
+  border: 0 none;
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.base, .demo,
+.section, .wrapper {
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+}
+.base, .demo,
+.wrapper {
+  padding: 20px;
+  text-align: left;
+}
+
+/* etxra */
+.has-icon[class^="ui-icon-"],
+.has-icon[class*=" ui-icon-"],
+.has-icon [class^="ui-icon-"],
+.has-icon [class*=" ui-icon-"] {
+  list-style: none;
+  padding-left: 1.5em;
+}
+.has-icon[class^="ui-icon-"]:before,
+.has-icon[class*=" ui-icon-"]:before,
+.has-icon [class^="ui-icon-"]:before,
+.has-icon [class*=" ui-icon-"]:before {
+  float: left;
+  font: normal normal normal 14px/16px 'jquery-ui', sans-serif;
+  margin-top: 0.1em;
+  margin-left: -1.5em;
+}
+
+.foot,
+.head,
+.wrapper {
+  position: relative;
+}
+
+.foot {
+  z-index: 100;
+}
+.foot .scroll,
+.foot .toggle-button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.5em;
+}
+.foot .scroll,
+.foot .toggle {
+  bottom: 0;
+  position: fixed;
+}
+.foot .scroll {
+  right: 0;
+  z-index: 101;
+}
+.foot .toggle {
+  width: 100%;
+  z-index: 100;
+}
+.foot .toggle-button {
+  padding-left: 0;
+  padding-right: 0;
+  left: 0;
+  width: 100%;
+}
+.foot .toggle-button .ui-icon {
+  margin: 0 auto;
+}
+
+.head {
+  z-index: 210;
+}
+
+
+#head.fixed {
+  position: fixed;
+}
+
+#main .section {
+  border-bottom: 3px solid #dbe5f1;
+  margin-top: -4em;
+  padding: 6em 0 2em 0;
+}
+#main .section:first-child {
+  margin-top: 0;
+}
+#main .section:last-child {
+  border-bottom: 0 none;
+}
+
+
+/*
+ * Border-Box and Clearfix
+ */
+
+.base,
+.demo,
+.foot .nav,
+.foot .terms,
+.form-field,
+.form-field input,
+.form-field select,
+.form-field .ui-colorpicker,
+.form-field .ui-combobox,
+.form-field .ui-selectmenu-button,
+.head .nav,
+.head .nav-mobile,
+.head .nav-mobile-items,
+.icon-list,
+.icon-table-cell,
+.section,
+.wrapper {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.nav ul,
+.form-field {
+  min-height: 0;
+}
+.nav ul:after,
+.base:after,
+.demo:after,
+.foot:after,
+.form-field:after,
+.head:after,
+.icon-list:after,
+.main:after,
+.section:after,
+.wrapper:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.nav ul:before,
+.base:before,
+.demo:before,
+.foot:before,
+.form-field:before,
+.head:before,
+.icon-list:before,
+.main:before,
+.section:before,
+.wrapper:before {
+  content: '';
+  display: table;
+}
+
+
+/*
+ * Default Structures
+ */
+
+#browser-error {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: -9999px;
+  width: 100%;
+}
+#browser-error .ui-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+#browser-error .wrapper {
+  padding: 5px 10px 5px 35px;
+}
+
+#loading {
+  display: block;
+  z-index: 200;
+}
+#loading .overlay {
+  background-color: #fff;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 201;
+}
+#loading .throbber {
+  animation: rotate 1s linear 0s infinite;
+  border-radius: 50px;
+  border: 5px solid #007fff;
+  border-bottom-color: #fff;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: fixed;
+  top: 50%;
+  width: 50px;
+  -moz-animation: rotate 1s linear 0s infinite;
+  -moz-border-radius: 50px;
+  -webkit-animation: rotate 1s linear 0s infinite;
+  -webkit-border-radius: 50px;
+  z-index: 202;
+}
+
+.icon-grid ul,
+.icon-list ul {
+  list-style: none outside none;
+  text-align: left;
+}
+.icon-grid li {
+  display: block;
+  float: left;
+}
+.icon-grid ul {
+  padding: 0;
+}
+.icon-grid li {
+  cursor: pointer;
+  margin: 0.25em;
+  padding: 0.5em;
+}
+
+.icon-list {
+  margin: 1em 0;
+}
+.icon-list ul li {
+  font-size: 1em;
+  line-height: 1em;
+  position: relative;
+}
+.icon-table {
+  margin: 1em auto 1em auto;
+  overflow-x: auto;
+  padding: 0;
+  width: 100%;
+}
+.icon-table .icon-list {
+  display: table;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.icon-table-cell {
+  display: table-cell;
+  padding: 0.5em 1em;
+  width: 33.333%;
+}
+
+.icon-widget .view {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 180px;
+}
+.icon-widget .view-icon {
+  height: 160px;
+  position: relative;
+  margin-bottom: 5px;
+  width: 160px;
+}
+.icon-widget .view-icon .ui-icon {
+  left: 50%;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  position: absolute;
+  top: 50%;
+}
+.icon-widget .form {
+  display: block;
+  float: right;
+  max-width: 320px;
+  min-width: 200px;
+}
+.icon-widget .form-field {
+  margin-bottom: 1em;
+  width:100%;
+}
+.icon-widget .form-field label,
+.icon-widget .form-field input,
+.icon-widget .form-field .ui-colorpicker,
+.icon-widget .form-field .ui-combobox,
+.icon-widget .form-field .ui-selectmenu-button,
+.icon-widget .form-field .ui-selectmenu-button .ui-selectmenu-text {
+  line-height: normal;
+}
+.icon-widget .form-field label {
+  display: block;
+  float: left;
+  margin: 0.5em 0 0 0;
+  width: 25%;
+}
+.icon-widget .form-field input {
+  background: transparent none 0 0 no-repeat;
+  border: 0 none;
+  color: inherit;
+}
+.icon-widget .form-field .ui-colorpicker,
+.icon-widget .form-field .ui-combobox,
+.icon-widget .form-field .ui-selectmenu-button {
+  float: right;
+  width: 73% !important;
+}
+.icon-widget .form-field .ui-combobox input {
+  padding-right: 3em;
+  width: 100%;
+}
+.icon-widget .form-field .ui-combobox .ui-menu-overflow {
+  max-height: 10em;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.icon-widget .form-field .ui-colorpicker .ui-widget {
+  left: auto;
+  right: 0;
+}
+
+
+/*
+ * NO JS
+ */
+
+.js-off body {
+  padding-top: 52px;
+}
+.js-off .demo.js,
+.js-off #foot .toggle,
+.js-off #icon-widget,
+.js-off #loading {
+  display: none !important;
+}
+.js-off #foot,
+.js-off #head {
+  position: relative;
+}
+.js-off #browser-error {
+  top: -2px;
+}
+.js-off #head h1 {
+  font-size: 1.8em;
+}
+.js-off #main .section:first-child {
+  padding-top: 2em;
+}
+
+.js-off .icon-list,
+.lt-ie9 .icon-list {
+  overflow-x: auto;
+}
+.js-off .icon-list ul,
+.lt-ie9 .icon-list ul {
+  min-width: 520px;
+}
+.js-off .icon-list li,
+.lt-ie9 .icon-list li {
+  float: left;
+  box-sizing: border-box;
+  padding-right: 0.5em;
+  width: 33.333%;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+/*
+ * OLD MSIE
+ */
+
+.lt-ie9 body {
+  padding-top: 62px;
+}
+.lt-ie9 #main .section:first-child {
+  padding-top: 2em;
+}
+.lt-ie9 button,
+.lt-ie9 input[type='button'],
+.lt-ie9 input[type='reset'],
+.lt-ie9 input[type='submit'] {
+  overflow: visible
+}
+.lt-ie9 input[type='checkbox'],
+.lt-ie9 input[type='radio'] {
+  height: 13px;
+  width: 13px;
+}
+.lt-ie9 #browser-error {
+  height: 60px;
+  top: -2px;
+}
+.lt-ie9 #foot .toggle {
+  display: none;
+}
+.lt-ie9 #head h1 {
+  font-size: 1.8em;
+}
+
+.lt-ie8 body {
+  padding-top: 0;
+}
+.lt-ie8 #foot .scroll,
+.lt-ie8 #loading,
+.lt-ie8 #main,
+.lt-ie8 #head .nav {
+  display: none;
+}
+.lt-ie8 #browser-error,
+.lt-ie8 #foot {
+  display: block;
+  left: 0;
+  min-width: 580px;
+  position: absolute;
+}
+.lt-ie8 #browser-error {
+  height: 50px;
+  margin: -50px 0 0 0;
+  top: 50%;
+}
+.lt-ie8 #browser-error .ui-icon {
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  margin: -2px 0 0 0;
+  text-indent: 0;
+}
+.lt-ie8 #browser-error .wrapper {
+  padding-top: 10px;
+  width: 500px;
+}
+.lt-ie8 #foot {
+  bottom: 0;
+}
+
+
+/*
+ * BASE-FONT
+ * If font loaded then apply it to the <html>-tag
+ */
+
+.font-loaded #head .head-hl-1,
+.font-loaded #head .nav-main,
+.font-loaded .base-hl {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.font-loaded #head .badge,
+.font-loaded #head .head-h2-1,
+.font-loaded .foot {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-loaded #head .nav-main {
+  text-transform: uppercase;
+}
