@@ -53,13 +53,13 @@
   }
 
   $('.icon-list > ul').first().find('li').each(function() {
-    var i = ''+$(this).attr('class'), d = ''+$(this).attr('data-ui');
-    if ($('sup',this).length || i.indexOf('ui-icon-') === -1) {
+    var i = ''+$(this).attr('class'), d = ''+($(this).attr('data-ui') || ''), s = $('sup',this);
+    if (i.indexOf('ui-icon-') === -1) {
       return;
     }
     icons.push([
       i.replace(/ui-icon-/, ''),
-      d.indexOf('b') !== -1, d.indexOf('m') !== -1
+      (d.indexOf('b') !== -1), (d.indexOf('m') !== -1)
     ]);
   });
 
