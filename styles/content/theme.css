@@ -678,7 +678,7 @@ h4     { margin-top: 1em; }
   width: 1em;
 }
 .demo .ui-widget-demo-icon .ui-icon {
-  font-size: 2.2em;
+  font-size: 2em;
 }
 .demo .demo-menu, .demo .demo-menu ul {
   width: 95px;
@@ -708,7 +708,7 @@ h4     { margin-top: 1em; }
 .icon-list ul li {
   white-space: nowrap;
 }
-.icon-list ul li:before {
+.icon-list ul li:after {
   color: #007fff;
 }
 .icon-list ul li sup {

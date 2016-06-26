@@ -174,15 +174,17 @@ nav ul, nav li,
 .has-icon [class*=" ui-icon-"] {
   list-style: none;
   padding-left: 1.5em;
+  position: relative;
 }
-.has-icon[class^="ui-icon-"]:before,
-.has-icon[class*=" ui-icon-"]:before,
-.has-icon [class^="ui-icon-"]:before,
-.has-icon [class*=" ui-icon-"]:before {
-  float: left;
+.has-icon[class^="ui-icon-"]:after,
+.has-icon[class*=" ui-icon-"]:after,
+.has-icon [class^="ui-icon-"]:after,
+.has-icon [class*=" ui-icon-"]:after {
   font: normal normal normal 14px/16px 'jquery-ui', sans-serif;
-  margin-top: 0.1em;
-  margin-left: -1.5em;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
 }
 
 .foot,
