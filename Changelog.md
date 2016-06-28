@@ -1,4 +1,17 @@
+# Version 2.2 #
+2016-06-26
+
+Compatibility for jQuery Mobile (tested against 1.4.5). 
+ 
+**Please note:** 
+The pseudo elements `:before` are replaced by `:after` to make the Icon Font and the CSS compatible with jQuery Mobile. Perhabs some user defined CSS may be broken.
+
+
+
+
 # Version 2.1 #
+2016-05-10
+
 Welcome to version 2 with 326 unique icons. Many icons are optimized and some are added.
 Please take a note on the changes below:
 
