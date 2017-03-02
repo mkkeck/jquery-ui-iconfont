@@ -1,4 +1,4 @@
-# Version 2.3 #
+# [Version 2.3](v2.3) #
 2017-03-02 
 
 Welcome to Version 2.3 with **332 unique icons** and **support for jQuery UI 1.12.x**.  
@@ -44,7 +44,7 @@ All deprecated listed icons in version 2.1 are removed now.
 
 
 
-# Version 2.2 #
+# [Version 2.2](v2.2) #
 2016-06-26 
 
 Compatibility for jQuery Mobile (tested against 1.4.5). 
@@ -55,7 +55,7 @@ The pseudo elements `:before` are replaced by `:after` to make the Icon Font and
 
 
 
-# Version 2.1 #
+# [Version 2.1](v2.1) #
 2016-05-10
 
 Welcome to version 2 with 326 unique icons. Many icons are optimized and some are added.
