@@ -29,10 +29,10 @@ version `jquery-ui-1.11.icon-font.min.css`.
 
 #### New Aliases ####
 ```css
-.ui-icon-caret-1-e     /* for .ui-icon-carat-1-e (support jQuery UI v1.12.x) */ 
-.ui-icon-caret-1-n     /* for .ui-icon-carat-1-n (support jQuery UI v1.12.x) */ 
-.ui-icon-caret-1-s     /* for .ui-icon-carat-1-s (support jQuery UI v1.12.x) */ 
-.ui-icon-caret-1-w     /* for .ui-icon-carat-1-w (support jQuery UI v1.12.x) */ 
+.ui-icon-caret-1-e     /* for .ui-icon-carat-1-e (jQuery UI v1.12) */ 
+.ui-icon-caret-1-n     /* for .ui-icon-carat-1-n (jQuery UI v1.12) */ 
+.ui-icon-caret-1-s     /* for .ui-icon-carat-1-s (jQuery UI v1.12) */ 
+.ui-icon-caret-1-w     /* for .ui-icon-carat-1-w (jQuery UI v1.12) */ 
  
 .ui-icon-fullscreen-on /* for .ui-icon-fullscreen */
 ```
