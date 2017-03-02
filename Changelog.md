@@ -1,10 +1,10 @@
-# Version 2.3 # 
+# Version 2.3 #
 2017-03-02 
 
 Welcome to Version 2.3 with **332 unique icons** and **support for jQuery UI 1.12.x**.  
 
 
-#### What's new? #### 
+#### What's new? ####
 * 6 new icons 
 * jQuery UI 1.12.x support 
 * minified CSS-files 
@@ -15,7 +15,7 @@ For jQuery UI 1.11.x or jQuery Mobile please use the `jquery-ui-1.11.icon-font.c
 version `jquery-ui-1.11.icon-font.min.css`. 
 
 
-#### New Icons #### 
+#### New Icons ####
 ```css
 .ui-icon-caratstop-1-e 
 .ui-icon-caratstop-1-n 
@@ -38,7 +38,7 @@ version `jquery-ui-1.11.icon-font.min.css`.
 ```
 
 
-#### Deleted #### 
+#### Deleted ####
 All deprecated listed icons in version 2.1 are removed now. 
 
 
