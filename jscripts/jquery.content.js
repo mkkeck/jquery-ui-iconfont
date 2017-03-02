@@ -53,7 +53,7 @@
   }
 
   $('.icon-list > ul').first().find('li').each(function() {
-    var i = ''+$(this).attr('class'), d = ''+($(this).attr('data-ui') || ''), s = $('sup',this);
+    var i = ''+$(this).attr('class'), d = ''+($(this).attr('data-ui') || '');
     if (i.indexOf('ui-icon-') === -1) {
       return;
     }
@@ -70,24 +70,30 @@
       d = '#demo-'; e = d+'button-'; m = 'ui-icon-'; o = 'ui-state-';
       /* Button with icon only */
       $(e+'1').button({
-        text: false, icons: {primary: m+'gear'}
+        showLabel: false,
+        icon: m+'gear'
       });
       /* Button with  icon left */
       $(e+'2').button({
-        text: true, icons: {primary: m+'circle-arrow-w'}
+        showLabel: true, icon: m+'circle-arrow-w'
       });
       /* Button with icon right */
       $(e+'3').button({
-        text: true, icons: {secondary: m+'circle-arrow-e'}
+        showLabel: true, icon: m+'circle-arrow-e', iconPosition: 'end'
       });
       /* Button with icon left and right */
       $(e+'4').button({
-        text: true, icons: {primary: m+'gear', secondary: m+'triangle-1-s' }
+        showLabel: true, icon: m+'gear'
       });
       /* Button set (for jQuery UI 1.12.x) */
-      $(d+'radioset').buttonset();
+      $('input', $(d+'radioset-1')).checkboxradio();
+      $('input', $(d+'radioset-2')).checkboxradio({icon:false});
+      $('input', $(d+'checkboxset-1')).checkboxradio();
+      $('input', $(d+'checkboxset-2')).checkboxradio({icon:false});
       /* Accordion */
       $(d+'accordion').accordion();
+      $(d+'controlgroup-1').controlgroup();
+      $(d+'controlgroup-2').controlgroup({direction:'vertical'});
       /* Datapicker */
       $(d+'datepicker').datepicker({inline: true});
       /* Menu */
@@ -104,7 +110,8 @@
             { text: 'Ok', click: function() { d.dialog('close'); } },
             { text: 'Cancel', click: function() { d.dialog('close'); } }
           ],
-          autoOpen: false, dialogClass: 'demo-dialog', modal: true, width: 280
+          classes: { 'ui-dialog': 'demo-dialog' },
+          autoOpen: false, modal: true, width: 280
         });
         e.on('click', this, function() {
           $(this).removeClass(o+'hover '+o+'focus '+o+'active');
@@ -124,7 +131,10 @@
       /* Theme selection for the demos */
       var a = 'themeswitch', b, f;
       s = $('#'+a)[a]({ attach: {
-        stylesheet:'jquery-ui.icon-font.css', before:true
+        stylesheet:'jquery-ui.min.css', before:false,
+        version: '1.12.1',
+        basefile: 'jquery-ui.min.css',
+        baseurl: '//code.jquery.com/ui'
       } });
       a += 'menu';
       if (s.menu === undefined || s.menu[a] === undefined) {
@@ -133,25 +143,13 @@
       f = function() { s.menu[a]('close'); };
       b = $('<button />')
         .addClass('ui-button-close')
-        .button({ text: false, icons: {primary: m+'closethick'} })
+        .button({ label: false, icons: {primary: m+'closethick'} })
         .on('click', this, function() { f(); });
       b = $('<div />')
         .addClass('ui-selectmenu-overlay')
         .on('click',this,function() { f(); })
         .append(b);
       $('.ui-selectmenu-menu', s).append(b);
-    },
-
-    /* Fonts are loaded? */
-    fonts: function(f, l) {
-      if (FontObserver === undefined || Promise === undefined) {
-        return;
-      }
-      l = [new FontObserver('Roboto'), new FontObserver('Roboto Condensed')];
-      f = 'check';
-      Promise.all([l[0][f](), l[1][f]()]).then(function() {
-        $html.addClass('font-loaded');
-      });
     },
 
     /* Window Events */
@@ -228,7 +226,9 @@
       }
 
       $win.on(evnt.resize, function() {
-        $mobile.hide(1);
+        if ($mobile) {
+          $mobile.hide(1);
+        }
         $bottom.hide(1);
         deltimer('resize');
         timer['resize'] = setTimeout(function() {
@@ -237,7 +237,6 @@
           deltimer('resize');
         }, 200);
       }).on(evnt.scroll, function() {
-        var opos = win.scrolled;
         win.scrolled = $win[_scroll]();
         deltimer('scroll');
         timer['scroll'] = setTimeout(function() {
@@ -271,6 +270,9 @@
     /* Icon Form Widget */
     iconform: function() {
       var d = 'div', l = 'label', s = 'span';
+      if (msie.lt9) {
+        return;
+      }
       $widget = {
         element: $('<div />').addClass('base').attr({id: 'icon-widget'}).appendTo($('.section[id]',$('#main')).first()),
         fields: null,
@@ -362,7 +364,7 @@
 
         if (k === 'size' || k === 'animation') {
           v = (k !== 'animation')
-            ? [['1em', 'Default',''], ['2em', '2em',''], ['4em', '4em',''], ['6em', '6em',''], ['8em', '8em',' selected="selected"']]
+            ? [['', 'Default',''], ['200%', '2em',''], ['400%', '4em',''], ['600%', '6em',''], ['800%', '8em',' selected="selected"']]
             : [['', 'None',' selected="selected"'], ['rotate', 'Rotate clockwise',''], ['rotate-reverse', 'Rotate anti clockwise',''], ['bounce', 'Bouncing','']];
           c = 0; l = v.length;
           while (c < l) { v[c] = ['<',o,a,'"',v[c][0],'"',v[c][2],'>',v[c][1],'</',o,'>'].join(''); c++; }
@@ -607,7 +609,7 @@
   };
 
   loading(0);
-  var i = -1, r = ['events','fonts','menus','iconform','iconlist','prism','icongrid','demos'];
+  var i = -1, r = ['events','menus','iconform','iconlist','prism','icongrid','demos'];
   if (msie.lt9) {
     r = ['events','demos','iconform','icongrid'];
   }
@@ -621,6 +623,7 @@
 
   setTimeout(function() {
     loading(1);
+    $(window).resize();
   }, 500);
 
 })(jQuery,window,document);

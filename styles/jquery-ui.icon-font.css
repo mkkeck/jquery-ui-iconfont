@@ -3,18 +3,18 @@
  * Icon Font for jQuery UI
  * ----------------------------------------------------------------------
  *
- * ICON FONT   Version:   2.0
- *             Glyphs:    326
- *             Copyright: (c) 2015-2016 Michael Keck.
+ * ICON FONT   Version:   2.1
+ *             Glyphs:    332
+ *             Copyright: (c) 2015-2017 Michael Keck.
  *             License:   CC BY-SA 3.0
  *                        https://creativecommons.org/licenses/by-sa/3.0/
  *             Generated: with IcoMoon-App (Chromium)
  *
- * STYLESHEET  Version:   2.2
- *             Modified:  2016-06-26
- *             jQuery UI: 1.11.2, 1.11.3 & 1.11.4
+ * STYLESHEET  Version:   2.3
+ *             Modified:  2017-03-02
+ *             jQuery UI: 1.12 & 1.12.1
  *             jQMobile:  1.4.5
- *             Copyright: (c) 2015-2016 Michael Keck.
+ *             Copyright: (c) 2015-2017 Michael Keck.
  *             License:   GPL license
  *                        http://www.gnu.org/licenses/gpl.html
  */
@@ -22,11 +22,11 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-7032ab');
-  src: url('font/jquery-ui.eot?juif-7032ab#ie') format('embedded-opentype'),
-       url('font/jquery-ui.woff?juif-7032ab') format('woff'),
-       url('font/jquery-ui.ttf?juif-7032ab') format('truetype'),
-       url('font/jquery-ui.svg?juif-7032ab#jquery-ui') format('svg');
+  src: url('font/jquery-ui.eot?juif-b7f54b');
+  src: url('font/jquery-ui.eot?juif-b7f54b#ie') format("embedded-opentype"),
+       url('font/jquery-ui.woff2?juif-b7f54b') format("woff2"),
+       url('font/jquery-ui.woff?juif-b7f54b') format("woff"),
+       url('font/jquery-ui.ttf?juif-b7f54b') format("truetype");
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -34,228 +34,193 @@
 
 
 /* basic settings */
-.ui-icon {
+html .ui-icon {
   background-image: none !important;
-  display: block;
+  display: inline-block;
   font: normal normal normal 14px/16px sans-serif;
-  height: 1em;
+  height: 1.2em;
+  line-height: 1.2em;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: relative;
-  text-indent: -9999px;
-  width: 1em;
+  text-indent: -99999em;
+  vertical-align: middle;
+  width: 1.2em;
 }
 
 /* UI-Icons */
-.ui-icon:after {
+html .ui-icon:after {
   display: block;
+  font-family: 'jquery-ui', sans-serif;
   height: 1em;
   left: 50%;
-  line-height: 1em;
-  margin-left: -0.5em;
-  margin-top: -0.5em;
+  line-height: 1;
+  margin: -.5em;
   position: absolute;
   text-align: center;
   text-indent: 0;
   text-transform: none;
   top: 50%;
-  transform: translate(0,0);
   vertical-align: middle;
   width: 1em;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-transform: translate(0,0);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-transform: translate(0,0);
-}
-[class^="ui-icon-"]:after,
-[class*=' ui-icon-']:after {
-  font-family: 'jquery-ui', sans-serif;
-}
-
-/* positioning on button element(s) */
-.ui-button-icon-only .ui-icon,
-.ui-button-text-icon-primary .ui-icon,
-.ui-button-text-icon-secondary .ui-icon,
-.ui-button-text-icons .ui-icon,
-.ui-button-icons-only .ui-icon {
-  margin-top: -0.5em;
-  position: absolute;
-  top: 50%;
-}
-.ui-button-icon-only .ui-icon {
-  left: 50%;
-  margin-left: -0.5em;
-}
-.ui-button-text-icon-primary .ui-button-icon-primary,
-.ui-button-text-icons .ui-button-icon-primary,
-.ui-button-icons-only .ui-button-icon-primary {
-  left: 0.5em;
-}
-.ui-button-text-icon-secondary .ui-button-icon-secondary,
-.ui-button-text-icons .ui-button-icon-secondary,
-.ui-button-icons-only .ui-button-icon-secondary {
-  right: 0.5em;
-}
-
-/* positioning on datepicker element(s) */
-.ui-datepicker .ui-datepicker-next,
-.ui-datepicker .ui-datepicker-prev {
-  cursor: pointer;
-  font-size: 1em;
-  height: 2em;
-  margin: 1px;
-  position: absolute;
-  top: 1px;
-  width: 2em;
-}
-.ui-datepicker .ui-datepicker-prev { left: 0; }
-.ui-datepicker .ui-datepicker-next { right: 0; }
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
-  margin: 0;
-}
-.ui-datepicker .ui-datepicker-prev .ui-icon,
-.ui-datepicker .ui-datepicker-next .ui-icon {
-  left: 50%;
-  margin-left: -0.5em;
-  margin-top: -0.5em;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-}
-.ui-datepicker-rtl .ui-datepicker-prev,
-.ui-datepicker-rtl .ui-datepicker-prev:hover {
-  left: auto;
-  right: 0;
-}
-.ui-datepicker-rtl .ui-datepicker-next,
-.ui-datepicker-rtl .ui-datepicker-next:hover {
-  left: 0;
-  right: auto;
-}
-
-/* close button positioning on dialogs titlebar */
-.ui-dialog .ui-dialog-titlebar-close {
-  display: block;
-  height: 1.8em;
-  margin: -0.9em 0 0 0;
-  padding: 0;
-  position: absolute;
-  right: 0.3em;
-  top: 50%;
-  width: 1.8em;
-}
-/* resizable on dialog */
-.ui-dialog .ui-resizable-se {
-  bottom: 0;
-  display: block;
-  height: 1em;
-  padding: 0 .5em .5em 0;
-  position: absolute;
-  right: 0;
-  width: 1em;
-}
-.ui-dialog .ui-resizable-se:after {
-  left: 0;
-  margin: 0 0 0 0;
-  top: 0
-}
-
-/* positioning on accordion(s) */
-.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-  display: block;
-  left: 0.5em;
-  margin-top: -0.5em;
-  position: absolute;
-  top: 50%;
-}
-
-/* resizables */
-.ui-resizable-handle {
-  font-size: 1em;
-}
-.ui-resizable-n,
-.ui-resizable-s {
-  height: 1em;
-  left: 0;
-  width: 100%;
-}
-.ui-resizable-n {
-  top: -0.5em;
-}
-.ui-resizable-s {
-  bottom: -0.5em;
-}
-.ui-resizable-e,
-.ui-resizable-w {
-  height: 100%;
-  top: 0;
-  width: 1em;
-}
-.ui-resizable-e {
-  right: -0.5em;
-}
-.ui-resizable-w {
-  left: -0.5em;
-}
-.ui-resizable-se {
-  bottom: 1px;
-  height: 1em;
-  right: 1px;
-  width: 1em;
-}
-.ui-resizable-nw,
-.ui-resizable-sw {
-  height: 1em;
-  left: -0.5em;
-  width: 1em;
-}
-.ui-resizable-sw {
-  bottom: -0.5em;
-}
-.ui-resizable-nw {
-  top: -0.5em;
-}
-.ui-resizable-ne {
-  height: 1em;
-  right: -0.5em;
-  top: -0.5em;
-  width: 1em;
-}
-
-/* positioning on selectmenu element(s) */
-.ui-selectmenu-button span.ui-selectmenu-text {
-  padding: 0.4em 2.1em 0.4em 1em;
-}
-.ui-selectmenu-button span.ui-icon {
-  left: auto;
-  margin-top: -0.5em;
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-}
-
-/* positioning on spinner inputs(s) */
-.ui-spinner-input { margin: 0.2em 1.4em 0.2em 0.4em; }
-.ui-spinner-button { width: 1.2em; }
-/* more specificity required here to override default borders */
-.ui-spinner a.ui-spinner-button {
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-}
-/* vertically center icon */
-.ui-spinner .ui-icon {
-  left: 0;
-  margin-top: -0.5em;
-  position: absolute;
-  top: 50%;
+  -moz-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 
 /**
- * jQuery Mobile (testet with version 1.4.5)
+ * --------------------------------------------------------
+ * jQuery UI 1.12.x
+ * --------------------------------------------------------
+ */
+
+/* positioning on button element(s) */
+html .ui-button,
+html .ui-controlgroup .ui-controlgroup-label,
+html .ui-spinner .ui-spinner-input {
+  line-height: inherit;
+}
+html .ui-controlgroup .ui-controlgroup-label span {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+html .ui-button .ui-icon {
+  margin: -.25em 0 -.15em 0;
+}
+html .ui-button-icon-only {
+  min-width: 2.5em;
+}
+html .ui-button-icon-only .ui-icon {
+  left: 50%;
+  margin: -0.6em 0 0 -.6em;
+  position: absolute;
+  top: 50%;
+}
+html .ui-selectmenu-button .ui-icon {
+  margin: -.6em 0 0 0;
+  position: absolute;
+  right: .5em;
+  top: 50%;
+}
+html .ui-selectmenu-text {
+  margin-right: 1em;
+}
+html .ui-spinner .ui-spinner-input {
+  margin: 0;
+  padding: .4em 2.5em .4em 1em;
+}
+html .ui-widget-icon-block {
+  display: block;
+  left: auto;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+html .ui-datepicker .ui-datepicker-prev .ui-icon,
+html .ui-datepicker .ui-datepicker-next .ui-icon {
+  margin-left: -0.6em;
+  margin-top: -0.6em;
+}
+
+/* close button positioning on dialogs titlebar */
+html .ui-dialog .ui-dialog-titlebar-close {
+  height: 1.8em;
+  margin: -0.9em 0 0 0;
+  right: 0.3em;
+  width: 1.8em;
+}
+/* resizable on dialog */
+html .ui-dialog .ui-resizable-se {
+  bottom: 1px;
+  display: block;
+  height: 1em;
+  position: absolute;
+  right: 1px;
+  width: 1em;
+}
+.ui-dialog .ui-resizable-se:after {
+  left: 0;
+  margin: 0;
+  top: 0
+}
+/* positioning on accordion(s) */
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  margin-left: -0.2em;
+  margin-right: 0.4em;
+}
+
+html .ui-icon-background,
+html .ui-state-active .ui-icon-background,
+html .ui-checkboxradio-label .ui-icon-background,
+html .ui-checkboxradio-radio-label .ui-icon-background,
+html .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+html .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+  background-color: rgba(0,0,0,.25);
+  border: 0 none;
+  color:inherit;
+  font: normal normal normal 14px/16px sans-serif;
+  height: 1.2em;
+  line-height: 1.2em;
+  width: 1.2em;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* etxra */
+.has-left-icon li,
+li.has-left-icon {
+  list-style: none;
+}
+.has-left-icon[class^="ui-icon-"],
+.has-left-icon[class*=" ui-icon-"],
+.has-left-icon [class^="ui-icon-"],
+.has-left-icon [class*=" ui-icon-"] {
+  padding-left: 1.5em;
+  position: relative;
+}
+.has-left-icon[class^="ui-icon-"]:after,
+.has-left-icon[class*=" ui-icon-"]:after,
+.has-left-icon [class^="ui-icon-"]:after,
+.has-left-icon [class*=" ui-icon-"]:after {
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+.has-right-icon[class^="ui-icon-"],
+.has-right-icon[class*=" ui-icon-"],
+.has-right-icon [class^="ui-icon-"],
+.has-right-icon [class*=" ui-icon-"] {
+  padding-right: 1.5em;
+  position: relative;
+}
+.has-right-icon[class^="ui-icon-"]:after,
+.has-right-icon[class*=" ui-icon-"]:after,
+.has-right-icon [class^="ui-icon-"]:after,
+.has-right-icon [class*=" ui-icon-"]:after {
+  right: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+
+/**
+ * --------------------------------------------------------
+ * jQuery Mobile
+ * (testet with version 1.4.5)
+ * --------------------------------------------------------
  */
 .ui-mobile .ui-input-search:after,
 .ui-mobile .ui-btn-icon-left:after,
@@ -264,7 +229,6 @@
 .ui-mobile .ui-btn-icon-bottom:after,
 .ui-mobile .ui-btn-icon-notext:after {
   background-image: none !important;
-  box-sizing: border-box;
   color: #fff;
   display: block;
   height: 20px;
@@ -280,15 +244,16 @@
   text-shadow: none;
   text-transform: none;
   top: 50%;
-  transform: translate(0,0);
   vertical-align: middle;
   width: 20px;
-  -moz-box-sizing: border-box;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-transform: translate(0,0);
-  -webkit-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  transform: translate(0,0);
 }
 .ui-mobile .ui-input-search:after,
 .ui-mobile .ui-alt-icon.ui-btn-icon-left:after, .ui-mobile .ui-alt-icon .ui-btn-icon-left:after,
@@ -377,6 +342,7 @@
 }
 
 
+
 /* apply glyphs to icons */
 .ui-icon-blank:after { content: ' '; } /* <-- yeah, this really needed! */
 .ui-icon-addon:after,
@@ -412,8 +378,7 @@
 .ui-icon-arrow-2-se-nw:after { content: '\e618'; }
 .ui-icon-arrow-4:after,
 .ui-icon-move:after { content: '\e619'; }
-.ui-icon-arrow-4-diag:after,
-.ui-icon-fullscreen:after { content: '\e61a'; }
+.ui-icon-arrow-4-diag:after { content: '\e61a'; }
 .ui-icon-arrowrefresh-1-e:after { content: '\e612'; }
 .ui-icon-arrowrefresh-1-n:after { content: '\e611'; }
 .ui-icon-arrowrefresh-1-s:after { content: '\e613'; }
@@ -459,7 +424,9 @@
 .ui-icon-box:after { content: '\e6eb'; }
 .ui-icon-bucket:after { content: '\e728'; }
 .ui-icon-bug:after { content: '\e72e'; }
-.ui-icon-bullet:after { content: '\e65d'; }
+.ui-icon-bullet:after,
+html .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon:after,
+html .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon:after { content: '\e65d'; }
 .ui-icon-bullhorn:after { content: '\e731'; }
 .ui-icon-calculator:after { content: '\e6fd'; }
 .ui-icon-calculator-b:after { content: '\e6fe'; }
@@ -470,23 +437,31 @@
 .ui-icon-cancel:after,
 .ui-icon-forbidden:after { content: '\e675'; }
 .ui-icon-carat-1-e:after,
-.ui-icon-carat-r:after { content: '\e639'; }
+.ui-icon-carat-r:after,
+.ui-icon-caret-1-e:after { content: '\e639'; }
 .ui-icon-carat-1-n:after,
-.ui-icon-carat-u:after { content: '\e637'; }
+.ui-icon-carat-u:after,
+.ui-icon-caret-1-n:after { content: '\e637'; }
 .ui-icon-carat-1-ne:after { content: '\e638'; }
 .ui-icon-carat-1-nw:after { content: '\e63e'; }
 .ui-icon-carat-1-s:after,
-.ui-icon-carat-d:after { content: '\e63b'; }
+.ui-icon-carat-d:after,
+.ui-icon-caret-1-s:after { content: '\e63b'; }
 .ui-icon-carat-1-se:after { content: '\e63a'; }
 .ui-icon-carat-1-sw:after { content: '\e63c'; }
 .ui-icon-carat-1-w:after,
-.ui-icon-carat-l:after { content: '\e63d'; }
+.ui-icon-carat-l:after,
+.ui-icon-caret-1-w:after { content: '\e63d'; }
 .ui-icon-carat-2-e:after { content: '\e640'; }
 .ui-icon-carat-2-e-w:after { content: '\e643'; }
 .ui-icon-carat-2-n:after { content: '\e63f'; }
 .ui-icon-carat-2-n-s:after { content: '\e644'; }
 .ui-icon-carat-2-s:after { content: '\e641'; }
 .ui-icon-carat-2-w:after { content: '\e642'; }
+.ui-icon-caratstop-1-e:after { content: '\e905'; }
+.ui-icon-caratstop-1-n:after { content: '\e901'; }
+.ui-icon-caratstop-1-s:after { content: '\e900'; }
+.ui-icon-caratstop-1-w:after { content: '\e904'; }
 .ui-icon-cart:after,
 .ui-icon-shop:after { content: '\e6d6'; }
 .ui-icon-cart-b:after,
@@ -598,6 +573,9 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 .ui-icon-folder:after,
 .ui-icon-folder-closed:after { content: '\e69a'; }
 .ui-icon-folder-open:after { content: '\e69b'; }
+.ui-icon-fullscreen:after,
+.ui-icon-fullscreen-on:after { content: '\e902'; }
+.ui-icon-fullscreen-off:after { content: '\e903'; }
 .ui-icon-gear:after { content: '\e6e6'; }
 .ui-icon-gears:after { content: '\e6e7'; }
 .ui-icon-globe:after { content: '\e6e2'; }
@@ -801,15 +779,7 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 .ui-icon-zoomin:after { content: '\e713'; }
 .ui-icon-zoomout:after { content: '\e715'; }
 
-.ui-icon-file-rtf:after { content: '\e6a4'; }                    /* deprecated: use '.ui-icon-file-richtext' instead */
-.ui-icon-file-spreadsheet:after { content: '\e6a5'; }            /* deprecated: use '.ui-icon-file-table' instead */
-.ui-icon-file-xls:after { content: '\e6a5'; }                    /* deprecated: use '.ui-icon-file-table' instead */
-.ui-icon-file-txt:after { content: '\e6a7'; }                    /* deprecated: use '.ui-icon-file-text' instead */
-.ui-loading-icon.ui-icon-balls:after { content: '\e741'; }       /* deprecated: use '.ui-icon-loading-status-balls' instead */
-.ui-loading-icon.ui-icon-circle:after { content: '\e742'; }      /* deprecated: use '.ui-icon-loading-status-circle' instead */
-.ui-loading-icon.ui-icon-comet:after { content: '\e743'; }       /* deprecated: use '.ui-icon-loading-status-comet' instead */
-.ui-loading-icon.ui-icon-lines:after { content: '\e744'; }       /* deprecated: use '.ui-icon-loading-status-lines' instead */
-.ui-loading-icon.ui-icon-planet:after { content: '\e745'; }      /* deprecated: use '.ui-icon-loading-status-planet' instead */
+
 
 
 /* bounce animations */
@@ -821,8 +791,8 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 @-ms-keyframes bounce     { 0%, 100% { transform: scale(0.2); -ms-transform: scale(0.2); }     50% { transform: scale(1.0); -ms-transform: scale(1.0); }  }
 @-webkit-keyframes bounce { 0%, 100% { transform: scale(0.2); -webkit-transform: scale(0.2); } 50% { transform: scale(1.0); -webkit-transform: scale(1.0); }  }
 
-[class^='ui-icon-'].bounce:before,
-[class*=' ui-icon-'].bounce:before {
+[class^='ui-icon-'].bounce:after,
+[class*=' ui-icon-'].bounce:after {
   animation: bounce 1s infinite ease-in-out;
   -moz-animation: bounce 1s infinite ease-in-out;
   -ms-animation: bounce 1s infinite ease-in-out;

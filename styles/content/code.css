@@ -163,18 +163,3 @@
   border-left: 3px solid #007fff;
   padding-left: 0.5em;
 }
-
-/* Printable */
-@media print {
-  .prism {
-    font-size: 0.9em;
-  }
-  .prism.line-numbers {
-    padding-left: 0;
-  }
-  .prism.line-numbers .line-numbers-rows,
-  .prism.line-numbers .line-numbers-rows > span,
-  .prism.line-numbers .line-numbers-rows > span:before {
-    display: none !important;
-  }
-}

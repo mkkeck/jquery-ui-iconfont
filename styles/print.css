@@ -1,0 +1,89 @@
+html, body,
+html a,
+#foot,
+#head {
+  background: transparent none 0 0 no-repeat;
+  box-shadow: none;
+  color: #111;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#browser-error,
+#error,
+#foot .nav,
+#foot .scroll,
+#foot .toggle,
+#head .badge,
+#head .nav,
+.demo.js,
+.no-print,
+.icon-widget {
+  display: none;
+}
+#foot.fixed,
+#head.fixed {
+  position: static;
+}
+#foot .wrapper,
+#foot .terms {
+  display: block;
+}
+
+#foot,
+#foot .wrapper,
+#foot .terms {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#foot .terms {
+  color: #666;
+  clear: both;
+  display: block;
+  float: none;
+  padding-top: 10px;
+  position: static;
+  text-align: center;
+  width: 100%;
+}
+
+#main .section {
+  border: 0 none;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.demo {
+  border: 0 none;
+  page-break-inside: avoid;
+}
+
+.icon-list {
+  max-height: none;
+  overflow: visible;
+}
+
+.icon-tabs .ui-tabs-nav,
+.icon-tabs #icon-grid-1 { display: none !important; }
+.icon-tabs #icon-grid-2 { display: block !important; }
+.icon-tabs #icon-grid-2 ul {
+  margin: 0;
+  text-align: left;
+}
+.icon-tabs .ui-tabs .ui-tabs-panel {
+  border: 0 none;
+  padding: 0;
+}
+
+.prism {
+  font-size: 0.9em;
+}
+.prism.line-numbers {
+  padding-left: 0;
+}
+.prism.line-numbers .line-numbers-rows,
+.prism.line-numbers .line-numbers-rows > span,
+.prism.line-numbers .line-numbers-rows > span:before {
+  display: none !important;
+}
