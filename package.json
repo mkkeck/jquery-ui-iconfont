@@ -1,8 +1,8 @@
 {
   "name": "jquery-ui-iconfont",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Icon Font for jQuery UI",
-  "main": "jquery-ui.icons.css",
+  "main": "jquery-ui.icon-font.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

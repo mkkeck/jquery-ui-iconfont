@@ -1,5 +1,51 @@
+# Version 2.3 # 
+2017-03-02 
+
+Welcome to Version 2.3 with **332 unique icons** and **support for jQuery UI 1.12.x**.  
+
+
+#### What's new? #### 
+* 6 new icons 
+* jQuery UI 1.12.x support 
+* minified CSS-files 
+* compressed font-files (WOFF2) 
+
+The file `jquery-ui.icon-font.css` and the minified version are for jQuery UI 1.12.x.
+For jQuery UI 1.11.x or jQuery Mobile please use the `jquery-ui-1.11.icon-font.css` or the minified
+version `jquery-ui-1.11.icon-font.min.css`. 
+
+
+#### New Icons #### 
+```css
+.ui-icon-caratstop-1-e 
+.ui-icon-caratstop-1-n 
+.ui-icon-caratstop-1-s 
+.ui-icon-caratstop-1-w 
+ 
+.ui-icon-fullscreen 
+.ui-icon-fullscreen-off 
+```
+
+
+#### New Aliases ####
+```css
+.ui-icon-caret-1-e     /* for .ui-icon-carat-1-e (support jQuery UI v1.12.x) */ 
+.ui-icon-caret-1-n     /* for .ui-icon-carat-1-n (support jQuery UI v1.12.x) */ 
+.ui-icon-caret-1-s     /* for .ui-icon-carat-1-s (support jQuery UI v1.12.x) */ 
+.ui-icon-caret-1-w     /* for .ui-icon-carat-1-w (support jQuery UI v1.12.x) */ 
+ 
+.ui-icon-fullscreen-on /* for .ui-icon-fullscreen */
+```
+
+
+#### Deleted #### 
+All deprecated listed icons in version 2.1 are removed now. 
+
+
+
+
 # Version 2.2 #
-2016-06-26
+2016-06-26 
 
 Compatibility for jQuery Mobile (tested against 1.4.5). 
  
@@ -29,7 +75,6 @@ Some tests on mobile devices and hdpi screens shows me, that the css only create
 .ui-busy-icon-progress,
 .ui-busy-icon-square
 ```
-
 
 
 #### Deprecated ####

@@ -12,7 +12,7 @@
  *
  * STYLESHEET  Version:   2.3
  *             Modified:  2017-03-02
- *             jQuery UI: 1.12 & 1.12.1
+ *             jQuery UI: 1.11.2, 1.11.3 & 1.11.4
  *             jQMobile:  1.4.5
  *             Copyright: (c) 2015-2017 Michael Keck.
  *             License:   GPL license
@@ -22,11 +22,12 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-b7f54b');
-  src: url('font/jquery-ui.eot?juif-b7f54b#ie') format("embedded-opentype"),
-       url('font/jquery-ui.woff2?juif-b7f54b') format("woff2"),
-       url('font/jquery-ui.woff?juif-b7f54b') format("woff"),
-       url('font/jquery-ui.ttf?juif-b7f54b') format("truetype");
+  src: url('font/jquery-ui.eot?juif-b7f55d');
+  src: url('font/jquery-ui.eot?juif-b7f55d#ie') format('embedded-opentype'),
+       url('font/jquery-ui.woff2?juif-b7f55d') format('woff2'),
+       url('font/jquery-ui.ttf?juif-b7f55d') format('truetype'),
+       url('font/jquery-ui.woff?juif-b7f55d') format('woff'),
+       url('font/jquery-ui.svg?juif-b7f55d#jquery-ui') format('svg');
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -35,17 +36,17 @@
 
 /* basic settings */
 html .ui-icon {
-  background-image: none !important;
+  background: transparent none 0 0 no-repeat !important;
   display: inline-block;
   font: normal normal normal 14px/16px sans-serif;
   height: 1.2em;
   line-height: 1.2em;
+  vertical-align: middle;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: relative;
   text-indent: -99999em;
-  vertical-align: middle;
   width: 1.2em;
 }
 
@@ -55,7 +56,7 @@ html .ui-icon:after {
   font-family: 'jquery-ui', sans-serif;
   height: 1em;
   left: 50%;
-  line-height: 1;
+  line-height: 1em;
   margin: -.5em;
   position: absolute;
   text-align: center;
@@ -74,67 +75,83 @@ html .ui-icon:after {
 
 /**
  * --------------------------------------------------------
- * jQuery UI 1.12.x
+ * jQuery UI 1.11.x
  * --------------------------------------------------------
  */
 
 /* positioning on button element(s) */
-html .ui-button,
-html .ui-controlgroup .ui-controlgroup-label,
-html .ui-spinner .ui-spinner-input {
-  line-height: inherit;
-}
-html .ui-controlgroup .ui-controlgroup-label span {
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-}
-html .ui-button .ui-icon {
-  margin: -.25em 0 -.15em 0;
-}
-html .ui-button-icon-only {
-  min-width: 2.5em;
+html .ui-button-icon-only .ui-icon,
+html .ui-button-text-icon-primary .ui-icon,
+html .ui-button-text-icon-secondary .ui-icon,
+html .ui-button-text-icons .ui-icon,
+html .ui-button-icons-only .ui-icon {
+  margin-top: -.6em;
+  position: absolute;
+  top: 50%;
 }
 html .ui-button-icon-only .ui-icon {
   left: 50%;
-  margin: -0.6em 0 0 -.6em;
-  position: absolute;
-  top: 50%;
+  margin-left: -.6em;
 }
-html .ui-selectmenu-button .ui-icon {
-  margin: -.6em 0 0 0;
-  position: absolute;
-  right: .5em;
-  top: 50%;
+html .ui-button-text-icon-primary .ui-button-icon-primary,
+html .ui-button-text-icons .ui-button-icon-primary,
+html .ui-button-icons-only .ui-button-icon-primary {
+  left: 0.5em;
 }
-html .ui-selectmenu-text {
-  margin-right: 1em;
-}
-html .ui-spinner .ui-spinner-input {
-  margin: 0;
-  padding: .4em 2.5em .4em 1em;
-}
-html .ui-widget-icon-block {
-  display: block;
-  left: auto;
-  margin: 0;
-  width: 100%;
-  position: relative;
+html .ui-button-text-icon-secondary .ui-button-icon-secondary,
+html .ui-button-text-icons .ui-button-icon-secondary,
+html .ui-button-icons-only .ui-button-icon-secondary {
+  right: 0.5em;
 }
 
+/* positioning on datepicker element(s) */
+html .ui-datepicker .ui-datepicker-next,
+html .ui-datepicker .ui-datepicker-prev {
+  cursor: pointer;
+  font-size: 1em;
+  height: 2em;
+  margin: 0;
+  position: absolute;
+  top: 1px;
+  width: 2em;
+}
+html .ui-datepicker .ui-datepicker-prev { left: 0; }
+html .ui-datepicker .ui-datepicker-next { right: 0; }
+html .ui-datepicker .ui-datepicker-prev-hover,
+html .ui-datepicker .ui-datepicker-next-hover {
+  margin: -1px;
+}
 html .ui-datepicker .ui-datepicker-prev .ui-icon,
 html .ui-datepicker .ui-datepicker-next .ui-icon {
-  margin-left: -0.6em;
-  margin-top: -0.6em;
+  left: 50%;
+  margin: -.6em 0 0 -.6em;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+}
+html .ui-datepicker-rtl .ui-datepicker-prev,
+html .ui-datepicker-rtl .ui-datepicker-prev:hover {
+  left: auto;
+  right: 0;
+}
+html .ui-datepicker-rtl .ui-datepicker-next,
+html .ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 0;
+  right: auto;
 }
 
 /* close button positioning on dialogs titlebar */
 html .ui-dialog .ui-dialog-titlebar-close {
+  display: block;
   height: 1.8em;
-  margin: -0.9em 0 0 0;
+  margin: -.9em 0 0 0;
+  padding: 0;
+  position: absolute;
   right: 0.3em;
+  top: 50%;
   width: 1.8em;
 }
+
 /* resizable on dialog */
 html .ui-dialog .ui-resizable-se {
   bottom: 1px;
@@ -144,75 +161,117 @@ html .ui-dialog .ui-resizable-se {
   right: 1px;
   width: 1em;
 }
-.ui-dialog .ui-resizable-se:after {
+html .ui-dialog .ui-resizable-se:after {
   left: 0;
-  margin: 0;
+  margin: 0 0 0 0;
   top: 0
 }
+
 /* positioning on accordion(s) */
-.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-  margin-left: -0.2em;
-  margin-right: 0.4em;
+html .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  display: block;
+  left: 0.5em;
+  margin-top: -.6em;
+  position: absolute;
+  top: 50%;
 }
 
-html .ui-icon-background,
-html .ui-state-active .ui-icon-background,
-html .ui-checkboxradio-label .ui-icon-background,
-html .ui-checkboxradio-radio-label .ui-icon-background,
-html .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
-html .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-  background-color: rgba(0,0,0,.25);
-  border: 0 none;
-  color:inherit;
-  font: normal normal normal 14px/16px sans-serif;
-  height: 1.2em;
-  line-height: 1.2em;
-  width: 1.2em;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
-  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
-  box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+/* resizables */
+html .ui-resizable-handle {
+  font-size: 1em;
+}
+html .ui-resizable-n,
+html .ui-resizable-s {
+  height: 1em;
+  left: 0;
+  width: 100%;
+}
+html .ui-resizable-n {
+  top: -.5em;
+}
+html .ui-resizable-s {
+  bottom: -.5em;
+}
+html .ui-resizable-e,
+html .ui-resizable-w {
+  height: 100%;
+  top: 0;
+  width: 1em;
+}
+html .ui-resizable-e {
+  right: -.5em;
+}
+html .ui-resizable-w {
+  left: -.5em;
+}
+html .ui-resizable-se {
+  bottom: 1px;
+  height: 1em;
+  right: 1px;
+  width: 1em;
+}
+html .ui-resizable-nw,
+html .ui-resizable-sw {
+  height: 1em;
+  left: -.5em;
+  width: 1em;
+}
+html .ui-resizable-sw {
+  bottom: -.5em;
+}
+html .ui-resizable-nw {
+  top: -.5em;
+}
+html .ui-resizable-ne {
+  height: 1em;
+  right: -.5em;
+  top: -.5em;
+  width: 1em;
+}
+
+/* positioning on selectmenu element(s) */
+html .ui-selectmenu-button span.ui-selectmenu-text {
+  padding: 0.4em 2.1em 0.4em 1em;
+}
+html .ui-selectmenu-button span.ui-icon {
+  left: auto;
+  margin-top: -.6em;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+}
+
+/* positioning on spinner inputs(s) */
+html .ui-spinner {
+  padding: 0;
+}
+html .ui-spinner-input {
+  line-height: 1;
+  margin: 0;
+  min-width: 4em;
+  padding: 0.4em 2em 0.4em 1em;
+  width: auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html .ui-spinner-button {
+  width: 1.4em;
+}
 
+/* more specificity required here to override default borders */
+html .ui-spinner a.ui-spinner-button {
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
 
-/* etxra */
-.has-left-icon li,
-li.has-left-icon {
-  list-style: none;
-}
-.has-left-icon[class^="ui-icon-"],
-.has-left-icon[class*=" ui-icon-"],
-.has-left-icon [class^="ui-icon-"],
-.has-left-icon [class*=" ui-icon-"] {
-  padding-left: 1.5em;
-  position: relative;
-}
-.has-left-icon[class^="ui-icon-"]:after,
-.has-left-icon[class*=" ui-icon-"]:after,
-.has-left-icon [class^="ui-icon-"]:after,
-.has-left-icon [class*=" ui-icon-"]:after {
-  left: 0;
-  margin: 0;
+/* vertically center icon */
+html .ui-spinner .ui-icon {
+  left: 50%;
+  margin: -.6em;
   position: absolute;
-  top: 0;
-}
-.has-right-icon[class^="ui-icon-"],
-.has-right-icon[class*=" ui-icon-"],
-.has-right-icon [class^="ui-icon-"],
-.has-right-icon [class*=" ui-icon-"] {
-  padding-right: 1.5em;
-  position: relative;
-}
-.has-right-icon[class^="ui-icon-"]:after,
-.has-right-icon[class*=" ui-icon-"]:after,
-.has-right-icon [class^="ui-icon-"]:after,
-.has-right-icon [class*=" ui-icon-"]:after {
-  right: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
+  top: 50%;
 }
 
 
@@ -340,7 +399,6 @@ li.has-left-icon {
 .ui-alt-icon .ui-btn.ui-radio-on:after {
   background-color: #000;
 }
-
 
 
 /* apply glyphs to icons */
