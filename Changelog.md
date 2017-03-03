@@ -1,7 +1,43 @@
+# Version 2.3.1 #
+2017-0-03
+
+This is a bugfix version for the icon classes `ui-icon-carat-*` wich are
+silently renamed to `ui-icon-caret-*`.  
+The `ui-icon-carat-*` are still available in the `jquery-ui.icon-font`
+files for backwards compatibility to jQuery UI 1.11 and jQuery Mobile, but
+defined as deprecated. 
+
+**Deprecated / renamed icons:**
+
+| Old CSS-class          |  »  | New CSS-class          |
+|------------------------|:---:|------------------------|
+| .ui-icon-carat-1-e     |  »  | .ui-icon-caret-1-e     |
+| .ui-icon-carat-1-n     |  »  | .ui-icon-caret-1-n     |
+| .ui-icon-carat-1-s     |  »  | .ui-icon-caret-1-s     |
+| .ui-icon-carat-1-w     |  »  | .ui-icon-caret-1-w     |
+| .ui-icon-carat-2-e     |  »  | .ui-icon-caret-2-e     |
+| .ui-icon-carat-2-e-w   |  »  | .ui-icon-caret-2-e-w   |
+| .ui-icon-carat-2-n     |  »  | .ui-icon-caret-2-n     |
+| .ui-icon-carat-2-n-s   |  »  | .ui-icon-caret-2-n-s   |
+| .ui-icon-carat-2-s     |  »  | .ui-icon-caret-2-s     |
+| .ui-icon-carat-2-w     |  »  | .ui-icon-caret-2-w     |
+| .ui-icon-caretstop-1-e |  »  | .ui-icon-caretstop-1-e |
+| .ui-icon-caretstop-1-n |  »  | .ui-icon-caretstop-1-n |
+| .ui-icon-caretstop-1-s |  »  | .ui-icon-caretstop-1-s |
+| .ui-icon-caretstop-1-w |  »  | .ui-icon-caretstop-1-w |
+
+
+For further information see 
+[jQuery UI #15022](https://bugs.jqueryui.com/ticket/15022) or the
+[jQuery UI upgrade guide 1.12](http://jqueryui.com/upgrade-guide/1.12/#theme).
+
+
+
 # Version 2.3 #
 2017-03-02 
 
-Welcome to Version 2.3 with **332 unique icons** and **support for jQuery UI 1.12.x**.  
+Welcome to Version 2.3 with **332 unique icons** and
+**support for jQuery UI 1.12.x**.  
 
 
 #### What's new? ####
@@ -10,9 +46,11 @@ Welcome to Version 2.3 with **332 unique icons** and **support for jQuery UI 1.1
 * minified CSS-files 
 * compressed font-files (WOFF2) 
 
-The file `jquery-ui.icon-font.css` and the minified version are for jQuery UI 1.12.x.
-For jQuery UI 1.11.x or jQuery Mobile please use the `jquery-ui-1.11.icon-font.css` or the minified
-version `jquery-ui-1.11.icon-font.min.css`. 
+The file `jquery-ui.icon-font.css` and the minified version are for
+jQuery UI 1.12.x.
+For jQuery UI 1.11.x or jQuery Mobile please use the 
+`jquery-ui-1.11.icon-font.css` or the minified version
+`jquery-ui-1.11.icon-font.min.css`. 
 
 
 #### New Icons ####
@@ -50,7 +88,9 @@ All deprecated listed icons in version 2.1 are removed now.
 Compatibility for jQuery Mobile (tested against 1.4.5). 
  
 **Please note:** 
-The pseudo elements `:before` are replaced by `:after` to make the Icon Font and the CSS compatible with jQuery Mobile. Perhabs some user defined CSS may be broken.
+The pseudo elements `:before` are replaced by `:after` to make the Icon Font
+and the CSS compatible with jQuery Mobile. Perhabs some user defined CSS may
+be broken.
 
 
 
@@ -58,12 +98,14 @@ The pseudo elements `:before` are replaced by `:after` to make the Icon Font and
 # Version 2.1 #
 2016-05-10
 
-Welcome to version 2 with 326 unique icons. Many icons are optimized and some are added.
-Please take a note on the changes below:
+Welcome to version 2 with 326 unique icons. Many icons are optimized and some
+are added. Please take a note on the changes below:
 
 
 #### Deleted ####
-Some tests on mobile devices and hdpi screens shows me, that the css only created icons for loading animations looks not so good. These icons and their animations are deleted:
+Some tests on mobile devices and hdpi screens shows me, that the css only
+created icons for loading animations looks not so good. These icons and
+their animations are deleted:
 ```css
 .ui-busy-icon,  
 .ui-busy-icon-balls,

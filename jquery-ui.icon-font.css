@@ -10,8 +10,8 @@
  *                        https://creativecommons.org/licenses/by-sa/3.0/
  *             Generated: with IcoMoon-App (Chromium)
  *
- * STYLESHEET  Version:   2.3
- *             Modified:  2017-03-02
+ * STYLESHEET  Version:   2.3.1
+ *             Modified:  2017-03-03
  *             jQuery UI: 1.12 & 1.12.1
  *             jQMobile:  1.4.5
  *             Copyright: (c) 2015-2017 Michael Keck.
@@ -22,11 +22,11 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-b7f54b');
-  src: url('font/jquery-ui.eot?juif-b7f54b#ie') format("embedded-opentype"),
-       url('font/jquery-ui.woff2?juif-b7f54b') format("woff2"),
-       url('font/jquery-ui.woff?juif-b7f54b') format("woff"),
-       url('font/jquery-ui.ttf?juif-b7f54b') format("truetype");
+  src: url('font/jquery-ui.eot?juif-b945ca');
+  src: url('font/jquery-ui.eot?juif-b945ca#ie') format("embedded-opentype"),
+       url('font/jquery-ui.woff2?juif-b945ca') format("woff2"),
+       url('font/jquery-ui.woff?juif-b945ca') format("woff"),
+       url('font/jquery-ui.ttf?juif-b945ca') format("truetype");
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -436,32 +436,32 @@ html .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon:after
 .ui-icon-camera:after { content: '\e6e8'; }
 .ui-icon-cancel:after,
 .ui-icon-forbidden:after { content: '\e675'; }
-.ui-icon-carat-1-e:after,
-.ui-icon-carat-r:after,
-.ui-icon-caret-1-e:after { content: '\e639'; }
-.ui-icon-carat-1-n:after,
-.ui-icon-carat-u:after,
-.ui-icon-caret-1-n:after { content: '\e637'; }
-.ui-icon-carat-1-ne:after { content: '\e638'; }
-.ui-icon-carat-1-nw:after { content: '\e63e'; }
-.ui-icon-carat-1-s:after,
-.ui-icon-carat-d:after,
-.ui-icon-caret-1-s:after { content: '\e63b'; }
-.ui-icon-carat-1-se:after { content: '\e63a'; }
-.ui-icon-carat-1-sw:after { content: '\e63c'; }
-.ui-icon-carat-1-w:after,
-.ui-icon-carat-l:after,
-.ui-icon-caret-1-w:after { content: '\e63d'; }
-.ui-icon-carat-2-e:after { content: '\e640'; }
-.ui-icon-carat-2-e-w:after { content: '\e643'; }
-.ui-icon-carat-2-n:after { content: '\e63f'; }
-.ui-icon-carat-2-n-s:after { content: '\e644'; }
-.ui-icon-carat-2-s:after { content: '\e641'; }
-.ui-icon-carat-2-w:after { content: '\e642'; }
-.ui-icon-caratstop-1-e:after { content: '\e905'; }
-.ui-icon-caratstop-1-n:after { content: '\e901'; }
-.ui-icon-caratstop-1-s:after { content: '\e900'; }
-.ui-icon-caratstop-1-w:after { content: '\e904'; }
+.ui-icon-caret-1-e:after,
+.ui-icon-caret-r:after,
+.ui-icon-carat-r:after { content: '\e639'; }
+.ui-icon-caret-1-n:after,
+.ui-icon-caret-u:after,
+.ui-icon-carat-u:after { content: '\e637'; }
+.ui-icon-caret-1-ne:after { content: '\e638'; }
+.ui-icon-caret-1-nw:after { content: '\e63e'; }
+.ui-icon-caret-1-s:after,
+.ui-icon-caret-d:after,
+.ui-icon-carat-d:after { content: '\e63b'; }
+.ui-icon-caret-1-se:after { content: '\e63a'; }
+.ui-icon-caret-1-sw:after { content: '\e63c'; }
+.ui-icon-caret-1-w:after,
+.ui-icon-caret-l:after,
+.ui-icon-carat-l:after { content: '\e63d'; }
+.ui-icon-caret-2-e:after { content: '\e640'; }
+.ui-icon-caret-2-e-w:after { content: '\e643'; }
+.ui-icon-caret-2-n:after { content: '\e63f'; }
+.ui-icon-caret-2-n-s:after { content: '\e644'; }
+.ui-icon-caret-2-s:after { content: '\e641'; }
+.ui-icon-caret-2-w:after { content: '\e642'; }
+.ui-icon-caretstop-1-e:after { content: '\e905'; }
+.ui-icon-caretstop-1-n:after { content: '\e901'; }
+.ui-icon-caretstop-1-s:after { content: '\e900'; }
+.ui-icon-caretstop-1-w:after { content: '\e904'; }
 .ui-icon-cart:after,
 .ui-icon-shop:after { content: '\e6d6'; }
 .ui-icon-cart-b:after,
@@ -779,8 +779,20 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 .ui-icon-zoomin:after { content: '\e713'; }
 .ui-icon-zoomout:after { content: '\e715'; }
 
-
-
+.ui-icon-carat-1-e:after { content: '\e639'; }                   /* deprecated: use '.ui-icon-caret-1-e' instead */
+.ui-icon-carat-1-n:after { content: '\e637'; }                   /* deprecated: use '.ui-icon-caret-1-n' instead */
+.ui-icon-carat-1-s:after { content: '\e63b'; }                   /* deprecated: use '.ui-icon-caret-1-s' instead */
+.ui-icon-carat-1-w:after { content: '\e63d'; }                   /* deprecated: use '.ui-icon-caret-1-w' instead */
+.ui-icon-carat-2-e:after { content: '\e640'; }                   /* deprecated: use '.ui-icon-caret-2-e' instead */
+.ui-icon-carat-2-e-w:after { content: '\e643'; }                 /* deprecated: use '.ui-icon-caret-2-e-w' instead */
+.ui-icon-carat-2-n:after { content: '\e63f'; }                   /* deprecated: use '.ui-icon-caret-2-n' instead */
+.ui-icon-carat-2-n-s:after { content: '\e644'; }                 /* deprecated: use '.ui-icon-caret-2-n-s' instead */
+.ui-icon-carat-2-s:after { content: '\e641'; }                   /* deprecated: use '.ui-icon-caret-2-s' instead */
+.ui-icon-carat-2-w:after { content: '\e642'; }                   /* deprecated: use '.ui-icon-caret-2-w' instead */
+.ui-icon-caretstop-1-e:after { content: '\e905'; }               /* deprecated: use '.ui-icon-caretstop-1-e' instead */
+.ui-icon-caretstop-1-n:after { content: '\e901'; }               /* deprecated: use '.ui-icon-caretstop-1-n' instead */
+.ui-icon-caretstop-1-s:after { content: '\e900'; }               /* deprecated: use '.ui-icon-caretstop-1-s' instead */
+.ui-icon-caretstop-1-w:after { content: '\e904'; }               /* deprecated: use '.ui-icon-caretstop-1-w' instead */
 
 /* bounce animations */
 @keyframes bounce  {

@@ -19,10 +19,10 @@ For jQuery Mobile it doesn't matter wich file is used, but only _`jquery-ui-1.11
 ```html
   <head>
     <!-- ... -->
-    <link href="jquery/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" /> 
-    <link href="jquery/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" /> 
-    <script src="jquery/jquery.min.js" type="text/javascript"></script> 
-    <script src="jquery/jquery-ui.min.js" type="text/javascript"></script> 
+    <link href="css/theme/jquery-ui.css" rel="stylesheet" type="text/css" /> 
+    <link href="css/theme/jquery-ui.icon-font.css" rel="stylesheet" type="text/css" /> 
+    <script src="js/jquery.min.js" type="text/javascript"></script> 
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script> 
     <!-- ... --> 
   </head>
 ```
@@ -51,7 +51,7 @@ Please report bugs or feature requests on the [issue-tracker](https://github.com
 
 
 ### Demo ###
-Take a look at the demo under [http://mkkeck.github.io/jquery-ui-iconfont/](http://mkkeck.github.io/jquery-ui-iconfont/)
+Take a look at the demo under [https://mkkeck.github.io/jquery-ui-iconfont/](http://mkkeck.github.io/jquery-ui-iconfont/)
 
 ### Screenshot ###
 ![Screenshot](https://raw.githubusercontent.com/mkkeck/jquery-ui-iconfont/master/screen.png)
