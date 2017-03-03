@@ -21,10 +21,10 @@ defined as deprecated.
 | .ui-icon-carat-2-n-s   |  »  | .ui-icon-caret-2-n-s   |
 | .ui-icon-carat-2-s     |  »  | .ui-icon-caret-2-s     |
 | .ui-icon-carat-2-w     |  »  | .ui-icon-caret-2-w     |
-| .ui-icon-caretstop-1-e |  »  | .ui-icon-caretstop-1-e |
-| .ui-icon-caretstop-1-n |  »  | .ui-icon-caretstop-1-n |
-| .ui-icon-caretstop-1-s |  »  | .ui-icon-caretstop-1-s |
-| .ui-icon-caretstop-1-w |  »  | .ui-icon-caretstop-1-w |
+| .ui-icon-caratstop-1-e |  »  | .ui-icon-caretstop-1-e |
+| .ui-icon-caratstop-1-n |  »  | .ui-icon-caretstop-1-n |
+| .ui-icon-caratstop-1-s |  »  | .ui-icon-caretstop-1-s |
+| .ui-icon-caratstop-1-w |  »  | .ui-icon-caretstop-1-w |
 
 
 For further information see 

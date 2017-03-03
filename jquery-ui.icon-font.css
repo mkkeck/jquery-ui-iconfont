@@ -22,11 +22,11 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-b945ca');
-  src: url('font/jquery-ui.eot?juif-b945ca#ie') format("embedded-opentype"),
-       url('font/jquery-ui.woff2?juif-b945ca') format("woff2"),
-       url('font/jquery-ui.woff?juif-b945ca') format("woff"),
-       url('font/jquery-ui.ttf?juif-b945ca') format("truetype");
+  src: url('font/jquery-ui.eot?juif-b98571');
+  src: url('font/jquery-ui.eot?juif-b98571#ie') format("embedded-opentype"),
+       url('font/jquery-ui.woff2?juif-b98571') format("woff2"),
+       url('font/jquery-ui.woff?juif-b98571') format("woff"),
+       url('font/jquery-ui.ttf?juif-b98571') format("truetype");
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -458,10 +458,14 @@ html .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon:after
 .ui-icon-caret-2-n-s:after { content: '\e644'; }
 .ui-icon-caret-2-s:after { content: '\e641'; }
 .ui-icon-caret-2-w:after { content: '\e642'; }
-.ui-icon-caretstop-1-e:after { content: '\e905'; }
-.ui-icon-caretstop-1-n:after { content: '\e901'; }
-.ui-icon-caretstop-1-s:after { content: '\e900'; }
-.ui-icon-caretstop-1-w:after { content: '\e904'; }
+.ui-icon-caretstop-1-e:after,
+.ui-icon-caratstop-1-e:after { content: '\e905'; }
+.ui-icon-caretstop-1-n:after,
+.ui-icon-caratstop-1-n:after { content: '\e901'; }
+.ui-icon-caretstop-1-s:after,
+.ui-icon-caratstop-1-s:after { content: '\e900'; }
+.ui-icon-caretstop-1-w:after,
+.ui-icon-caratstop-1-w:after { content: '\e904'; }
 .ui-icon-cart:after,
 .ui-icon-shop:after { content: '\e6d6'; }
 .ui-icon-cart-b:after,
@@ -789,19 +793,19 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 .ui-icon-carat-2-n-s:after { content: '\e644'; }                 /* deprecated: use '.ui-icon-caret-2-n-s' instead */
 .ui-icon-carat-2-s:after { content: '\e641'; }                   /* deprecated: use '.ui-icon-caret-2-s' instead */
 .ui-icon-carat-2-w:after { content: '\e642'; }                   /* deprecated: use '.ui-icon-caret-2-w' instead */
-.ui-icon-caretstop-1-e:after { content: '\e905'; }               /* deprecated: use '.ui-icon-caretstop-1-e' instead */
-.ui-icon-caretstop-1-n:after { content: '\e901'; }               /* deprecated: use '.ui-icon-caretstop-1-n' instead */
-.ui-icon-caretstop-1-s:after { content: '\e900'; }               /* deprecated: use '.ui-icon-caretstop-1-s' instead */
-.ui-icon-caretstop-1-w:after { content: '\e904'; }               /* deprecated: use '.ui-icon-caretstop-1-w' instead */
+.ui-icon-caratstop-1-e:after { content: '\e905'; }               /* deprecated: use '.ui-icon-caretstop-1-e' instead */
+.ui-icon-caratstop-1-n:after { content: '\e901'; }               /* deprecated: use '.ui-icon-caretstop-1-n' instead */
+.ui-icon-caratstop-1-s:after { content: '\e900'; }               /* deprecated: use '.ui-icon-caretstop-1-s' instead */
+.ui-icon-caratstop-1-w:after { content: '\e904'; }               /* deprecated: use '.ui-icon-caretstop-1-w' instead */
 
 /* bounce animations */
 @keyframes bounce  {
-  0%, 100% { transform: scale(0.2); -moz-transform: scale(0.2); -ms-transform: scale(0.2); -webkit-transform: scale(0.2); }
-  50%      { transform: scale(1.0); -moz-transform: scale(1.0); -ms-transform: scale(1.0); -webkit-transform: scale(1.0); }
+  0%, 100% { -webkit-transform: scale(0.2); -moz-transform: scale(0.2); -ms-transform: scale(0.2); transform: scale(0.2); }
+  50%      { -webkit-transform: scale(1.0); -moz-transform: scale(1.0); -ms-transform: scale(1.0); transform: scale(1.0); }
 }
-@-moz-keyframes bounce    { 0%, 100% { transform: scale(0.2); -moz-transform: scale(0.2); }    50% { transform: scale(1.0); -moz-transform: scale(1.0); } }
-@-ms-keyframes bounce     { 0%, 100% { transform: scale(0.2); -ms-transform: scale(0.2); }     50% { transform: scale(1.0); -ms-transform: scale(1.0); }  }
-@-webkit-keyframes bounce { 0%, 100% { transform: scale(0.2); -webkit-transform: scale(0.2); } 50% { transform: scale(1.0); -webkit-transform: scale(1.0); }  }
+@-moz-keyframes bounce    { 0%, 100% { -moz-transform: scale(0.2);    transform: scale(0.2); } 50% { -moz-transform: scale(1.0);    transform: scale(1.0); } }
+@-ms-keyframes bounce     { 0%, 100% { -ms-transform: scale(0.2);     transform: scale(0.2); } 50% { -ms-transform: scale(1.0);     transform: scale(1.0); } }
+@-webkit-keyframes bounce { 0%, 100% { -webkit-transform: scale(0.2); transform: scale(0.2); } 50% { -webkit-transform: scale(1.0); transform: scale(1.0); } }
 
 [class^='ui-icon-'].bounce:after,
 [class*=' ui-icon-'].bounce:after {
@@ -814,12 +818,12 @@ html .ui-alt-icon .ui-btn.ui-checkbox-on:after { content: '\e670'; }
 
 /* rotated animations */
 @keyframes rotate {
-  from { transform: rotate(0deg);   -moz-transform: rotate(0deg);   -ms-transform: rotate(0deg);   -webkit-transform: rotate(0deg); }
-  to   { transform: rotate(359deg); -moz-transform: rotate(359deg); -ms-transform: rotate(359deg); -webkit-transform: rotate(359deg); }
+  from { -webkit-transform: rotate(0deg);   -moz-transform: rotate(0deg);   -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  to   { -webkit-transform: rotate(359deg); -moz-transform: rotate(359deg); -ms-transform: rotate(359deg); transform: rotate(359deg);  }
 }
-@-moz-keyframes    rotate { from { transform: rotate(0deg); -moz-transform: rotate(0deg); }    to { transform: rotate(359deg); -moz-transform: rotate(359deg); }    }
-@-ms-keyframes     rotate { from { transform: rotate(0deg); -ms-transform: rotate(0deg); }     to { transform: rotate(359deg); -ms-transform: rotate(359deg); }     }
-@-webkit-keyframes rotate { from { transform: rotate(0deg); -webkit-transform: rotate(0deg); } to { transform: rotate(359deg); -webkit-transform: rotate(359deg); } }
+@-moz-keyframes    rotate { from { -moz-transform: rotate(0deg);    transform: rotate(0deg); } to { -moz-transform: rotate(359deg);    transform: rotate(359deg); } }
+@-ms-keyframes     rotate { from { -ms-transform: rotate(0deg);     transform: rotate(0deg); } to { -ms-transform: rotate(359deg);     transform: rotate(359deg); } }
+@-webkit-keyframes rotate { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { -webkit-transform: rotate(359deg); transform: rotate(359deg); } }
 
 [class^='ui-icon-'].rotate,         /* clockwise */
 [class*=' ui-icon-'].rotate,        /* clockwise */
