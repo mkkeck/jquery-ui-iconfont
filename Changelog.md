@@ -1,6 +1,15 @@
 # Version 2.3.1 #
 2017-0-03
 
+There where some little mistakes in [Version 2.3.1](#version-2.3.1): 
+
+**Failure:**  
+`.ui-icon-caretstop-1-*` was defined as an alias and deprecated of
+`.ui-icon-caretstop-1-*`.  
+**Correct:**  
+`.ui-icon-caratstop-1-*` is deprecated and an alias of
+`.ui-icon-caretstop-1-*` (which is the new classname). 
+
 This is a bugfix version for the icon classes `ui-icon-carat-*` wich are
 silently renamed to `ui-icon-caret-*`.  
 The `ui-icon-carat-*` are still available in the `jquery-ui.icon-font`
@@ -25,6 +34,42 @@ defined as deprecated.
 | .ui-icon-caratstop-1-n |  »  | .ui-icon-caretstop-1-n |
 | .ui-icon-caratstop-1-s |  »  | .ui-icon-caretstop-1-s |
 | .ui-icon-caratstop-1-w |  »  | .ui-icon-caretstop-1-w |
+
+
+For further information see 
+[jQuery UI #15022](https://bugs.jqueryui.com/ticket/15022) or the
+[jQuery UI upgrade guide 1.12](http://jqueryui.com/upgrade-guide/1.12/#theme).
+
+
+
+
+# Version 2.3.1 #
+2017-0-03
+
+This is a bugfix version for the icon classes `ui-icon-carat-*` wich are
+silently renamed to `ui-icon-caret-*`.  
+The `ui-icon-carat-*` are still available in the `jquery-ui.icon-font`
+files for backwards compatibility to jQuery UI 1.11 and jQuery Mobile, but
+defined as deprecated. 
+
+**Deprecated / renamed icons:**
+
+| Old CSS-class          |  »  | New CSS-class          |
+|------------------------|:---:|------------------------|
+| .ui-icon-carat-1-e     |  »  | .ui-icon-caret-1-e     |
+| .ui-icon-carat-1-n     |  »  | .ui-icon-caret-1-n     |
+| .ui-icon-carat-1-s     |  »  | .ui-icon-caret-1-s     |
+| .ui-icon-carat-1-w     |  »  | .ui-icon-caret-1-w     |
+| .ui-icon-carat-2-e     |  »  | .ui-icon-caret-2-e     |
+| .ui-icon-carat-2-e-w   |  »  | .ui-icon-caret-2-e-w   |
+| .ui-icon-carat-2-n     |  »  | .ui-icon-caret-2-n     |
+| .ui-icon-carat-2-n-s   |  »  | .ui-icon-caret-2-n-s   |
+| .ui-icon-carat-2-s     |  »  | .ui-icon-caret-2-s     |
+| .ui-icon-carat-2-w     |  »  | .ui-icon-caret-2-w     |
+| .ui-icon-caretstop-1-e |  »  | .ui-icon-caretstop-1-e |
+| .ui-icon-caretstop-1-n |  »  | .ui-icon-caretstop-1-n |
+| .ui-icon-caretstop-1-s |  »  | .ui-icon-caretstop-1-s |
+| .ui-icon-caretstop-1-w |  »  | .ui-icon-caretstop-1-w |
 
 
 For further information see 

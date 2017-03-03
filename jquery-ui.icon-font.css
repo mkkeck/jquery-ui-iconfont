@@ -10,7 +10,7 @@
  *                        https://creativecommons.org/licenses/by-sa/3.0/
  *             Generated: with IcoMoon-App (Chromium)
  *
- * STYLESHEET  Version:   2.3.1
+ * STYLESHEET  Version:   2.3.2
  *             Modified:  2017-03-03
  *             jQuery UI: 1.12 & 1.12.1
  *             jQMobile:  1.4.5
@@ -22,11 +22,11 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-b98571');
-  src: url('font/jquery-ui.eot?juif-b98571#ie') format("embedded-opentype"),
-       url('font/jquery-ui.woff2?juif-b98571') format("woff2"),
-       url('font/jquery-ui.woff?juif-b98571') format("woff"),
-       url('font/jquery-ui.ttf?juif-b98571') format("truetype");
+  src: url('font/jquery-ui.eot?juif-b98c27');
+  src: url('font/jquery-ui.eot?juif-b98c27#ie') format("embedded-opentype"),
+       url('font/jquery-ui.woff2?juif-b98c27') format("woff2"),
+       url('font/jquery-ui.woff?juif-b98c27') format("woff"),
+       url('font/jquery-ui.ttf?juif-b98c27') format("truetype");
   font-style: normal;
   font-variant: normal;
   font-weight: normal;

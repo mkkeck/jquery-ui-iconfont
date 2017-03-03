@@ -1,6 +1,6 @@
 {
   "name": "jquery-ui-iconfont",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Icon Font for jQuery UI",
   "main": "jquery-ui.icon-font.css",
   "scripts": {
