@@ -11,7 +11,7 @@
  *             Generated: with IcoMoon-App (Chromium)
  *
  * STYLESHEET  Version:   2.3.2
- *             Modified:  2017-03-03
+ *             Modified:  2017-03-04
  *             jQuery UI: 1.11.2, 1.11.3 & 1.11.4
  *             jQMobile:  1.4.5
  *             Copyright: (c) 2015-2017 Michael Keck.
@@ -22,12 +22,12 @@
 /* load icon font */
 @font-face {
   font-family: 'jquery-ui';
-  src: url('font/jquery-ui.eot?juif-b98c1f');
-  src: url('font/jquery-ui.eot?juif-b98c1f#ie') format('embedded-opentype'),
-       url('font/jquery-ui.woff2?juif-b98c1f') format('woff2'),
-       url('font/jquery-ui.ttf?juif-b98c1f') format('truetype'),
-       url('font/jquery-ui.woff?juif-b98c1f') format('woff'),
-       url('font/jquery-ui.svg?juif-b98c1f#jquery-ui') format('svg');
+  src: url('font/jquery-ui.eot?juif-bac781');
+  src: url('font/jquery-ui.eot?juif-bac781#ie') format('embedded-opentype'),
+       url('font/jquery-ui.woff2?juif-bac781') format('woff2'),
+       url('font/jquery-ui.ttf?juif-bac781') format('truetype'),
+       url('font/jquery-ui.woff?juif-bac781') format('woff'),
+       url('font/jquery-ui.svg?juif-bac781#jquery-ui') format('svg');
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
