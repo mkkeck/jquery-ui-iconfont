@@ -1,7 +1,7 @@
-# Version 2.3.1 #
-2017-0-03
+# Version 2.3.2 #
+2017-03-04
 
-There where some little mistakes in [Version 2.3.1](#version-2.3.1): 
+There where some little mistakes in [Version 2.3.1](#version-231): 
 
 **Failure:**  
 `.ui-icon-caretstop-1-*` was defined as an alias and deprecated of
@@ -44,7 +44,7 @@ For further information see
 
 
 # Version 2.3.1 #
-2017-0-03
+2017-03-03
 
 This is a bugfix version for the icon classes `ui-icon-carat-*` wich are
 silently renamed to `ui-icon-caret-*`.  
