@@ -27,7 +27,7 @@ if (!String.prototype.trim) {
 /* app.js Init */
 (function(r, c, d, l) {
   c.basePath = l.protocol+'//'+l.hostname+'/';
-  c.isLocal = (l.hostname.indexOf('km-wampp.de') !== -1 || l.hostname.indexOf('localhost') !== -1 || l.protocol.indexOf('file') !== -1);
+  c.isLocal = (l.hostname.indexOf('localhost') !== -1 || l.protocol.indexOf('file') !== -1);
   if (typeof c.developer === 'undefined' || c.developer === null) {
     c.developer = c.isLocal;
   }
@@ -64,10 +64,6 @@ if (!String.prototype.trim) {
       e = s[si];
       if (e.href && e.href.match(x)) {
         var a = [
-          /* Removed: 2017-03-01 */
-          /**
-          'https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400',
-          /**/
           'styles/jquery-ui.icon-font'+c.useMin+'.css',
           'styles/jquery-ui.min.css'
         ].reverse();
@@ -78,64 +74,7 @@ if (!String.prototype.trim) {
       }
     }
   }
-  /* Removed: 2017-03-01 */
-  /**
-  var waitForWebfonts = function(fonts, callback) {
-    var loadedFonts = 0;
-    for(var i = 0, l = fonts.length; i < l; ++i) {
-      (function(font) {
-        var node = d.createElement('span');
-        // Characters that vary significantly among different fonts
-        node.innerHTML = 'giItT1WQy@!-/#';
-        // Visible - so we can measure it - but not on the screen
-        node.style.position      = 'absolute';
-        node.style.left          = '-10000px';
-        node.style.top           = '-10000px';
-        // Large font size makes even subtle changes obvious
-        node.style.fontSize      = '300px';
-        // Reset any font properties
-        node.style.fontFamily    = 'sans-serif';
-        node.style.fontVariant   = 'normal';
-        node.style.fontStyle     = 'normal';
-        node.style.fontWeight    = 'normal';
-        node.style.letterSpacing = '0';
-        d.body.appendChild(node);
-
-        // Remember width with no applied web font
-        var width = node.offsetWidth;
-
-        node.style.fontFamily = font;
-
-        var interval;
-        var checkFont = function() {
-          // Compare current width with original width
-          if (node && node.offsetWidth != width) {
-            ++loadedFonts;
-            node.parentNode.removeChild(node);
-            node = null;
-          }
-
-          // If all fonts have been loaded
-          if (loadedFonts >= fonts.length) {
-            if (interval) {
-              clearInterval(interval);
-            }
-            if (loadedFonts == fonts.length) {
-              callback();
-              return true;
-            }
-          }
-        };
-
-        if(!checkFont()) {
-          interval = setInterval(checkFont, 50);
-        }
-      })(fonts[i]);
-    }
-  };
-  /**/
-
-  /* REQUIRE.JS Konfigurieren */
+   /* REQUIRE.JS Konfigurieren */
   r.config({
     baseUrl: c.jsPath,
     paths: {
