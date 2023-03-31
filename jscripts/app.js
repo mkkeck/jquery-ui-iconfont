@@ -1,10 +1,10 @@
 /**
  * Require JS App
  *
- * Copyright: (c) 2015-2017 Michael Keck
+ * Copyright: (c) 2015-2023 Michael Keck
  *               (https://github.com/mkkeck/jquery-ui-icons)
  * License:   http://www.gnu.org/licenses/gpl.html
- * Modified:  Michael Keck, 2017-03-01
+ * Modified:  Michael Keck, 2023-03-31
  */
 
 /**
@@ -92,37 +92,12 @@ if (!String.prototype.trim) {
 
   r(['jquery'], function($) {
     r(['ui','custom'], function() {
-      /* Removed: 2017-03-01 */
-      /**
-      waitForWebfonts(['Roboto Condensed', 'Roboto'], function() {
-        $('html').addClass('font-loaded');
-      });
-      /**/
       if (!(d.all && !d.addEventListener)) {
         r(['prism.min'], function() {
           r(['content']);
         })
       } else {
         r(['content']);
-      }
-      if (!c.isLocal && c.hasOwnProperty('ganalytic') && c['ganalytic']) {
-        (function(i, s, o, g, r, a, m) {
-          i['GoogleAnalyticsObject'] = r;
-          i[r] = i[r] || function() {
-              (i[r].q = i[r].q || []).push(arguments)
-            };
-          i[r].l = 1 * new Date();
-          a = s.createElement(o);
-          m = s.getElementsByTagName(o)[0];
-          a.async = 1;
-          a.src = g;
-          m.parentNode.insertBefore(a, m);
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        if ('ga' in window) {
-          ga('create', c['ganalytic'], 'auto');
-          ga('require', 'linkid', 'linkid.js');
-          ga('send', 'pageview');
-        }
       }
     });
   });
