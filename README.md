@@ -10,4 +10,9 @@
 
 ----
 
+## No longer maintained ##
+Since there are now better alternatives and frameworks, I have decided to discontinue this project.
+
+----
+
 This repository is for the [Front Page](https://mkkeck.github.io/jquery-ui-iconfont/) with some information how to use the [Icon Font for jQuery UI](https://github.com/mkkeck/jquery-ui-iconfont), examples, demos and an icon list.
