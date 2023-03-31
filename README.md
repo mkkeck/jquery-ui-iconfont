@@ -7,6 +7,10 @@
 * Included CSS3 animation for e.g. AJAX loading status. 
 * Icon License [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
+## No longer maintained ##
+Since there are now better alternatives and frameworks, I have decided to discontinue this project.
+
+## Manual ##
 
 ### Usage ###
 #### Include the Icon Font ####
